@@ -36,10 +36,7 @@ CREATE TABLE IF NOT EXISTS `users_bancoalim`.`donacion` (
   INDEX `id_donante` (`id_donante` ASC) VISIBLE,
   CONSTRAINT `donacion_ibfk_1`
     FOREIGN KEY (`id_donante`)
-    REFERENCES `users_bancoalim`.`donante` (`id_donante`),
-  CONSTRAINT `donacion_ibfk_2`
-    FOREIGN KEY (`id_donante`)
-    REFERENCES `users_bancoalim`.`empresa` (`id_empresa`))
+    REFERENCES `users_bancoalim`.`donante` (`id_donante`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;

@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `users_bancoalim`.`donante` (
   `lastname` VARCHAR(45) NOT NULL,
   `phone` VARCHAR(25) NULL DEFAULT NULL,
   `email` VARCHAR(45) NULL DEFAULT NULL,
+  `direccion` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_donante`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
@@ -61,6 +62,8 @@ CREATE TABLE IF NOT EXISTS `users_bancoalim`.`donacion` (
   `cantidad` VARCHAR(45) NULL DEFAULT NULL,
   `id_donante` INT NULL DEFAULT NULL,
   `id_empresa` INT NULL DEFAULT NULL,
+  `f_vencimiento` DATE NULL DEFAULT NULL,
+  `detalles` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id_donacion`),
   INDEX `id_donante` (`id_donante` ASC) VISIBLE,
   INDEX `id_empresa` (`id_empresa` ASC) VISIBLE,
@@ -72,6 +75,26 @@ CREATE TABLE IF NOT EXISTS `users_bancoalim`.`donacion` (
     REFERENCES `users_bancoalim`.`empresa` (`id_empresa`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 3
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `users_bancoalim`.`ong`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `users_bancoalim`.`ong` (
+  `id_ong` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `cuit_ong` VARCHAR(45) NOT NULL,
+  `direcc_ong` VARCHAR(45) NOT NULL,
+  `barrio_ong` VARCHAR(45) NOT NULL,
+  `razon` VARCHAR(100) NOT NULL,
+  `nameResp` VARCHAR(45) NOT NULL,
+  `lastnameResp` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45) NULL DEFAULT NULL,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_ong`))
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

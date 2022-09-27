@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
+
 
 @Entity
 public class user {
@@ -14,7 +16,7 @@ public class user {
     private int id_user;
 
     @NotNull
-    @Size(min = 1, max = 50)
+    @Size (min = 1, max = 50)
     private String userName;
 
     @NotNull
@@ -22,19 +24,19 @@ public class user {
     private String userLastname;
 
     @Size(min = 1, max = 50)
-    private String email;
+    private String userEmail;
 
     @Size(min = 1, max = 50)
-    private String phone;
+    private String userPhone;
 
     @Size(min = 1, max = 50)
-    private String direccion;
+    private String userDireccion;
 
     @Size(min = 1, max = 50)
-    private String vehicle;
+    private String userVehicle;
 
     @Size(min = 1, max = 50)
-    private String diponibilidad;
+    private String userDiponibilidad;
 
     public user() {
     }
@@ -64,42 +66,42 @@ public class user {
     }
 
     public String getEmail() {
-        return email;
+        return userEmail;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.userEmail = email;
     }
 
     public String getPhone() {
-        return phone;
+        return userPhone;
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.userPhone = phone;
     }
 
     public String getDireccion() {
-        return direccion;
+        return userDireccion;
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+        this.userDireccion = direccion;
     }
 
     public String getVehicle() {
-        return vehicle;
+        return userVehicle;
     }
 
     public void setVehicle(String vehicle) {
-        this.vehicle = vehicle;
+        this.userVehicle = vehicle;
     }
 
     public String getDiponibilidad() {
-        return diponibilidad;
+        return userDiponibilidad;
     }
 
     public void setDiponibilidad(String diponibilidad) {
-        this.diponibilidad = diponibilidad;
+        this.userDiponibilidad = diponibilidad;
     }
 }

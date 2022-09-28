@@ -28,8 +28,6 @@ CREATE TABLE IF NOT EXISTS `users_bancoalim`.`donante` (
   `phone` VARCHAR(25) NULL DEFAULT NULL,
   `email` VARCHAR(45) NULL DEFAULT NULL,
   `direccion` VARCHAR(45) NOT NULL,
-  `vehicle` VARCHAR(45) NULL DEFAULT NULL,
-  `disponibilidad` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id_donante`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
@@ -101,6 +99,22 @@ DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
+-- -----------------------------------------------------
+-- Table `users_bancoalim`.`voluntario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `users_bancoalim`.`voluntario` (
+  `id_voluntario` INT NOT NULL AUTO_INCREMENT,
+  `dni_voluntario` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `lastname` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45) NULL DEFAULT NULL,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
+  `vehicle` VARCHAR(45) NULL DEFAULT NULL,
+  `time` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_voluntario`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

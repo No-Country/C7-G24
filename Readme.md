@@ -32,7 +32,6 @@ Si quieres correr este proyecto de forma local debes seguir los siguientes pasos
 * Lucia Cerpa ***Front-end Developer***
 * Patricia Cor ***Front-end Developer***
 * Federico Di cillo ***Back-end Developer***
-* Benjamin Genovesi ***Front-end Developer***
 * Rocio Lamberti ***UX-UI Designer***
 * Agustin Medina ***Back-end Developer***
 * Mariana Palavecino ***Back-end Developer***

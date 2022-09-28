@@ -1,0 +1,23 @@
+:root {
+    /* colors */
+    --primary-500: #645cff;
+    /* grey */
+    --grey-500: black;
+  }
+  
+  .navBar {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .link {
+    color: var(--grey-500);
+    text-decoration: none;
+  }
+  
+  .active {
+    color: var(--primary-500);
+  }

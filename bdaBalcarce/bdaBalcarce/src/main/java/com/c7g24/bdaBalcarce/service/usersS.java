@@ -13,13 +13,14 @@ import java.util.Optional;
 @Transactional
 public class usersS {
     @Autowired
+    static
     usersR userRepo;
 
     public List<users> list() {
         return userRepo.findAll();
     }
 
-    public Optional<users> getOne(int id) {
+    public static Optional<users> getOne(int id) {
         return userRepo.findById(id);
     }
 
@@ -31,7 +32,7 @@ public class usersS {
         userRepo.deleteById(id);
     }
 
-    public boolean existsById(int id){
+    public static boolean existsById(int id){
         return userRepo.existsById(id);
     }
 

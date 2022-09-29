@@ -8,29 +8,29 @@ import javax.persistence.Id;
 @Entity
 public class users {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY) //campo primary key autogenerado
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
     private int id_user;
     private String userName;
     private String userLastname;
     private String userDni;
-    private String email;
-    private String phone;
-    private String direccion;
-    private String vehicle;
-    private String diponibilidad;
+    private String userEmail;
+    private String userPhone;
+    private String userDireccion;
+    private String userVehicle;
+    private String userDiponibilidad;
 
     public users() {
     }
 
-    public users(String userName, String userLastname, String userDni, String email, String phone, String direccion, String vehicle, String diponibilidad) {
+    public users(String userName, String userLastname, String userDni, String userEmail, String userPhone, String userDireccion, String userVehicle, String userDiponibilidad) {
         this.userName = userName;
         this.userLastname = userLastname;
         this.userDni = userDni;
-        this.email = email;
-        this.phone = phone;
-        this.direccion = direccion;
-        this.vehicle = vehicle;
-        this.diponibilidad = diponibilidad;
+        this.userEmail = userEmail;
+        this.userPhone = userPhone;
+        this.userDireccion = userDireccion;
+        this.userVehicle = userVehicle;
+        this.userDiponibilidad = userDiponibilidad;
     }
 
     public int getId_user() {
@@ -65,43 +65,43 @@ public class users {
         this.userDni = userDni;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getUserDireccion() {
+        return userDireccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setUserDireccion(String userDireccion) {
+        this.userDireccion = userDireccion;
     }
 
-    public String getVehicle() {
-        return vehicle;
+    public String getUserVehicle() {
+        return userVehicle;
     }
 
-    public void setVehicle(String vehicle) {
-        this.vehicle = vehicle;
+    public void setUserVehicle(String userVehicle) {
+        this.userVehicle = userVehicle;
     }
 
-    public String getDiponibilidad() {
-        return diponibilidad;
+    public String getUserDiponibilidad() {
+        return userDiponibilidad;
     }
 
-    public void setDiponibilidad(String diponibilidad) {
-        this.diponibilidad = diponibilidad;
+    public void setUserDiponibilidad(String userDiponibilidad) {
+        this.userDiponibilidad = userDiponibilidad;
     }
 }

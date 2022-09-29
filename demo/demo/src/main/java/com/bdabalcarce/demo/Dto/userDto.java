@@ -1,4 +1,4 @@
-package Dto;
+package com.bdabalcarce.demo.Dto;
 
 import javax.validation.constraints.NotBlank;
 

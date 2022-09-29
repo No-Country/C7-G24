@@ -1,4 +1,4 @@
-package entity;
+package com.bdabalcarce.demo.entity;
 
 import com.sun.istack.NotNull;
 
@@ -40,6 +40,16 @@ public class user implements Serializable{
     private String userDiponibilidad;
 
     public user() {
+    }
+
+    public user(String userName, String userLastname, String userEmail, String userPhone, String userDireccion, String userVehicle, String userDiponibilidad) {
+        this.userName = userName;
+        this.userLastname = userLastname;
+        this.userEmail = userEmail;
+        this.userPhone = userPhone;
+        this.userDireccion = userDireccion;
+        this.userVehicle = userVehicle;
+        this.userDiponibilidad = userDiponibilidad;
     }
 
     public int getId_user() {

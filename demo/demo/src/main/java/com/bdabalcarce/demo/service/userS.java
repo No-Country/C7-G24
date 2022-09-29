@@ -1,9 +1,9 @@
-package service;
+package com.bdabalcarce.demo.service;
 
-import entity.user;
+import com.bdabalcarce.demo.entity.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.userRepo;
+import com.bdabalcarce.demo.repository.userRepo;
 
 import javax.transaction.Transactional;
 import java.util.List;

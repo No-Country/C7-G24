@@ -1,31 +1,31 @@
 :root {
-    /* colors */
-    --primary-500: #049456;
-    /* grey */
-    --grey-500: black;
-  }
-  
-  .navBar {
-    width: 90vw;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .link {
-    color: var(--grey-500);
-    text-decoration: none; 
-  }
-  .navbar{
-    background-color: #f5f3f3;
+  /* colors */
+  --primary-500: #049456;
+  /* grey */
+  --grey-500: black;
+}
 
-    ;
-  }
-  .active {
-    color: #8C30F5;
-  }
- a:hover{
-  color: #8C30F5;
-  background-color: #f5f3f3
- }
+.navBar {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--grey-500);
+}
+.navbar {
+  background-color: #f5f3f3;
+}
+.active {
+  color: #8c30f5;
+}
+.link:hover {
+  color: #8c30f5;
+}
+.active:hover{
+  color: #8c30f5;
+}

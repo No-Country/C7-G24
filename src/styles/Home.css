@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-flex {
+  width: 50%;
+}
+h1 {
+  width: 540px;
+  height: 196px;
+  margin-top: 50px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+  text-align: center;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #18191f;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+p {
+  width: 540px;
+  height: 288px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #18191f;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.bg-circle {
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  margin-right: 60px;
+  margin-top: 50px;
+  margin-left: 600px;
+  top: calc(50% - 640px / 2 + 36px);
+  background: #8c30f5;
+  border-radius: 50%;
+}
+.bal {
+  position: relative;
+  width: 508px;
+  height: 400px;
+  left: 80px;
+  top: 60px;
+
+  filter: drop-shadow(0px 10px 20px rgba(41, 41, 42, 0.07));
+  border-radius: 8px;
+} /**home es el boton debajo del parrafo**/
+.home {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 32px;
+  gap: 10px;
+  width: 175px;
+  height: 48px;
+  background: #8c30f5;
+  border-radius: 6px;
+  color: #ffff;
+}
+select {
+  margin: 10px;
+}
+select.btn.btn-dropdown.btn-success.p-1.w-10 {
+  width: 100px;
+  height: 30px;
+}
+
+.form-check {
+  margin-top: 10px;
+}
+.botonR {
+  background-color: #f1e4ff;
+  border-radius: 6px;
+  padding: 12px 32px;
+  margin-top: -12px;
+}
+.botonR:hover {
+  color: #f1e4ff;
+}

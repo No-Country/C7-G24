@@ -6,7 +6,7 @@ const VehicleForm = (/* vehiculo:any */) => {
 
   return (<div>
     
- <select className="btn btn-dropdown btn-warning p-1"  name="Vehiculo" value={selected} onChange={(event)=>setSelected(event.target.value)}  >
+ <select className="btn btn-dropdown btn-success p-1"  name="Vehiculo" value={selected} onChange={(event)=>setSelected(event.target.value)}  >
     <option  value="Camion">Camion</option>
     <option  value="Camioneta">Camioneta</option>
     <option value="Auto">Auto</option>

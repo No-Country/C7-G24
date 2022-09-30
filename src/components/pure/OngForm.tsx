@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function CompanyForm() {
+const OngForm = () => {
   return (
     <div>
       <Row className="mb-3">
@@ -24,7 +24,7 @@ function CompanyForm() {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="validationCustom02">
-          <Form.Label>Cuit</Form.Label>
+          <Form.Label>Cuit de la Organización</Form.Label>
           <Form.Control required type="text" />
           <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
@@ -54,7 +54,7 @@ function CompanyForm() {
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom03">
-          <Form.Label>Nombre Empresa</Form.Label>
+          <Form.Label>Nombre de la Organización</Form.Label>
           <Form.Control type="text" required />
           <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
@@ -70,7 +70,7 @@ function CompanyForm() {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="3" controlId="validationCustom05">
-          <Form.Label>Tipo de Empresa</Form.Label>
+          <Form.Label>Tipo de Organización</Form.Label>
           <Form.Control type="text" required />
           <Form.Control.Feedback>Correcto!</Form.Control.Feedback>{' '}
           <Form.Control.Feedback type="invalid">
@@ -80,6 +80,6 @@ function CompanyForm() {
       </Row>
     </div>
   );
-}
+};
 
-export default CompanyForm;
+export default OngForm;

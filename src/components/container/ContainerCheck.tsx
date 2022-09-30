@@ -3,10 +3,26 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import CompanyForm from "../pure/CompanyForm";
 import VoluntaryForm from "../pure/VoluntaryForm";
+import SubmitButton from "../SubmitButton"
 
 const ContainerCheck = () => {
     const [soyPersona, setSoyPersona] = useState(false);
     const [soyEmpresa, setSoyEmpresa] = useState(false);
+    const [validated, setValidated] = useState(false);
+
+    const  handleOnSubmitVoluntaryForm=(event: {
+      currentTarget: any;
+      preventDefault: () => void;
+      stopPropagation: () => void;
+    }) => {
+      const form = event.currentTarget;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+  
+      setValidated(true);
+    };
 
     const handleOnSoyPersona = (e: { target: { checked: any } }) => {
         const value = e.target.checked;
@@ -22,7 +38,9 @@ const ContainerCheck = () => {
     
   return (
     <div>
-      <Form>
+      <Form noValidate
+    validated={validated}
+    onSubmit={handleOnSubmitVoluntaryForm}>
         <Form.Group>
           <Form.Check
             type="checkbox"
@@ -35,9 +53,10 @@ const ContainerCheck = () => {
             label="¿Eres una Empresa ?"
           />
         </Form.Group>
+        {soyPersona? <VoluntaryForm/>:""}
+        {soyEmpresa ? <CompanyForm/> : "" }
+        {soyPersona || soyEmpresa ?  <SubmitButton/> : ""}
       </Form>
-      {soyPersona? <VoluntaryForm/>:""}
-      {soyEmpresa ? <CompanyForm/> : "" }
     </div>
   );
 };

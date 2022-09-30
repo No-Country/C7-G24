@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -13,23 +12,8 @@ const VoluntaryForm = ({ person }: any) => {
   const [horario, setHorario] = useState("");
   const [mail, setMail] = useState("");
   const [dni, setDni] = useState("");
-  /* const [validated, setValidated] = useState(false);
 
-  const  handleOnSubmitVoluntaryForm=(event: {
-    currentTarget: any;
-    preventDefault: () => void;
-    stopPropagation: () => void;
-  }) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  } */
-
-  const handleOnChange = (e: any) => {
+  const handleOnChange =  (e: any) => {
     const name = e.target.name;
     switch (name) {
       case "nombres":
@@ -43,9 +27,6 @@ const VoluntaryForm = ({ person }: any) => {
         break;
       case "dni":
         setDni(e.target.value);
-        break;
-      case "horario":
-        setHorario(e.target.value);
         break;
       case "telefono":
         setTelefono(e.target.value);
@@ -75,7 +56,6 @@ const VoluntaryForm = ({ person }: any) => {
           <Form.Control.Feedback type="invalid">
             Debes completar el campo!
           </Form.Control.Feedback>
-          {nombre}
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="validationCustom02">
           <Form.Label>Apellidos</Form.Label>
@@ -118,22 +98,7 @@ const VoluntaryForm = ({ person }: any) => {
           <Form.Label>Telefono</Form.Label>
           <Form.Control type="text" onChange={handleOnChange} name="telefono" />
         </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustom04">
-          <Form.Label>Horario</Form.Label>
-          <Form.Control
-            required
-            type="text"
-            placeholder="ejem (09:00AM - 12:00PM)"
-            onChange={handleOnChange}
-            name="horario"
-          />
-          <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
-          <Form.Control.Feedback type="invalid">
-            Debes completar el campo!
-          </Form.Control.Feedback>
-        </Form.Group>
       </Row>
-     
     </div>
   );
 };

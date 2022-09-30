@@ -3,8 +3,8 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import VoluntaryForm from "../pure/VoluntaryForm";
 import VehicleForm from "../pure/VehicleForm";
-import { Button } from "react-bootstrap";
-
+import ScheduleForm from "../pure/ScheduleForm"
+import SubmitButton from "../SubmitButton";
 
 const FormContainer = () => {
   const [completed, setCompleted] = useState(false);
@@ -37,6 +37,7 @@ const FormContainer = () => {
     validated={validated}
     onSubmit={handleOnSubmitVoluntaryForm} >
         <VoluntaryForm />
+        <ScheduleForm/>
         <Form.Group as={Col} md="4">
           <Form.Check
             type="checkbox"
@@ -52,10 +53,8 @@ const FormContainer = () => {
             ""
           )}
         </Form.Group>
-        <Button type="submit" variant="success">
-        Enviar
-      </Button>    </Form>
-
+        <SubmitButton/>
+    </Form>
   </div>;
 };
 

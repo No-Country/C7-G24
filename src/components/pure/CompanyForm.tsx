@@ -1,28 +1,13 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 function CompanyForm() {
-  const [validated, setValidated] = useState(false);
-
-  function handleSubmit(event: {
-    currentTarget: any;
-    preventDefault: () => void;
-    stopPropagation: () => void;
-  }) {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  }
+  
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+    <div>
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Label>Nombre de Empresa</Form.Label>
@@ -71,8 +56,7 @@ function CompanyForm() {
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
-      <Button type="submit" variant="success">Enviar</Button>
-    </Form>
+    </div>
     
   );
 }

@@ -1,6 +1,6 @@
 :root {
     /* colors */
-    --primary-500: #645cff;
+    --primary-500: #049456;
     /* grey */
     --grey-500: black;
   }
@@ -15,9 +15,17 @@
   
   .link {
     color: var(--grey-500);
-    text-decoration: none;
+    text-decoration: none; 
   }
-  
+  .navbar{
+    background-color: #f5f3f3;
+
+    ;
+  }
   .active {
-    color: var(--primary-500);
+    color: #8C30F5;
   }
+ a:hover{
+  color: #8C30F5;
+  background-color: #f5f3f3
+ }

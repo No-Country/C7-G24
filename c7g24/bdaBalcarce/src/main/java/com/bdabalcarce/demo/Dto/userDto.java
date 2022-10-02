@@ -1,16 +1,20 @@
-package com.c7g24.bdaBalcarce.dtos;
+package com.bdabalcarce.demo.Dto;
 
 
-public class usersDto {
+import javax.validation.constraints.NotBlank;
 
+public class userDto {
+
+    @NotBlank
+    private  String userRol;
+    @NotBlank
     private String userName;
 
-
+    @NotBlank
     private String userLastname;
 
-
+    @NotBlank
     private String userDni;
-
 
     private String userEmail;
 
@@ -18,24 +22,35 @@ public class usersDto {
     private String userPhone;
 
 
-    private String userAddress;
+    private String userAdress;
+
 
     private String userVehicle;
 
-    private String userTime;
 
-    public usersDto() {
+    private String userAbailability;
+
+    public userDto() {
     }
 
-    public usersDto(String userName, String userLastname, String userDni, String userEmail, String userPhone, String userDireccion, String userVehicle, String userDiponibilidad) {
+    public userDto(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+        this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;
         this.userDni = userDni;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
-        this.userAddress = userDireccion;
+        this.userAdress = userAdress;
         this.userVehicle = userVehicle;
-        this.userTime = userDiponibilidad;
+        this.userAbailability = userAbailability;
+    }
+
+    public String getUserRol() {
+        return userRol;
+    }
+
+    public void setUserRol(String userRol) {
+        this.userRol = userRol;
     }
 
     public String getUserName() {
@@ -78,12 +93,12 @@ public class usersDto {
         this.userPhone = userPhone;
     }
 
-    public String getUserDireccion() {
-        return userAddress;
+    public String getUserAdress() {
+        return userAdress;
     }
 
-    public void setUserDireccion(String userDireccion) {
-        this.userAddress = userDireccion;
+    public void setUserAdress(String userAdress) {
+        this.userAdress = userAdress;
     }
 
     public String getUserVehicle() {
@@ -94,14 +109,11 @@ public class usersDto {
         this.userVehicle = userVehicle;
     }
 
-    public String getUserDiponibilidad() {
-        return userTime;
+    public String getUserAbailability() {
+        return userAbailability;
     }
 
-    public void setUserDiponibilidad(String userDiponibilidad) {
-        this.userTime = userDiponibilidad;
+    public void setUserAbailability(String userAbailability) {
+        this.userAbailability = userAbailability;
     }
 }
-
-
-

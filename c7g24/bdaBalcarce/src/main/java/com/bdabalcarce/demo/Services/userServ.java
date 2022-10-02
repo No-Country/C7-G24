@@ -1,9 +1,9 @@
-package com.c7g24.bdaBalcarce.service;
+package com.bdabalcarce.demo.Services;
 
-import com.c7g24.bdaBalcarce.entity.users;
-import com.c7g24.bdaBalcarce.repository.RUser;
+import com.bdabalcarce.demo.Entities.users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.bdabalcarce.demo.Repositories.userRepo;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -11,27 +11,26 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class usersS {
-    @Autowired
-    RUser rUser;
+public class userServ {
+    @Autowired userRepo userR;
 
     public List<users> list() {
-        return rUser.findAll();
+        return userR.findAll();
     }
 
     public Optional<users> getOne(int id) {
-        return rUser.findById(id);
+        return userR.findById(id);
     }
 
     public void save(users usuario) {
-        rUser.save(usuario);
+        userR.save(usuario);
     }
 
     public void delete(int id) {
-        rUser.deleteById(id);
+        userR.deleteById(id);
     }
 
     public boolean existById(int id) {
-        return rUser.existsById(id);
+        return userR.existsById(id);
     }
 }

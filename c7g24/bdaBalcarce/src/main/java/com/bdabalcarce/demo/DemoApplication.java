@@ -1,13 +1,14 @@
-package com.c7g24.bdaBalcarce;
+package com.bdabalcarce.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication()
-public class BdaBalcarceApplication {
+
+@SpringBootApplication
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BdaBalcarceApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }

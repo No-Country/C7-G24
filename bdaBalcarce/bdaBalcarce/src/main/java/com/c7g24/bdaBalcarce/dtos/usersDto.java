@@ -1,29 +1,28 @@
 package com.c7g24.bdaBalcarce.dtos;
 
-import javax.validation.constraints.NotBlank;
 
 public class usersDto {
-    @NotBlank
+
     private String userName;
 
-    @NotBlank
+
     private String userLastname;
 
-    @NotBlank
+
     private String userDni;
 
-    @NotBlank
+
     private String userEmail;
 
-    @NotBlank
+
     private String userPhone;
 
-    @NotBlank
-    private String userDireccion;
+
+    private String userAddress;
 
     private String userVehicle;
 
-    private String userDiponibilidad;
+    private String userTime;
 
     public usersDto() {
     }
@@ -34,9 +33,9 @@ public class usersDto {
         this.userDni = userDni;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
-        this.userDireccion = userDireccion;
+        this.userAddress = userDireccion;
         this.userVehicle = userVehicle;
-        this.userDiponibilidad = userDiponibilidad;
+        this.userTime = userDiponibilidad;
     }
 
     public String getUserName() {
@@ -80,11 +79,11 @@ public class usersDto {
     }
 
     public String getUserDireccion() {
-        return userDireccion;
+        return userAddress;
     }
 
     public void setUserDireccion(String userDireccion) {
-        this.userDireccion = userDireccion;
+        this.userAddress = userDireccion;
     }
 
     public String getUserVehicle() {
@@ -96,11 +95,11 @@ public class usersDto {
     }
 
     public String getUserDiponibilidad() {
-        return userDiponibilidad;
+        return userTime;
     }
 
     public void setUserDiponibilidad(String userDiponibilidad) {
-        this.userDiponibilidad = userDiponibilidad;
+        this.userTime = userDiponibilidad;
     }
 }
 

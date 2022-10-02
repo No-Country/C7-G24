@@ -1,7 +1,7 @@
 package com.c7g24.bdaBalcarce.service;
 
 import com.c7g24.bdaBalcarce.entity.users;
-import com.c7g24.bdaBalcarce.repository.usersR;
+import com.c7g24.bdaBalcarce.repository.RUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,36 +13,25 @@ import java.util.Optional;
 @Transactional
 public class usersS {
     @Autowired
-    static
-    usersR userRepo;
+    RUser rUser;
 
     public List<users> list() {
-        return userRepo.findAll();
+        return rUser.findAll();
     }
 
-    public static Optional<users> getOne(int id) {
-        return userRepo.findById(id);
+    public Optional<users> getOne(int id) {
+        return rUser.findById(id);
     }
 
     public void save(users usuario) {
-        userRepo.save(usuario);
+        rUser.save(usuario);
     }
 
     public void delete(int id) {
-        userRepo.deleteById(id);
+        rUser.deleteById(id);
     }
 
-    public static boolean existsById(int id){
-        return userRepo.existsById(id);
+    public boolean existById(int id) {
+        return rUser.existsById(id);
     }
-
-    public boolean existsByName(String userName){
-        return userRepo.existsByName(userName);
-    }
-    public boolean existsByLastname(String userLastname){
-        return userRepo.existsByLastname(userLastname);
-    }
-
-
-
 }

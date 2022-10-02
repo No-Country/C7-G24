@@ -5,19 +5,32 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
     private int id_user;
+
+
     private String userName;
+
     private String userLastname;
+
     private String userDni;
+
+
     private String userEmail;
+
+
     private String userPhone;
-    private String userDireccion;
+
+
+    private String userAddress;
+
     private String userVehicle;
-    private String userDiponibilidad;
+
+    private String userTime;
 
     public users() {
     }
@@ -28,9 +41,9 @@ public class users {
         this.userDni = userDni;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
-        this.userDireccion = userDireccion;
+        this.userAddress = userDireccion;
         this.userVehicle = userVehicle;
-        this.userDiponibilidad = userDiponibilidad;
+        this.userTime = userDiponibilidad;
     }
 
     public int getId_user() {
@@ -81,12 +94,12 @@ public class users {
         this.userPhone = userPhone;
     }
 
-    public String getUserDireccion() {
-        return userDireccion;
+    public String getUserAddress() {
+        return userAddress;
     }
 
-    public void setUserDireccion(String userDireccion) {
-        this.userDireccion = userDireccion;
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
     }
 
     public String getUserVehicle() {
@@ -97,11 +110,11 @@ public class users {
         this.userVehicle = userVehicle;
     }
 
-    public String getUserDiponibilidad() {
-        return userDiponibilidad;
+    public String getUserTime() {
+        return userTime;
     }
 
-    public void setUserDiponibilidad(String userDiponibilidad) {
-        this.userDiponibilidad = userDiponibilidad;
+    public void setUserTime(String userTime) {
+        this.userTime = userTime;
     }
 }

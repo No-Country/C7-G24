@@ -9,19 +9,16 @@ import javax.validation.constraints.Size;
 public class Ongs {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
-    private int id_ong;
-
-    @NotNull
-    @Size (max = 50)
-    @Column (name = "ong_name")
-    private String ongName;
-
     @NotNull
     @Size (max = 15)
     @Column (name = "ong_cuit")
     private String ongCuit;
 
+    @NotNull
+    @Size (max = 50)
+    @Column (name = "ong_name")
+    private String ongName;
+    
     @NotNull
     @Size (max = 50)
     @Column (name = "ong_reason")
@@ -63,13 +60,6 @@ public class Ongs {
         this.ongEmail = ongEmail;
     }
 
-    public int getId_ong() {
-        return id_ong;
-    }
-
-    public void setId_ong(int id_ong) {
-        this.id_ong = id_ong;
-    }
 
     public String getOngName() {
         return ongName;

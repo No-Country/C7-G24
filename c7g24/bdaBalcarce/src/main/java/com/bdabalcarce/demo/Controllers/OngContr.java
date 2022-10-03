@@ -1,9 +1,7 @@
 package com.bdabalcarce.demo.Controllers;
 
 
-import com.bdabalcarce.demo.Dto.CompanyDto;
 import com.bdabalcarce.demo.Dto.OngDto;
-import com.bdabalcarce.demo.Entities.Company;
 import com.bdabalcarce.demo.Entities.Message;
 import com.bdabalcarce.demo.Entities.Ongs;
 import com.bdabalcarce.demo.Services.OngServ;
@@ -41,7 +39,7 @@ public class OngContr {
 
         if (StringUtils.isBlank(ongDto.getOngPhone()) &&
                 StringUtils.isBlank(ongDto.getOngEmail()) ){
-            return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: ongPhone o ongEmail"),
+            return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: ongPhone u ongEmail"),
                     HttpStatus.BAD_REQUEST);
         }
 

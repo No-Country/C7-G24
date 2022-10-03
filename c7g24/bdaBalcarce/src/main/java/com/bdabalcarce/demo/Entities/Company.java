@@ -9,8 +9,10 @@ import javax.validation.constraints.Size;
 public class Company {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
-    private int id_company;
+    @NotNull
+    @Size (max = 15)
+    @Column(name = "co_cuit")
+    private String coCuit;
 
     @NotNull
     @Size(max = 80)
@@ -22,10 +24,6 @@ public class Company {
     @Column(name = "co_category")
     private String coCategory;
 
-    @NotNull
-    @Size (max = 15)
-    @Column(name = "co_cuit")
-    private String coCuit;
 
     @NotNull
     @Size (max = 25)
@@ -61,14 +59,6 @@ public class Company {
         this.coAdress = coAdress;
         this.coContactNm = coContactNm;
         this.coContactLn = coContactLn;
-    }
-
-    public int getId_company() {
-        return id_company;
-    }
-
-    public void setId_company(int id_company) {
-        this.id_company = id_company;
     }
 
     public String getCoName() {

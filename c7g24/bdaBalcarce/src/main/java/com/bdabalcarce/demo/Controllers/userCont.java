@@ -30,11 +30,10 @@ public class userCont {
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody userDto dtousuario) {
         if (StringUtils.isBlank(dtousuario.getUserName()) ||
-                StringUtils.isBlank(dtousuario.getUserRol()) ||
                 StringUtils.isBlank(dtousuario.getUserLastname()) ||
                 StringUtils.isBlank(dtousuario.getUserDni())){
 
-            return new ResponseEntity(new Message("Campo obligatorio"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Message("Campos obligatorio: Nombre, Apellido, Dni"),HttpStatus.BAD_REQUEST);
         }
 
         users usuario = new users(

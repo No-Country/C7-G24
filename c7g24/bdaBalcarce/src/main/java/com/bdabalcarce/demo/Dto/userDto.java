@@ -5,7 +5,7 @@ import javax.validation.constraints.NotBlank;
 
 public class userDto {
 
-    @NotBlank
+
     private  String userRol;
     @NotBlank
     private String userName;

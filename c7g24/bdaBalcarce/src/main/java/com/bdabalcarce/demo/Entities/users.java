@@ -14,7 +14,7 @@ public class users implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
     private int id_user;
 
-    @NotBlank
+
     @Size (max = 12)
     @Column(name = "user_rol")
     private String userRol;

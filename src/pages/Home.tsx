@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Home.css';
-import bal from '../assets/bal.png';
 import { Link } from 'react-router-dom';
+import CarouselComponent from '../components/container/CarouselComponent';
 
 const Home = () => {
   return (
@@ -22,7 +22,7 @@ const Home = () => {
         </p>
       </div>
       <div className="bg-circle">
-        <img className="bal" src={bal} alt="bal" />
+        <CarouselComponent />
       </div>
     </div>
   );

@@ -5,11 +5,21 @@ import DonateFoodForm from '../pure/DonateFoodForm';
 import VoluntaryForm from '../pure/VoluntaryForm';
 import SubmitButton from '../SubmitButton';
 import ContainerCheck from './ContainerCheck';
+import { useAppContext } from '../../context/Context';
 
 const ContainerDonate = () => {
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [mail, setMail] = useState('');
+  const [dni, setDni] = useState('');
+  const [categoryDonation, setCategoryDonation] = useState('');
+  const [quantityDonation, setQuantityDonation] = useState('');
   const [minorista, setMinorista] = useState(false);
   const [mayorista, setMayorista] = useState(false);
   const [validated, setValidated] = useState(false);
+
+  const context = useAppContext();
 
   const handleSubmit = (event: any) => {
     const form = event.currentTarget;
@@ -19,6 +29,18 @@ const ContainerDonate = () => {
     }
 
     setValidated(true);
+
+    const peopleDonation = {
+      id: dni,
+      name,
+      lastName,
+      phone,
+      mail,
+      categoryDonation,
+      quantityDonation,
+      /* FALTA SABER SI ES PERECEDERO O NO PERECERECEDERO */
+    };
+    context.createPeopleDonation(peopleDonation);
   };
 
   const handleOnClick = (event: any) => {
@@ -62,8 +84,18 @@ const ContainerDonate = () => {
         >
           Donante Mayorista
         </Button>
-        {minorista ? <VoluntaryForm /> : ''}
-        {minorista ? <DonateFoodForm /> : ''}
+        {minorista ? (
+          <VoluntaryForm
+            name={setName}
+            lastName={setLastName}
+            phone={setPhone}
+            mail={setMail}
+            dni={setDni}
+          />
+        ) : (
+          ''
+        )}
+        {minorista ? <DonateFoodForm category={setCategoryDonation} quantity={setQuantityDonation} /> : ''}
         {minorista ? <SubmitButton /> : ''}
         {mayorista ? <ContainerCheck /> : ''}
       </Form>

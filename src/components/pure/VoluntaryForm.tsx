@@ -1,44 +1,30 @@
-import React, { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
-/* formulario para vountario entrega de comida en puntos de ayuda */
-
-const VoluntaryForm = ({ person }: any) => {
-  const [nombre, setNombre] = useState('');
-  const [apellido, setApellido] = useState('');
-  const [telefono, setTelefono] = useState('');
-  const [horario, setHorario] = useState('');
-  const [mail, setMail] = useState('');
-  const [dni, setDni] = useState('');
-
+const VoluntaryForm = ({ name, lastName, phone, mail, dni }: any) => {
   const handleOnChange = (e: any) => {
-    const name = e.target.name;
-    switch (name) {
+    const names = e.target.name;
+    switch (names) {
       case 'nombres':
-        setNombre(e.target.value);
+        name(e.target.value);
         break;
       case 'apellidos':
-        setApellido(e.target.value);
+        lastName(e.target.value);
         break;
       case 'mail':
-        setMail(e.target.value);
+        mail(e.target.value);
         break;
       case 'dni':
-        setDni(e.target.value);
+        dni(e.target.value);
         break;
       case 'telefono':
-        setTelefono(e.target.value);
+        phone(e.target.value);
         break;
 
       default:
         break;
     }
-  };
-
-  const send = () => {
-    return person([nombre, apellido, dni, mail, telefono, horario]);
   };
 
   return (

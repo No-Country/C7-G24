@@ -1,9 +1,9 @@
 package com.bdabalcarce.demo.service;
 
-import com.bdabalcarce.demo.entity.user;
+import com.bdabalcarce.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.bdabalcarce.demo.repository.userRepo;
+import com.bdabalcarce.demo.repository.UserRepo;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -11,18 +11,19 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class userS {
-    @Autowired userRepo userR;
+public class UserS {
+    @Autowired
+    UserRepo userR;
 
-    public List<user> list() {
+    public List<User> list() {
         return userR.findAll();
     }
 
-    public Optional<user> getOne(int id) {
+    public Optional<User> getOne(int id) {
         return userR.findById(id);
     }
 
-    public void save(user usuario) {
+    public void save(User usuario) {
         userR.save(usuario);
     }
 

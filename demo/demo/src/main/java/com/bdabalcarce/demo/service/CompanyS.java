@@ -1,7 +1,7 @@
 package com.bdabalcarce.demo.service;
 
-import com.bdabalcarce.demo.entity.company;
-import com.bdabalcarce.demo.repository.companyRepo;
+import com.bdabalcarce.demo.entity.Company;
+import com.bdabalcarce.demo.repository.CompanyRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -14,20 +14,20 @@ import java.util.Optional;
 @Service
 @Transactional
 
-public class companyS {
+public class CompanyS {
 
     @Autowired
-    companyRepo companyR;
+    CompanyRepo companyR;
 
-    public List<company> list() {
+    public List<Company> list() {
         return companyR.findAll();
     }
 
-    public Optional<company> getOne(int id) {
+    public Optional<Company> getOne(int id) {
         return companyR.findById(id);
     }
 
-    public void save(company comp) {
+    public void save(Company comp) {
         companyR.save(comp);
     }
 

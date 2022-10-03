@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="company")
-public class company {
+public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
@@ -49,10 +49,10 @@ public class company {
     @Column(name = "co_ContactLn")
     private String coContactLn;
 
-    public company() {
+    public Company() {
     }
 
-    public company(String coName, String coCategory, String coCuit, String coEmail, String coPhone, String coAdress, String coContactNm, String coContactLn) {
+    public Company(String coName, String coCategory, String coCuit, String coEmail, String coPhone, String coAdress, String coContactNm, String coContactLn) {
         this.coName = coName;
         this.coCategory = coCategory;
         this.coCuit = coCuit;

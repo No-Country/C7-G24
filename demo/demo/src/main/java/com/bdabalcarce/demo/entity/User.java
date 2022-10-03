@@ -1,41 +1,62 @@
-package com.bdabalcarce.demo.Dto;
+package com.bdabalcarce.demo.entity;
 
-
-
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
+
+@Entity
+@Table(name="users")
+public class User implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
+    private int id_user;
 
 
-public class userDto {
+    @Size (max = 12)
+    @Column(name = "user_rol")
+    private String userRol;
 
-
-    private  String userRol;
     @NotBlank
+    @Size (max = 25)
+    @Column(name = "user_name")
     private String userName;
 
     @NotBlank
+    @Size (max = 25)
+    @Column(name = "user_lastname")
     private String userLastname;
 
     @NotBlank
+    @Size (max = 10)
+    @Column(name = "user_dni")
     private String userDni;
 
+
+    @Size (max = 25)
+    @Column(name = "user_email")
     private String userEmail;
 
-
+    @Size (max = 15)
+    @Column(name = "user_phone")
     private String userPhone;
 
-
+    @Size (max = 50)
+    @Column(name = "user_address")
     private String userAdress;
 
-
+    @Size (max = 10)
+    @Column(name = "user_vehicle")
     private String userVehicle;
 
-
+    @Size (max = 10)
+    @Column(name = "user_abailability")
     private String userAbailability;
 
-    public userDto() {
+    public User() {
     }
 
-    public userDto(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public User(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;
@@ -45,6 +66,14 @@ public class userDto {
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
+    }
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
 
     public String getUserRol() {

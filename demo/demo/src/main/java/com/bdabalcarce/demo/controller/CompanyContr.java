@@ -1,10 +1,10 @@
 package com.bdabalcarce.demo.controller;
 
 
-import com.bdabalcarce.demo.Dto.companyDto;
+import com.bdabalcarce.demo.Dto.CompanyDto;
 import com.bdabalcarce.demo.entity.Message;
-import com.bdabalcarce.demo.entity.company;
-import com.bdabalcarce.demo.service.companyS;
+import com.bdabalcarce.demo.entity.Company;
+import com.bdabalcarce.demo.service.CompanyS;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,17 +17,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping({"/companies"})
-public class companyController {
+public class CompanyContr {
     @Autowired
-    companyS coServ;
+    CompanyS coServ;
 
     @GetMapping("/list")
-    public ResponseEntity<List<company>> list() {
-        List<company> list = coServ.list();
+    public ResponseEntity<List<Company>> list() {
+        List<Company> list = coServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
     @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody companyDto coDto) {
+    public ResponseEntity<?> create(@RequestBody CompanyDto coDto) {
         if (StringUtils.isBlank(coDto.getCoName()) ||
                 StringUtils.isBlank(coDto.getCoCategory()) ||
                 StringUtils.isBlank(coDto.getCoCuit())  ||
@@ -41,7 +41,7 @@ public class companyController {
                     HttpStatus.BAD_REQUEST);
         }
 
-        company empresa = new company(
+        Company empresa = new Company(
                 coDto.getCoName(),
                 coDto.getCoCategory(),
                 coDto.getCoCuit(),

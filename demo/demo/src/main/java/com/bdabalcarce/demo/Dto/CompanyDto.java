@@ -4,7 +4,7 @@ package com.bdabalcarce.demo.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-public class companyDto {
+public class CompanyDto {
 
     @NotBlank
     private String coName;
@@ -31,10 +31,10 @@ public class companyDto {
     private String coContactLn;
 
 
-    public companyDto() {
+    public CompanyDto() {
     }
 
-    public companyDto(String coName, String coCategory, String coCuit, String coEmail, String coPhone, String coAddress, String coContactNm, String coContactLn) {
+    public CompanyDto(String coName, String coCategory, String coCuit, String coEmail, String coPhone, String coAddress, String coContactNm, String coContactLn) {
         this.coName = coName;
         this.coCategory = coCategory;
         this.coCuit = coCuit;

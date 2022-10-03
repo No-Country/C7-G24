@@ -9,9 +9,10 @@ import java.io.Serializable;
 @Table(name="users")
 public class User implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
-    private int id_user;
-
+    @NotBlank
+    @Size (max = 10)
+    @Column(name = "user_dni")
+    private String userDni;
 
     @Size (max = 12)
     @Column(name = "user_rol")
@@ -26,11 +27,6 @@ public class User implements Serializable {
     @Size (max = 25)
     @Column(name = "user_lastname")
     private String userLastname;
-
-    @NotBlank
-    @Size (max = 10)
-    @Column(name = "user_dni")
-    private String userDni;
 
 
     @Size (max = 25)
@@ -68,13 +64,6 @@ public class User implements Serializable {
         this.userAbailability = userAbailability;
     }
 
-    public int getId_user() {
-        return id_user;
-    }
-
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
-    }
 
     public String getUserRol() {
         return userRol;

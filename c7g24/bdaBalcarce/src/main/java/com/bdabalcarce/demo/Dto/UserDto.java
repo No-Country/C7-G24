@@ -3,7 +3,7 @@ package com.bdabalcarce.demo.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-public class userDto {
+public class UserDto {
 
 
     private  String userRol;
@@ -30,10 +30,10 @@ public class userDto {
 
     private String userAbailability;
 
-    public userDto() {
+    public UserDto() {
     }
 
-    public userDto(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public UserDto(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;

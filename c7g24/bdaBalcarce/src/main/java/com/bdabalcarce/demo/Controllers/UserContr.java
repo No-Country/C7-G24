@@ -1,9 +1,10 @@
 package com.bdabalcarce.demo.Controllers;
 
 
-import com.bdabalcarce.demo.Dto.userDto;
+import com.bdabalcarce.demo.Dto.UserDto;
 import com.bdabalcarce.demo.Entities.Message;
-import com.bdabalcarce.demo.Entities.users;
+import com.bdabalcarce.demo.Entities.Users;
+import com.bdabalcarce.demo.Services.UserServ;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,26 +18,26 @@ import java.util.List;
 @RestController
 
 @RequestMapping({"/users"})
-public class userCont {
+public class UserContr {
     @Autowired
-    com.bdabalcarce.demo.Services.userServ userServ;
+    UserServ userServ;
 
     @GetMapping ("/list")
-    public ResponseEntity<List<users>> list() {
-        List<users> list = userServ.list();
+    public ResponseEntity<List<Users>> list() {
+        List<Users> list = userServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody userDto dtousuario) {
+    public ResponseEntity<?> create(@RequestBody UserDto dtousuario) {
         if (StringUtils.isBlank(dtousuario.getUserName()) ||
                 StringUtils.isBlank(dtousuario.getUserLastname()) ||
                 StringUtils.isBlank(dtousuario.getUserDni())){
 
-            return new ResponseEntity(new Message("Campos obligatorio: Nombre, Apellido, Dni"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Message("Campos obligatorios: Nombre, Apellidoy Dni"),HttpStatus.BAD_REQUEST);
         }
 
-        users usuario = new users(
+        Users usuario = new Users(
                 dtousuario.getUserRol(),
                 dtousuario.getUserName(),
                 dtousuario.getUserLastname(),

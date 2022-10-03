@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Entity
 @Table (name="users")
-public class users implements Serializable {
+public class Users implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
     private int id_user;
@@ -55,10 +55,10 @@ public class users implements Serializable {
     @Column(name = "user_abailability")
     private String userAbailability;
 
-    public users() {
+    public Users() {
     }
 
-    public users(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public Users(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;

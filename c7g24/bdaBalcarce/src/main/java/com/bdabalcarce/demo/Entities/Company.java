@@ -1,7 +1,7 @@
 package com.bdabalcarce.demo.Entities;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -12,27 +12,27 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //campo primary key autogenerado
     private int id_company;
 
-    @NotBlank
+    @NotNull
     @Size(max = 80)
     @Column(name = "co_name")
     private String coName;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "co_category")
     private String coCategory;
 
-    @NotBlank
+    @NotNull
     @Size (max = 15)
     @Column(name = "co_cuit")
     private String coCuit;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "co_email")
     private String coEmail;
 
-    @NotBlank
+    @NotNull
     @Size (max = 15)
     @Column(name = "co_phone")
     private String coPhone;

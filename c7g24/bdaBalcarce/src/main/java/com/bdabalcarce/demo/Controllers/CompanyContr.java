@@ -1,10 +1,8 @@
 package com.bdabalcarce.demo.Controllers;
 
 import com.bdabalcarce.demo.Dto.CompanyDto;
-import com.bdabalcarce.demo.Dto.UserDto;
 import com.bdabalcarce.demo.Entities.Company;
 import com.bdabalcarce.demo.Entities.Message;
-import com.bdabalcarce.demo.Entities.Users;
 import com.bdabalcarce.demo.Services.CompanyServ;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

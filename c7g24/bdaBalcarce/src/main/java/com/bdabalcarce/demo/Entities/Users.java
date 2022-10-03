@@ -2,7 +2,7 @@ package com.bdabalcarce.demo.Entities;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -19,17 +19,17 @@ public class Users implements Serializable {
     @Column(name = "user_rol")
     private String userRol;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "user_name")
     private String userName;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "user_lastname")
     private String userLastname;
 
-    @NotBlank
+    @NotNull
     @Size (max = 10)
     @Column(name = "user_dni")
     private String userDni;

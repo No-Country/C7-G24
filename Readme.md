@@ -4,6 +4,11 @@
 ## Descripción
 
 Este repositorio contiene el proyecto final desarrollado en  `No Country`.
+Este proyecto consiste en generar un control del stock de alimentos que se recibe mediante donaciones 
+en la Ciudad de Balcarce. Estas donaciones pueden ser de empresas o de ciudadanos de la ciudad. 
+El objetivo es controlar el stock de alimentos para conocer en que rubro alimenticio hay déficit, 
+orientar las donaciones hacia ese déficit y mejorar así la red solidaria local. 
+
 
 
 Si quieres correr este proyecto de forma local debes seguir los siguientes pasos:
@@ -28,7 +33,6 @@ Si quieres correr este proyecto de forma local debes seguir los siguientes pasos
 * ***Figma***
 ## Equipo de Trabajo :
 * Mauro Arteaga ***Front-end Developer***
-* Lucia Cerpa ***Front-end Developer***
 * Patricia Cor ***Front-end Developer***
 * Federico Di cillo ***Back-end Developer***
 * Rocio Lamberti ***UX-UI Designer***

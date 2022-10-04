@@ -28,6 +28,15 @@ public class UserContr {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<User> getById(@PathVariable("id") String id) {
+        if (!userServ.existById(id)) {
+            return new ResponseEntity(new Message("No existe"), HttpStatus.NOT_FOUND);
+        }
+        User persona = userServ.getOne(id).get();
+        return new ResponseEntity(persona, HttpStatus.OK);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody UserDto dtousuario) {
         if (StringUtils.isBlank(dtousuario.getUserName()) ||

@@ -3,7 +3,9 @@ package com.bdabalcarce.demo.Controllers;
 import com.bdabalcarce.demo.Dto.DonationDto;
 import com.bdabalcarce.demo.Entities.Donation;
 import com.bdabalcarce.demo.Entities.Message;
+import com.bdabalcarce.demo.Entities.User;
 import com.bdabalcarce.demo.Services.DonationServ;
+import com.bdabalcarce.demo.Services.UserServ;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +21,7 @@ import java.util.List;
 public class DonationContr {
     @Autowired
     DonationServ donationS;
+
 
     @GetMapping("/list")
     public ResponseEntity<List<Donation>> list() {
@@ -44,7 +47,8 @@ public class DonationContr {
                dtoDonation.getDonExpiration(),
                dtoDonation.getDonDetails(),
                 dtoDonation.getUser(),
-                dtoDonation.getCompany());
+                dtoDonation.getCompany()
+               );
 
         donationS.save(donacion);
 

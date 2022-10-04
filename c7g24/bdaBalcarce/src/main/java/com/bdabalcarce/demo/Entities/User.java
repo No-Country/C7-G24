@@ -143,6 +143,6 @@ public class User implements Serializable {
         this.userAbailability = userAbailability;
     }
 
-   
+
 }
 

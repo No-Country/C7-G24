@@ -34,14 +34,12 @@ public class Donation {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     @JoinColumn(name = "user_dni")
-    @JsonIgnoreProperties({"hibernateLazyInitialize","handler"})
     @Size(max = 10)
     private User user;
 
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     @JoinColumn(name = "co_cuit")
-    @JsonIgnoreProperties({"hibernateLazyInitialize","handler"})
     @Size(max = 15)
     private Company company;
 

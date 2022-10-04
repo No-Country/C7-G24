@@ -1,15 +1,18 @@
 package com.bdabalcarce.demo.entity;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.List;
+
 
 @Entity
-@Table(name="users")
+@Table (name="users")
 public class User implements Serializable {
     @Id
-    @NotBlank
+    @NotNull
     @Size (max = 10)
     @Column(name = "user_dni")
     private String userDni;
@@ -18,16 +21,15 @@ public class User implements Serializable {
     @Column(name = "user_rol")
     private String userRol;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "user_name")
     private String userName;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "user_lastname")
     private String userLastname;
-
 
     @Size (max = 25)
     @Column(name = "user_email")
@@ -49,21 +51,25 @@ public class User implements Serializable {
     @Column(name = "user_abailability")
     private String userAbailability;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private List<Donation> donaciones;
+
+
     public User() {
     }
 
-    public User(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+        this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;
-        this.userDni = userDni;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
-    }
 
+    }
 
     public String getUserRol() {
         return userRol;
@@ -136,4 +142,6 @@ public class User implements Serializable {
     public void setUserAbailability(String userAbailability) {
         this.userAbailability = userAbailability;
     }
+
+
 }

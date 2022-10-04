@@ -1,36 +1,38 @@
 package com.bdabalcarce.demo.entity;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
-@Table(name="company")
+@Table(name="companies")
 public class Company {
 
     @Id
-    @NotBlank
+    @NotNull
     @Size (max = 15)
     @Column(name = "co_cuit")
     private String coCuit;
 
-
-    @NotBlank
+    @NotNull
     @Size(max = 80)
     @Column(name = "co_name")
     private String coName;
 
-    @NotBlank
+    @NotNull
     @Size (max = 25)
     @Column(name = "co_category")
     private String coCategory;
 
-    @NotBlank
+
+    @NotNull
     @Size (max = 25)
     @Column(name = "co_email")
     private String coEmail;
 
-    @NotBlank
+    @NotNull
     @Size (max = 15)
     @Column(name = "co_phone")
     private String coPhone;
@@ -47,6 +49,10 @@ public class Company {
     @Column(name = "co_ContactLn")
     private String coContactLn;
 
+    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private List<Donation> donaciones;
+
+
     public Company() {
     }
 
@@ -60,7 +66,6 @@ public class Company {
         this.coContactNm = coContactNm;
         this.coContactLn = coContactLn;
     }
-
 
     public String getCoName() {
         return coName;

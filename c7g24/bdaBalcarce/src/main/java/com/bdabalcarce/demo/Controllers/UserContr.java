@@ -46,7 +46,8 @@ public class UserContr {
                 dtousuario.getUserPhone(),
                 dtousuario.getUserAdress(),
                 dtousuario.getUserVehicle(),
-                dtousuario.getUserAbailability());
+                dtousuario.getUserAbailability()
+                );
         userServ.save(usuario);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);

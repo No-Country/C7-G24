@@ -58,19 +58,18 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+        this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;
-        this.userDni = userDni;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
+
     }
-
-
 
     public String getUserRol() {
         return userRol;
@@ -143,5 +142,7 @@ public class User implements Serializable {
     public void setUserAbailability(String userAbailability) {
         this.userAbailability = userAbailability;
     }
+
+   
 }
 

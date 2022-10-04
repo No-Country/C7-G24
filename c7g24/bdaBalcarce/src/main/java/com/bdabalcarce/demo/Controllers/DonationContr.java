@@ -32,6 +32,11 @@ public class DonationContr {
 
             return new ResponseEntity(new Message("Campos obligatorios: donCategory"),HttpStatus.BAD_REQUEST);
         }
+        if (StringUtils.isBlank((CharSequence) dtoDonation.getUser()) &&
+                StringUtils.isBlank((CharSequence) dtoDonation.getCompany()) ){
+            return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: user(dni) o company(cuit)"),
+                    HttpStatus.BAD_REQUEST);
+        }
 
        Donation donacion = new Donation(
               dtoDonation.getDonCategory(),

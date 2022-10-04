@@ -1,7 +1,10 @@
 package com.bdabalcarce.demo.Dto;
 
 
+import com.bdabalcarce.demo.Entities.Donation;
+
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
 public class UserDto {
 
@@ -30,8 +33,11 @@ public class UserDto {
 
     private String userAbailability;
 
+
+
     public UserDto() {
     }
+
 
     public UserDto(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userRol = userRol;
@@ -43,6 +49,7 @@ public class UserDto {
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
+
     }
 
     public String getUserRol() {
@@ -116,4 +123,6 @@ public class UserDto {
     public void setUserAbailability(String userAbailability) {
         this.userAbailability = userAbailability;
     }
+
+
 }

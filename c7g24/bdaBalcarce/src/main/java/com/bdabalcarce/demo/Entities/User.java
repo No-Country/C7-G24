@@ -5,11 +5,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
 @Table (name="users")
-public class Users implements Serializable {
+public class User implements Serializable {
     @Id
     @NotNull
     @Size (max = 10)
@@ -29,7 +30,6 @@ public class Users implements Serializable {
     @Size (max = 25)
     @Column(name = "user_lastname")
     private String userLastname;
-
 
     @Size (max = 25)
     @Column(name = "user_email")
@@ -51,10 +51,14 @@ public class Users implements Serializable {
     @Column(name = "user_abailability")
     private String userAbailability;
 
-    public Users() {
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private List<Donation> donaciones;
+
+
+    public User() {
     }
 
-    public Users(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public User(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;

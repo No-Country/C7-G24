@@ -3,7 +3,7 @@ package com.bdabalcarce.demo.Controllers;
 
 import com.bdabalcarce.demo.Dto.OngDto;
 import com.bdabalcarce.demo.Entities.Message;
-import com.bdabalcarce.demo.Entities.Ongs;
+import com.bdabalcarce.demo.Entities.Ong;
 import com.bdabalcarce.demo.Services.OngServ;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,8 @@ public class OngContr {
     OngServ ongServ;
 
     @GetMapping("/list")
-    public ResponseEntity<List<Ongs>> list() {
-        List<Ongs> list = ongServ.list();
+    public ResponseEntity<List<Ong>> list() {
+        List<Ong> list = ongServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
     @PostMapping("/create")
@@ -43,7 +43,7 @@ public class OngContr {
                     HttpStatus.BAD_REQUEST);
         }
 
-        Ongs ong = new Ongs(
+        Ong ong = new Ong(
                 ongDto.getOngName(),
                 ongDto.getOngCuit(),
                 ongDto.getOngReason(),

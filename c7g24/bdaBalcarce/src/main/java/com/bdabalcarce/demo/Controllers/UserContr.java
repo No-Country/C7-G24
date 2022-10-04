@@ -3,7 +3,7 @@ package com.bdabalcarce.demo.Controllers;
 
 import com.bdabalcarce.demo.Dto.UserDto;
 import com.bdabalcarce.demo.Entities.Message;
-import com.bdabalcarce.demo.Entities.Users;
+import com.bdabalcarce.demo.Entities.User;
 import com.bdabalcarce.demo.Services.UserServ;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +23,8 @@ public class UserContr {
     UserServ userServ;
 
     @GetMapping ("/list")
-    public ResponseEntity<List<Users>> list() {
-        List<Users> list = userServ.list();
+    public ResponseEntity<List<User>> list() {
+        List<User> list = userServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
@@ -37,7 +37,7 @@ public class UserContr {
             return new ResponseEntity(new Message("Campos obligatorios: Nombre, Apellidoy Dni"),HttpStatus.BAD_REQUEST);
         }
 
-        Users usuario = new Users(
+        User usuario = new User(
                 dtousuario.getUserRol(),
                 dtousuario.getUserName(),
                 dtousuario.getUserLastname(),

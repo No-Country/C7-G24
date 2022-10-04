@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table (name = "ongs")
-public class Ongs {
+public class Ong {
 
     @Id
     @NotNull
@@ -18,7 +18,7 @@ public class Ongs {
     @Size (max = 50)
     @Column (name = "ong_name")
     private String ongName;
-    
+
     @NotNull
     @Size (max = 50)
     @Column (name = "ong_reason")
@@ -46,10 +46,10 @@ public class Ongs {
     @Column (name = "ong_email")
     private String ongEmail;
 
-    public Ongs() {
+    public Ong() {
     }
 
-    public Ongs(String ongName, String ongCuit, String ongReason, String ongHeadNm, String ongHeadLn, String ongAddress, String ongPhone, String ongEmail) {
+    public Ong(String ongName, String ongCuit, String ongReason, String ongHeadNm, String ongHeadLn, String ongAddress, String ongPhone, String ongEmail) {
         this.ongName = ongName;
         this.ongCuit = ongCuit;
         this.ongReason = ongReason;

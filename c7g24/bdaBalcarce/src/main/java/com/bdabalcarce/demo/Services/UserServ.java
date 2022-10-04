@@ -1,6 +1,7 @@
 package com.bdabalcarce.demo.Services;
 
-import com.bdabalcarce.demo.Entities.Users;
+
+import com.bdabalcarce.demo.Entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bdabalcarce.demo.Repositories.UserRepo;
@@ -15,23 +16,25 @@ public class UserServ {
     @Autowired
     UserRepo userR;
 
-    public List<Users> list() {
+    public List<User> list() {
         return userR.findAll();
     }
 
-    public Optional<Users> getOne(int id) {
+    public Optional<User> getOne(String id) {
         return userR.findById(id);
     }
 
-    public void save(Users usuario) {
+    public void save(User usuario) {
         userR.save(usuario);
     }
 
-    public void delete(int id) {
+    public void delete(String id) {
         userR.deleteById(id);
     }
 
-    public boolean existById(int id) {
+    public boolean existById(String id) {
         return userR.existsById(id);
     }
+
+
 }

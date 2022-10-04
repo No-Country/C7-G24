@@ -1,7 +1,6 @@
 package com.bdabalcarce.demo.Services;
 
-import com.bdabalcarce.demo.Entities.Company;
-import com.bdabalcarce.demo.Entities.Ongs;
+import com.bdabalcarce.demo.Entities.Ong;
 import com.bdabalcarce.demo.Repositories.OngRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,15 +15,15 @@ public class OngServ {
 
     @Autowired
     OngRepo ongR;
-    public List<Ongs> list() {
+    public List<Ong> list() {
         return ongR.findAll();
     }
 
-    public Optional<Ongs> getOne(int id) {
+    public Optional<Ong> getOne(int id) {
         return ongR.findById(id);
     }
 
-    public void save(Ongs ong) {
+    public void save(Ong ong) {
         ongR.save(ong);
     }
 

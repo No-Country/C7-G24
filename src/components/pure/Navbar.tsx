@@ -1,20 +1,21 @@
 import React from 'react';
 import '../../styles/NavBar.css';
 import { NavLink, Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logoPicture from '../../assets/logo.png';
+import logoPicture from '../../assets/logoBalcarce.png';
 
 const NavBar = () => {
   return (
-    <>
+    <div>
       <Navbar variant="light">
-        <div className="d-flex  gap-5">
-          <Link to="home" className="mx-5">
-            <img src={logoPicture} alt="BDA" width="50" />
+        <div>
+          <Link to="home">
+            <img src={logoPicture} alt="BDA" className="logo" />
           </Link>
-          <Nav className="d-flex  gap-5 mt-3 ">
+        </div>
+        <div className="d-flex">
+          <Nav className="d-flex nav  gap-5 mt-3 ">
             <NavLink
               to="home"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
@@ -22,24 +23,37 @@ const NavBar = () => {
               Sobre Nosotros
             </NavLink>
             <NavLink
-              to="donate"
-              className={({ isActive }) => (isActive ? 'link active' : 'link')}
-            >
-              Doná
-            </NavLink>
-            <NavLink
               to="forms"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
-              Ser Voluntario
+              Quienes Participan
             </NavLink>
-            <div className="botonR">
-              <Link to="recibirAyuda">Recibir Ayuda</Link>
+            <NavLink
+              to="donate"
+              className={({ isActive }) => (isActive ? 'link active' : 'link')}
+            >
+              Novedades
+            </NavLink>
+            <NavLink
+              to="recibirAyuda"
+              className={({ isActive }) => (isActive ? 'link active' : 'link')}
+            >
+              Contacto
+            </NavLink>
+            <div>
+              <Link to="recibirAyuda" className="botonR letras">
+                Recibir Ayuda
+              </Link>
+            </div>
+            <div>
+              <Link to="recibirAyuda" className="botonI">
+                Quiero Ayudar
+              </Link>
             </div>
           </Nav>
         </div>
       </Navbar>
-    </>
+    </div>
   );
 };
 

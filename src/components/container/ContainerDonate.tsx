@@ -15,6 +15,7 @@ const ContainerDonate = () => {
   const [dni, setDni] = useState('');
   const [categoryDonation, setCategoryDonation] = useState('');
   const [quantityDonation, setQuantityDonation] = useState('');
+  const [infoFood, setInfoFood] = useState('');
   const [minorista, setMinorista] = useState(false);
   const [mayorista, setMayorista] = useState(false);
   const [validated, setValidated] = useState(false);
@@ -38,7 +39,7 @@ const ContainerDonate = () => {
       mail,
       categoryDonation,
       quantityDonation,
-      /* FALTA SABER SI ES PERECEDERO O NO PERECERECEDERO */
+      infoFood,
     };
     context.createPeopleDonation(peopleDonation);
   };
@@ -95,10 +96,18 @@ const ContainerDonate = () => {
         ) : (
           ''
         )}
-        {minorista ? <DonateFoodForm category={setCategoryDonation} quantity={setQuantityDonation} /> : ''}
+        {minorista ? (
+          <DonateFoodForm
+            category={setCategoryDonation}
+            quantity={setQuantityDonation}
+            info={setInfoFood}
+          />
+        ) : (
+          ''
+        )}
         {minorista ? <SubmitButton /> : ''}
-        {mayorista ? <ContainerCheck /> : ''}
       </Form>
+      {mayorista ? <ContainerCheck /> : ''}
     </div>
   );
 };

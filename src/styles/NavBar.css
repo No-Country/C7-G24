@@ -4,7 +4,13 @@
   /* grey */
   --grey-500: black;
 }
-
+.logo {
+  position: absolute;
+  width: 80px;
+  height: 35px;
+  left: 110px;
+  top: 15px;
+}
 .navBar {
   width: 90vw;
   max-width: var(--max-width);
@@ -14,15 +20,41 @@
 }
 
 .link {
+  font-weight: 500;
   text-decoration: none;
   color: var(--grey-500);
 }
 .navbar {
   background-color: #f5f3f3;
 }
+.nav {
+  margin-left: 250px;
+}
+
 .active {
   color: #8c30f5;
 }
 .link:hover {
   color: #8c30f5;
+}
+.botonI {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 32px;
+  gap: 10px;
+  width: 175px;
+  height: 48px;
+  background: #8c30f5;
+  border-radius: 6px;
+  color: #ffff;
+  margin-top: -12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.botonI:hover {
+  color: #ffff;
+}
+.letras {
+  font-weight: 500;
 }

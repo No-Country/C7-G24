@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
-
 import VoluntaryForm from '../pure/VoluntaryForm';
 import VehicleForm from '../pure/VehicleForm';
 import ScheduleForm from '../pure/ScheduleForm';

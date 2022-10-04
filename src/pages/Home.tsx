@@ -2,11 +2,13 @@ import React from 'react';
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
 import CarouselComponent from '../components/container/CarouselComponent';
-
+import Int from '../assets/int.png';
+import bal from '../assets/bal.png';
+import Header from '../assets/header.png';
 const Home = () => {
   return (
-    <div className="container">
-      <div className="container-left">
+    <div>
+      <div className="container">
         <h1>Sumate como donante</h1>
         <p>
           Somos una organización sin fines de lucro, y trabajamos con el
@@ -20,9 +22,56 @@ const Home = () => {
             Quiero Ayudar!
           </Link>
         </p>
+        <div className="bg-circle">
+          <CarouselComponent />
+        </div>
       </div>
-      <div className="bg-circle">
-        <CarouselComponent />
+      <div className="cite">
+        <div>
+          <img src={Int} className="cite-Int " alt="int"></img>
+          <p className="cite-p">
+            Trabajamos para reducir el hambre, mejorar la nutrición y evitar el
+            desperdicio de alimentos. Recibimos grandes donaciones de alimentos
+            y productos y los distribuimos entre comedores y otras
+            organizaciones sociales que dan de comer a personas que lo
+            necesitan.
+          </p>
+        </div>
+      </div>
+      <div className="container">
+        <div className="container-img">
+          <p className="comotrabajamos">Como Trabajamos</p>
+          <img src={bal} alt="" className="bal-img" />
+        </div>
+        <div className="container-CTrabajamos">
+          <div>
+            <div className="span1">1 </div>
+            <p className="container-color paso1">Paso 1</p>
+            <p className="container-color">
+              Recibimos donaciones de alimentos por parte de empresas,
+              productores, supermercados y mayoritas.
+            </p>
+          </div>
+        </div>
+        <div className="container-CTrabajamos2">
+          <div>
+            <div className="span2">2</div>
+            <p className="container-color2 paso2">Paso 2</p>
+            <p className="container-color2">
+              Los clasificamos con ayuda de voluntarios
+            </p>
+          </div>
+          <div>
+            <div className="span3">3</div>
+            <p className="container-color3 paso3">Paso 3</p>
+            <p className="container-color3">
+              Los almacenamos en nuestro depósito
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="container-header">
+        <img src={Header} alt="" className="conteo" />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 package com.bdabalcarce.demo.Entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -31,13 +31,13 @@ public class Donation {
     @Column (name = "don_details")
     private String donDetails;
 
-
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     @JoinColumn(name = "user_dni")
     @Size(max = 10)
     private User user;
 
-
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     @JoinColumn(name = "co_cuit")
     @Size(max = 15)

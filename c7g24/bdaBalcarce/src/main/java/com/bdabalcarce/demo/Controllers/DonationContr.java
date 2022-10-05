@@ -12,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.List;
 
 
@@ -21,6 +20,7 @@ import java.util.List;
 public class DonationContr {
     @Autowired
     DonationServ donationS;
+    @Autowired UserServ userS;
 
 
     @GetMapping("/list")
@@ -28,6 +28,7 @@ public class DonationContr {
         List<Donation> list = donationS.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
+
 
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DonationDto dtoDonation) {
@@ -40,7 +41,6 @@ public class DonationContr {
             return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: user(dni) o company(cuit)"),
                     HttpStatus.BAD_REQUEST);
         }
-
        Donation donacion = new Donation(
               dtoDonation.getDonCategory(),
                dtoDonation.getDonPerishable(),

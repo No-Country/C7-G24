@@ -4,6 +4,7 @@ package com.bdabalcarce.demo.Dto;
 import com.bdabalcarce.demo.Entities.Donation;
 
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDto {
@@ -33,8 +34,7 @@ public class UserDto {
 
     private String userAbailability;
 
-
-
+    private List<Donation> donaciones = new ArrayList<Donation>();
     public UserDto() {
     }
 
@@ -124,5 +124,11 @@ public class UserDto {
         this.userAbailability = userAbailability;
     }
 
+    public List<Donation> getDonaciones() {
+        return donaciones;
+    }
 
+    public void setDonaciones(List<Donation> donaciones) {
+        this.donaciones = donaciones;
+    }
 }

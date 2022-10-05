@@ -47,15 +47,16 @@ public class UserContr {
         }
 
         User usuario = new User(
+                dtousuario.getUserDni(),
                 dtousuario.getUserRol(),
                 dtousuario.getUserName(),
                 dtousuario.getUserLastname(),
-                dtousuario.getUserDni(),
                 dtousuario.getUserEmail(),
                 dtousuario.getUserPhone(),
                 dtousuario.getUserAdress(),
                 dtousuario.getUserVehicle(),
-                dtousuario.getUserAbailability()
+                dtousuario.getUserAbailability(),
+                dtousuario.getDonaciones()
                 );
         userServ.save(usuario);
 

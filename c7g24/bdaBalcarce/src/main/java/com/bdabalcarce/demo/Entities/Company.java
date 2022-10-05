@@ -3,6 +3,7 @@ package com.bdabalcarce.demo.Entities;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -49,7 +50,7 @@ public class Company {
     private String coContactLn;
 
     @OneToMany(mappedBy = "company", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    private List<Donation> donaciones;
+    private List<Donation> donaciones = new ArrayList<Donation>();
 
 
     public Company() {
@@ -128,5 +129,13 @@ public class Company {
 
     public void setCoContactLn(String coContactLn) {
         this.coContactLn = coContactLn;
+    }
+
+    public List<Donation> getDonaciones() {
+        return donaciones;
+    }
+
+    public void setDonaciones(List<Donation> donaciones) {
+        this.donaciones = donaciones;
     }
 }

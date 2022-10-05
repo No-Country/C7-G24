@@ -1,9 +1,11 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 h1 {
   width: 540px;
   height: 196px;
   margin-top: 50px;
-  font-family: 'Inter';
-  font-style: normal;
+
   font-weight: 800;
   font-size: 72px;
   line-height: 98px;
@@ -17,8 +19,6 @@ h1 {
 p {
   width: 540px;
   height: 288px;
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
@@ -62,17 +62,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
 .form-check {
   margin-top: 10px;
 }
-.botonR {
-  background-color: #f1e4ff;
-  color: #8c30f5;
-  border-radius: 6px;
-  padding: 12px 32px;
-  margin-top: -12px;
-  text-decoration: none;
-}
-.botonR:hover {
-  color: #8c30f5;
-}
 
 .bg-circle {
   position: absolute;
@@ -114,8 +103,8 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
 .bal-img {
   margin-top: -170px;
   margin-left: -15px;
-  width: 500px;
-  height: 525px;
+  width: 550px;
+  height: 500px;
 }
 .container-CTrabajamos {
   margin-left: 600px;
@@ -137,7 +126,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
   text-align: center;
   padding-top: 15px;
   margin-left: 10px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -152,8 +140,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
   text-align: center;
   padding-top: 15px;
   margin-left: 10px;
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 800;
   font-size: 48px;
   line-height: 64px;
@@ -166,7 +152,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
   text-align: center;
   padding-top: 15px;
   margin-left: 10px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -176,8 +161,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
 .container-color {
   width: 299px;
   height: 96px;
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
@@ -190,8 +173,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
 .container-color2 {
   width: 299px;
   height: 96px;
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
@@ -203,8 +184,6 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
 .container-color3 {
   width: 299px;
   height: 96px;
-  font-family: 'Inter';
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;

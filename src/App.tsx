@@ -6,6 +6,8 @@ import Donate from './pages/Donate';
 import FormPages from './pages/FormPages';
 import Home from './pages/Home';
 import NeedHelp from './pages/NeedHelp';
+import News from './pages/News';
+import ThoseWhoParticipate from './pages/ThoseWhoParticipate';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
+          <Route path="thosewhoparticipate" element={<ThoseWhoParticipate />} />
+          <Route path="news" element={<News />} />
           <Route path="forms" element={<FormPages />} />
           <Route path="donate" element={<Donate />} />
           <Route path="recibirAyuda" element={<NeedHelp />} />

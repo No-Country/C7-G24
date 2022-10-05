@@ -23,13 +23,13 @@ const NavBar = () => {
               Sobre Nosotros
             </NavLink>
             <NavLink
-              to="forms"
+              to="thosewhoparticipate"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Quienes Participan
             </NavLink>
             <NavLink
-              to="donate"
+              to="news"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Novedades

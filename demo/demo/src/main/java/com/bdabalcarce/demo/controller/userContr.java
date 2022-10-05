@@ -28,6 +28,15 @@ public class userContr {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<User> getById(@PathVariable("id") String id) {
+        if (!userServ.existById(Integer.parseInt(id))) {
+            return new ResponseEntity(new Message("No existe"), HttpStatus.NOT_FOUND);
+        }
+        User persona = userServ.getOne(Integer.parseInt(id)).get();
+        return new ResponseEntity(persona, HttpStatus.OK);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody UserDto dtousuario) {
         if (StringUtils.isBlank(dtousuario.getUserName()) ||
@@ -38,15 +47,18 @@ public class userContr {
         }
 
         User usuario = new User(
+                dtousuario.getUserDni(),
                 dtousuario.getUserRol(),
                 dtousuario.getUserName(),
                 dtousuario.getUserLastname(),
-                dtousuario.getUserDni(),
                 dtousuario.getUserEmail(),
                 dtousuario.getUserPhone(),
                 dtousuario.getUserAdress(),
                 dtousuario.getUserVehicle(),
-                dtousuario.getUserAbailability());
+                dtousuario.getUserAbailability(),
+                dtousuario.getDonaciones()
+        );
+
         userServ.save(usuario);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);

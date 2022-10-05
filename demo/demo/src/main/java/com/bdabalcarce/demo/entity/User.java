@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -52,13 +53,14 @@ public class User implements Serializable {
     private String userAbailability;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    private List<Donation> donaciones;
+    private List<Donation> donaciones = new ArrayList<Donation>();
 
 
     public User() {
     }
 
-    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+
+    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability, List<Donation> donaciones) {
         this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
@@ -68,7 +70,7 @@ public class User implements Serializable {
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
-
+        this.donaciones = donaciones;
     }
 
     public String getUserRol() {
@@ -143,6 +145,12 @@ public class User implements Serializable {
         this.userAbailability = userAbailability;
     }
 
+    public List<Donation> getDonaciones() {
+        return donaciones;
+    }
 
+    public void setDonaciones(List<Donation> donaciones) {
+        this.donaciones = donaciones;
+    }
 }
 

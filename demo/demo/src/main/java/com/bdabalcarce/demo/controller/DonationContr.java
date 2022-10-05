@@ -1,9 +1,14 @@
 package com.bdabalcarce.demo.controller;
 
 import com.bdabalcarce.demo.Dto.DonationDto;
+
 import com.bdabalcarce.demo.entity.Donation;
 import com.bdabalcarce.demo.entity.Message;
+
 import com.bdabalcarce.demo.service.DonationS;
+import com.bdabalcarce.demo.service.UserS;
+
+import com.sun.istack.NotNull;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,12 +24,15 @@ import java.util.List;
 public class DonationContr {
     @Autowired
     DonationS donationS;
+    @Autowired UserS userS;
+
 
     @GetMapping("/list")
     public ResponseEntity<List<Donation>> list() {
         List<Donation> list = donationS.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
+
 
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DonationDto dtoDonation) {
@@ -37,17 +45,19 @@ public class DonationContr {
             return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: user(dni) o company(cuit)"),
                     HttpStatus.BAD_REQUEST);
         }
-
         Donation donacion = new Donation(
                 dtoDonation.getDonCategory(),
                 dtoDonation.getDonPerishable(),
                 dtoDonation.getDonExpiration(),
                 dtoDonation.getDonDetails(),
                 dtoDonation.getUser(),
-                dtoDonation.getCompany());
+                dtoDonation.getCompany()
+        );
 
         donationS.save(donacion);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);
     }
 }
+
+//cambio el isBlank por isEmpty 19:12

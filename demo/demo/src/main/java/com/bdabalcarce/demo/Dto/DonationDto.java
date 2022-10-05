@@ -82,3 +82,16 @@ public class DonationDto {
         this.company = company;
     }
 }
+
+   /* public String getCoCuit() {
+        return coCuit;
+    }
+
+    public void setCoCuit(String coCuit) {
+        this.coCuit = coCuit;
+    }*/
+
+
+
+//cambio objeto user por userDni de la clase User
+//cambio objeto company por coCuit de la clase Company

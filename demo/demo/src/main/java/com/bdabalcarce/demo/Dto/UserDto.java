@@ -1,8 +1,11 @@
 package com.bdabalcarce.demo.Dto;
 
 
+import com.bdabalcarce.demo.entity.Donation;
 
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class UserDto {
@@ -32,17 +35,16 @@ public class UserDto {
 
     private String userAbailability;
 
-
-
+    private List<Donation> donaciones = new ArrayList<Donation>();
     public UserDto() {
     }
 
 
-    public UserDto(String userRol, String userName, String userLastname, String userDni, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public UserDto(String userDni,String userRol, String userName, String userLastname,  String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+        this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;
-        this.userDni = userDni;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
         this.userAdress = userAdress;
@@ -123,5 +125,11 @@ public class UserDto {
         this.userAbailability = userAbailability;
     }
 
+    public List<Donation> getDonaciones() {
+        return donaciones;
+    }
 
+    public void setDonaciones(List<Donation> donaciones) {
+        this.donaciones = donaciones;
+    }
 }

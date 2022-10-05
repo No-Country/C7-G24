@@ -1,6 +1,7 @@
 package com.bdabalcarce.demo.Controllers;
 
 
+
 import com.bdabalcarce.demo.Dto.UserDto;
 import com.bdabalcarce.demo.Entities.Message;
 import com.bdabalcarce.demo.Entities.User;
@@ -58,6 +59,7 @@ public class UserContr {
                 dtousuario.getUserAbailability(),
                 dtousuario.getDonaciones()
                 );
+
         userServ.save(usuario);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);

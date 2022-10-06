@@ -11,6 +11,9 @@ import java.util.List;
 public class Company {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_Company;
+
     @NotNull
     @Size (max = 15)
     @Column(name = "co_cuit")
@@ -65,6 +68,14 @@ public class Company {
         this.coAdress = coAdress;
         this.coContactNm = coContactNm;
         this.coContactLn = coContactLn;
+    }
+
+    public int getId_Company() {
+        return id_Company;
+    }
+
+    public void setId_Company(int id_Company) {
+        this.id_Company = id_Company;
     }
 
     public String getCoName() {

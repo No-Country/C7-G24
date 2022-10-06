@@ -30,7 +30,7 @@ public class UserContr {
     }
 
     @GetMapping("/detail/{id}")
-    public ResponseEntity<User> getById(@PathVariable("id") String id) {
+    public ResponseEntity<User> getById(@PathVariable("id") int id) {
         if (!userServ.existById(id)) {
             return new ResponseEntity(new Message("No existe"), HttpStatus.NOT_FOUND);
         }
@@ -56,11 +56,12 @@ public class UserContr {
                 dtousuario.getUserPhone(),
                 dtousuario.getUserAdress(),
                 dtousuario.getUserVehicle(),
-                dtousuario.getUserAbailability(),
-                dtousuario.getDonaciones()
+                dtousuario.getUserAbailability()
                 );
 
         userServ.save(usuario);
+
+
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);
     }

@@ -20,7 +20,7 @@ public class UserServ {
         return userR.findAll();
     }
 
-    public Optional<User> getOne(String id) {
+    public Optional<User> getOne(int id) {
         return userR.findById(id);
     }
 
@@ -28,11 +28,11 @@ public class UserServ {
         userR.save(usuario);
     }
 
-    public void delete(String id) {
+    public void delete(int id) {
         userR.deleteById(id);
     }
 
-    public boolean existById(String id) {
+    public boolean existById(int id) {
         return userR.existsById(id);
     }
 

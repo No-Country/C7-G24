@@ -34,13 +34,13 @@ public class Donation {
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    @JoinColumn(name = "user_dni")
+    @JoinColumn(name = "id_user")
     @Size(max = 10)
     private User user;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    @JoinColumn(name = "co_cuit")
+    @JoinColumn(name = "id_Company")
     @Size(max = 15)
     private Company company;
 

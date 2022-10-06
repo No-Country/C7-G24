@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const VehicleForm = ({ vehicle }: any) => {
   const onChangeVehicle = (event: { target: { value: any } }) => {
@@ -7,7 +7,7 @@ const VehicleForm = ({ vehicle }: any) => {
   };
 
   return (
-    <div>
+    <Fragment>
       <select
         className="btn btn-dropdown btn-success p-1"
         name="Vehiculo"
@@ -19,7 +19,7 @@ const VehicleForm = ({ vehicle }: any) => {
         <option value="Motocicleta">Motocicleta</option>
         <option value="Bicicleta">Bicicleta</option>
       </select>
-    </div>
+    </Fragment>
   );
 };
 

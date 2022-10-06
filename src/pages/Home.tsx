@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import '../styles/Home.css';
-import { Link } from 'react-router-dom';
 import CarouselComponent from '../components/container/CarouselComponent';
 import Int from '../assets/int.png';
 import bal from '../assets/bal.png';
 import Header from '../assets/header.png';
 import FooterComponent from '../components/container/FooterComponent';
+import ModalComponent from '../components/container/ModalComponent';
 const Home = () => {
   return (
     <Fragment>
@@ -21,10 +21,8 @@ const Home = () => {
             alimentos aptos para el consumo, con el fin de almacenarlos,
             clasificarlos y distribuirlos entre diferentes instituciones. ¡Todos
             podemos ser parte!
-            <Link to="/donate" className="btn home">
-              Quiero Ayudar!
-            </Link>
           </p>
+          <ModalComponent />
           <div className="bg-circle">
             <CarouselComponent />
           </div>

@@ -4,6 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logoPicture from '../../assets/logoBalcarce.png';
+import ModalComponent from '../container/ModalComponent';
 
 const NavBar = () => {
   return (
@@ -46,9 +47,7 @@ const NavBar = () => {
               </Link>
             </div>
             <div>
-              <Link to="recibirAyuda" className="botonI">
-                Quiero Ayudar
-              </Link>
+              <ModalComponent />
             </div>
           </Nav>
         </div>

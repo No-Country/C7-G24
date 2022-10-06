@@ -8,7 +8,7 @@ const ScheduleForm = ({ scheduleInfo }: any) => {
   };
 
   return (
-    <Form.Group as={Col} md="4" controlId="validationCustom04">
+    <Form.Group as={Col} md="12" controlId="validationCustom04">
       <Form.Label>Horario</Form.Label>
       <Form.Control
         required

@@ -6,6 +6,7 @@ import VehicleForm from '../pure/VehicleForm';
 import ScheduleForm from '../pure/ScheduleForm';
 import SubmitButton from '../SubmitButton';
 import { useAppContext } from '../../context/Context';
+import '../../styles/ContBtn.css';
 
 const FormContainer = () => {
   const [completed, setCompleted] = useState(false);
@@ -52,6 +53,7 @@ const FormContainer = () => {
   return (
     <div className="p-5">
       <Form
+        className="p-5"
         noValidate
         validated={validated}
         onSubmit={handleOnSubmitVoluntaryForm}
@@ -65,7 +67,7 @@ const FormContainer = () => {
           dni={setDni}
         />
         <ScheduleForm scheduleInfo={setSchedule} />
-        <Form.Group as={Col} md="4">
+        <Form.Group as={Col} md="12">
           <Form.Check
             type="checkbox"
             onChange={check}
@@ -73,14 +75,16 @@ const FormContainer = () => {
               alimentos?"
           />{' '}
           {completed ? (
-            <p>
+            <p className="p-vehicle">
               Tipo de Vehiculo: <VehicleForm vehicle={setVehicle} />{' '}
             </p>
           ) : (
             ''
           )}
         </Form.Group>
-        <SubmitButton />
+        <div className="cont-btn">
+          <SubmitButton />
+        </div>
       </Form>
     </div>
   );

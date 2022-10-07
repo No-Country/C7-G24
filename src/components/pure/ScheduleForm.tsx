@@ -8,20 +8,22 @@ const ScheduleForm = ({ scheduleInfo }: any) => {
   };
 
   return (
-    <Form.Group as={Col} md="12" controlId="validationCustom04">
-      <Form.Label>Horario</Form.Label>
-      <Form.Control
-        required
-        type="text"
-        placeholder="ejem (09:00AM - 12:00PM)"
-        onChange={handleOnChange}
-        name="horario"
-      />
-      <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
-      <Form.Control.Feedback type="invalid">
-        Debes completar el campo!
-      </Form.Control.Feedback>
-    </Form.Group>
+    <div className="px-5">
+      <Form.Group as={Col} md="12" controlId="validationCustom04">
+        <Form.Label>Horario</Form.Label>
+        <Form.Control
+          required
+          type="text"
+          placeholder="ejem (09:00AM - 12:00PM)"
+          onChange={handleOnChange}
+          name="horario"
+        />
+        <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
+        <Form.Control.Feedback type="invalid">
+          Debes completar el campo!
+        </Form.Control.Feedback>
+      </Form.Group>
+    </div>
   );
 };
 

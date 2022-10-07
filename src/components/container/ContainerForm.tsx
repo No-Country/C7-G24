@@ -54,12 +54,12 @@ const FormContainer = () => {
   return (
     <div>
       <Form
-        className="px-5"
+        className="p-5"
         noValidate
         validated={validated}
         onSubmit={handleOnSubmitVoluntaryForm}
       >
-        <div className="formHeader py-5">
+        <div className="formHeader">
           <img src={Img} alt="" className="logoBalcarce" />
           <div className="p-formu">
             Nuestra tarea sería imposible de realizar sin la ayuda de
@@ -80,6 +80,7 @@ const FormContainer = () => {
         />
         <ScheduleForm scheduleInfo={setSchedule} />
         <Form.Group as={Col} md="12">
+          <br />
           <Form.Check
             type="checkbox"
             onChange={check}

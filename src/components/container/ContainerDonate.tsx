@@ -67,7 +67,7 @@ const ContainerDonate = () => {
     <div>
       <Form
         noValidate
-        className="minForm"
+        className="minForm p-5"
         validated={validated}
         onSubmit={handleSubmit}
       >

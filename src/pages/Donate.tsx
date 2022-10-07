@@ -2,17 +2,17 @@ import React, { Fragment } from 'react';
 import ContainerDonate from '../components/container/ContainerDonate';
 import Content from '../components/Content';
 import FooterComponent from '../components/container/FooterComponent';
-import Car from '../assets/7.jpg';
+import Car from '../assets/3.jpeg';
 import '../styles/Donate.css';
 const Donate = () => {
   return (
     <div>
       <ContainerDonate />
-      <img src={Car} alt="" className="fondo" />
-      {/* <Fragment>
+      <img src={Car} alt="" className="fondo2" />
+      <Fragment>
         <Content />
         <FooterComponent />
-      </Fragment> */}
+      </Fragment>
     </div>
   );
 };

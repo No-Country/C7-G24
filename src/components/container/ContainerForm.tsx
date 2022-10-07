@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
+import Img from '../../assets/logoBalcarce.png';
 import VoluntaryForm from '../pure/VoluntaryForm';
 import VehicleForm from '../pure/VehicleForm';
 import ScheduleForm from '../pure/ScheduleForm';
@@ -51,14 +52,25 @@ const FormContainer = () => {
   };
 
   return (
-    <div className="p-5">
+    <div>
       <Form
-        className="p-5"
+        className="px-5"
         noValidate
         validated={validated}
         onSubmit={handleOnSubmitVoluntaryForm}
       >
-        {' '}
+        <div className="formHeader py-5">
+          <img src={Img} alt="" />
+          <div className="p-formu">
+            Nuestra tarea sería imposible de realizar sin la ayuda de
+            voluntarios. En el Banco de Alimentos tu tiempo se transforma en
+            ayuda.{' '}
+          </div>
+          <h4 className="H4-form">Quiero sumarme como voluntario </h4>{' '}
+        </div>{' '}
+        <br />
+        <br />
+        <br />
         <VoluntaryForm
           name={setName}
           lastName={setLastName}

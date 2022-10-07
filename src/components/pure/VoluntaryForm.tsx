@@ -29,7 +29,7 @@ const VoluntaryForm = ({ name, lastName, phone, mail, dni }: any) => {
   };
 
   return (
-    <div className="absolute">
+    <div>
       <Row>
         <Form.Group as={Col} md="12" controlId="validationCustom01">
           <Form.Label>Nombres</Form.Label>

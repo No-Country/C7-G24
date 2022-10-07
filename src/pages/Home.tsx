@@ -3,9 +3,9 @@ import '../styles/Home.css';
 import CarouselComponent from '../components/container/CarouselComponent';
 import Int from '../assets/int.png';
 import bal from '../assets/bal.png';
-import Header from '../assets/header.png';
 import FooterComponent from '../components/container/FooterComponent';
 import ModalComponent from '../components/container/ModalComponent';
+import Content from '../components/Content';
 const Home = () => {
   return (
     <Fragment>
@@ -71,9 +71,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="container-header">
-          <img src={Header} alt="" className="conteo" />
-        </div>
+        <Content />
       </div>
       <FooterComponent />
     </Fragment>

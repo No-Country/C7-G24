@@ -6,7 +6,7 @@ import VoluntaryForm from '../pure/VoluntaryForm';
 import SubmitButton from '../SubmitButton';
 import ContainerCheck from './ContainerCheck';
 import { useAppContext } from '../../context/Context';
-
+import '../../styles/HeaderForm.css';
 const ContainerDonate = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -19,6 +19,8 @@ const ContainerDonate = () => {
   const [minorista, setMinorista] = useState(false);
   const [mayorista, setMayorista] = useState(false);
   const [validated, setValidated] = useState(false);
+  const [stateMinorista, setStateMinorista] = useState(true);
+  const [stateMayorista, setStateMayorista] = useState(true);
 
   const context = useAppContext();
 
@@ -49,42 +51,45 @@ const ContainerDonate = () => {
     switch (id) {
       case 'minorista':
         setMinorista(!minorista);
-        setMayorista(false);
+        setStateMinorista(false);
         break;
       default:
       case 'mayorista':
         setMayorista(!mayorista);
-        setMinorista(false);
+        setStateMayorista(false);
         break;
     }
   };
 
   return (
     <div className="p-5">
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <a
-          target="_blank"
-          href="https://donaronline.org/banco-de-alimentos-balcarce-asociacion-civil/menos-hambre-mas-futuro?fbclid=IwAR2prtk1DrSU8RFir_eupbbWsWJewtABDPkNOo2SGAXh1e0rr5bmSm75-dY"
-          className="btn w-45 btn-success text-light "
-          rel="noreferrer"
-        >
-          {' '}
-          Donar Efectivo
-        </a>
-        <Button
-          onClick={handleOnClick}
-          id="minorista"
-          className="btn m-5 w-45 btn-success text-light"
-        >
-          Donante Minorista
-        </Button>
-        <Button
-          onClick={handleOnClick}
-          id="mayorista"
-          className="btn btn-success w-45 text-light"
-        >
-          Donante Mayorista
-        </Button>
+      <Form
+        noValidate
+        className="minForm"
+        validated={validated}
+        onSubmit={handleSubmit}
+      >
+        <div></div>
+        {stateMinorista && stateMayorista ? (
+          <div>
+            <Button
+              onClick={handleOnClick}
+              id="minorista"
+              className="btn m-5 w-45 btn-success text-light"
+            >
+              Donante Minorista
+            </Button>
+            <Button
+              onClick={handleOnClick}
+              id="mayorista"
+              className="btn btn-success w-45 text-light"
+            >
+              Donante Mayorista
+            </Button>
+          </div>
+        ) : (
+          ''
+        )}
         {minorista ? (
           <VoluntaryForm
             name={setName}
@@ -105,7 +110,7 @@ const ContainerDonate = () => {
         ) : (
           ''
         )}
-        {minorista ? <SubmitButton /> : ''}
+        <div className="contSb">{minorista ? <SubmitButton /> : ''}</div>
       </Form>
       {mayorista ? <ContainerCheck /> : ''}
     </div>

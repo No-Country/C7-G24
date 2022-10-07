@@ -1,9 +1,11 @@
 package com.bdabalcarce.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,6 +13,9 @@ import java.util.List;
 public class Company {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_Company;
+
     @NotNull
     @Size (max = 15)
     @Column(name = "co_cuit")
@@ -49,22 +54,31 @@ public class Company {
     @Column(name = "co_ContactLn")
     private String coContactLn;
 
-    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    private List<Donation> donaciones;
+    @JsonIgnore
+    @OneToMany(mappedBy = "company", fetch = FetchType.EAGER,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private List<Donation> donaciones = new ArrayList<Donation>();
 
 
     public Company() {
     }
 
-    public Company(String coName, String coCategory, String coCuit, String coEmail, String coPhone, String coAdress, String coContactNm, String coContactLn) {
+    public Company(String coCuit, String coName, String coCategory, String coEmail, String coPhone, String coAdress, String coContactNm, String coContactLn) {
+        this.coCuit = coCuit;
         this.coName = coName;
         this.coCategory = coCategory;
-        this.coCuit = coCuit;
         this.coEmail = coEmail;
         this.coPhone = coPhone;
         this.coAdress = coAdress;
         this.coContactNm = coContactNm;
         this.coContactLn = coContactLn;
+    }
+
+    public int getId_Company() {
+        return id_Company;
+    }
+
+    public void setId_Company(int id_Company) {
+        this.id_Company = id_Company;
     }
 
     public String getCoName() {
@@ -129,5 +143,13 @@ public class Company {
 
     public void setCoContactLn(String coContactLn) {
         this.coContactLn = coContactLn;
+    }
+
+    public List<Donation> getDonaciones() {
+        return donaciones;
+    }
+
+    public void setDonaciones(List<Donation> donaciones) {
+        this.donaciones = donaciones;
     }
 }

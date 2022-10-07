@@ -39,8 +39,7 @@ public class UserDto {
     public UserDto() {
     }
 
-
-    public UserDto(String userDni,String userRol, String userName, String userLastname,  String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public UserDto(String userDni, String userRol, String userName, String userLastname,  String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
@@ -50,7 +49,6 @@ public class UserDto {
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
-
     }
 
     public String getUserRol() {

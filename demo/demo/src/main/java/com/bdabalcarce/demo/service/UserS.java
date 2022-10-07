@@ -34,4 +34,10 @@ public class UserS {
     public boolean existById(int id) {
         return userR.existsById(id);
     }
+
+
+
+
+
+
 }

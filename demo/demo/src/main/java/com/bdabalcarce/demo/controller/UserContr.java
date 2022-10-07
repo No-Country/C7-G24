@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 
 @RequestMapping({"/users"})
-public class userContr {
+public class UserContr {
     @Autowired
     UserS userServ;
 
@@ -29,11 +29,11 @@ public class userContr {
     }
 
     @GetMapping("/detail/{id}")
-    public ResponseEntity<User> getById(@PathVariable("id") String id) {
-        if (!userServ.existById(Integer.parseInt(id))) {
+    public ResponseEntity<User> getById(@PathVariable("id") int id) {
+        if (!userServ.existById(id)) {
             return new ResponseEntity(new Message("No existe"), HttpStatus.NOT_FOUND);
         }
-        User persona = userServ.getOne(Integer.parseInt(id)).get();
+        User persona = userServ.getOne(id).get();
         return new ResponseEntity(persona, HttpStatus.OK);
     }
 
@@ -55,11 +55,12 @@ public class userContr {
                 dtousuario.getUserPhone(),
                 dtousuario.getUserAdress(),
                 dtousuario.getUserVehicle(),
-                dtousuario.getUserAbailability(),
-                dtousuario.getDonaciones()
+                dtousuario.getUserAbailability()
         );
 
         userServ.save(usuario);
+
+
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);
     }

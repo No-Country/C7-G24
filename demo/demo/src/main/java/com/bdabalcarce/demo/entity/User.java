@@ -1,5 +1,6 @@
 package com.bdabalcarce.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -13,6 +14,9 @@ import java.util.List;
 @Table (name="users")
 public class User implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_user;
+
     @NotNull
     @Size (max = 10)
     @Column(name = "user_dni")
@@ -52,15 +56,15 @@ public class User implements Serializable {
     @Column(name = "user_abailability")
     private String userAbailability;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<Donation> donaciones = new ArrayList<Donation>();
 
 
     public User() {
     }
 
-
-    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability, List<Donation> donaciones) {
+    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
         this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
@@ -70,7 +74,22 @@ public class User implements Serializable {
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
-        this.donaciones = donaciones;
+    }
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
+
+    public String getUserDni() {
+        return userDni;
+    }
+
+    public void setUserDni(String userDni) {
+        this.userDni = userDni;
     }
 
     public String getUserRol() {
@@ -95,14 +114,6 @@ public class User implements Serializable {
 
     public void setUserLastname(String userLastname) {
         this.userLastname = userLastname;
-    }
-
-    public String getUserDni() {
-        return userDni;
-    }
-
-    public void setUserDni(String userDni) {
-        this.userDni = userDni;
     }
 
     public String getUserEmail() {

@@ -1,5 +1,7 @@
 package com.bdabalcarce.demo.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -52,9 +54,9 @@ public class Company {
     @Column(name = "co_ContactLn")
     private String coContactLn;
 
-    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    @JsonIgnore
+    @OneToMany(mappedBy = "company", fetch = FetchType.EAGER,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<Donation> donaciones = new ArrayList<Donation>();
-
 
     public Company() {
     }

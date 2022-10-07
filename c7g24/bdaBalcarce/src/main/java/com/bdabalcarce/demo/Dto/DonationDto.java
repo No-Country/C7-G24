@@ -17,14 +17,14 @@ public class DonationDto {
 
     private String donDetails;
 
-    private User user;
+    private UserDto user;
 
-    private Company company;
+    private CompanyDto company;
 
     public DonationDto() {
     }
 
-    public DonationDto(String donCategory, Boolean donPerishable, Date donExpiration, String donDetails, User user, Company company) {
+    public DonationDto(String donCategory, Boolean donPerishable, Date donExpiration, String donDetails, UserDto user, CompanyDto company) {
         this.donCategory = donCategory;
         this.donPerishable = donPerishable;
         this.donExpiration = donExpiration;
@@ -66,19 +66,19 @@ public class DonationDto {
         this.donDetails = donDetails;
     }
 
-    public User getUser() {
+    public UserDto getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserDto user) {
         this.user = user;
     }
 
-    public Company getCompany() {
+    public CompanyDto getCompany() {
         return company;
     }
 
-    public void setCompany(Company company) {
+    public void setCompany(CompanyDto company) {
         this.company = company;
     }
 }

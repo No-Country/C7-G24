@@ -3,7 +3,7 @@ import '../../styles/NavBar.css';
 import { NavLink, Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logoPicture from '../../assets/logoBalcarce.png';
+import logoPicture from '../../assets/isologotipo.png';
 import ModalComponent from '../container/ModalComponent';
 
 const NavBar = () => {

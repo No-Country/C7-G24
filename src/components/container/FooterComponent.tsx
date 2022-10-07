@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoPicture from '../../assets/Rect.png';
+import LogoPicture from '../../assets/isologotipo.png';
 import Location from '../../assets/Location.png';
 import Messsage from '../../assets/Message.png';
 import '../../styles/Footer.css';

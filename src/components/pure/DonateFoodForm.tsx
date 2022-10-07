@@ -33,12 +33,12 @@ const DonateFoodForm = ({ category, quantity, info }: any) => {
   };
 
   return (
-    <div className="p-4">
+    <div className="px-5">
       <Row>
         {''}
-        Seleccionar Categoria:
+        <div className="select-text">Seleccionar Categoria:</div>
         <select
-          className="btn btn-dropdown  btn-success p-1 w-10"
+          className="btn btn-dropdown  select-food btn-success p-1 w-10"
           name="categoria"
           onChange={handleOnChange}
         >

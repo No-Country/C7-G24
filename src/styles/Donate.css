@@ -1,0 +1,52 @@
+.fondo {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  opacity: 0.4;
+  z-index: -1;
+}
+.form-company {
+  padding: 20px;
+}
+.form-contentC {
+  margin-top: 40px;
+}
+.form-c {
+  position: absolute;
+  width: 612px;
+  height: 1300px;
+  left: 663px;
+  top: 100px;
+  border-radius: 8px;
+  background: #d9d9d9;
+  display: inline-block;
+}
+
+.check-form {
+  display: flex;
+  padding-left: 40px;
+  position: absolute;
+  left: 100px;
+}
+.check-form2 {
+  display: flex;
+  margin-left: 70px;
+  margin-top: -60px;
+}
+.conditionDonateFood {
+  margin-top: 40px;
+}
+.conditionDonateOther {
+  margin-top: 100px;
+  padding-left: 70px;
+}
+
+.conditionSb {
+  position: absolute;
+  margin-top: 80px;
+  left: 250px;
+}
+.CPC {
+  padding-top: 100px;
+}

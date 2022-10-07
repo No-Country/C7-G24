@@ -6,7 +6,9 @@ import VoluntaryForm from '../pure/VoluntaryForm';
 import SubmitButton from '../SubmitButton';
 import ContainerCheck from './ContainerCheck';
 import { useAppContext } from '../../context/Context';
+import Img from '../../assets/isologotipo.png';
 import '../../styles/HeaderForm.css';
+
 const ContainerDonate = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -62,16 +64,23 @@ const ContainerDonate = () => {
   };
 
   return (
-    <div className="p-5">
+    <div>
       <Form
         noValidate
         className="minForm"
         validated={validated}
         onSubmit={handleSubmit}
       >
-        <div></div>
+        <div className="formHeader">
+          <img src={Img} alt="" className="logoBalcarce" />
+          <div className="p-formu">
+            El hambre no espera para miles de chicos y chicas que siguen
+            necesitando de los comedores para tener un plato de comida.
+          </div>
+          <h4 className="H4-form">Quiero sumarme como Donante</h4>{' '}
+        </div>
         {stateMinorista && stateMayorista ? (
-          <div>
+          <div className="contBtnType">
             <Button
               onClick={handleOnClick}
               id="minorista"
@@ -90,26 +99,28 @@ const ContainerDonate = () => {
         ) : (
           ''
         )}
-        {minorista ? (
-          <VoluntaryForm
-            name={setName}
-            lastName={setLastName}
-            phone={setPhone}
-            mail={setMail}
-            dni={setDni}
-          />
-        ) : (
-          ''
-        )}
-        {minorista ? (
-          <DonateFoodForm
-            category={setCategoryDonation}
-            quantity={setQuantityDonation}
-            info={setInfoFood}
-          />
-        ) : (
-          ''
-        )}
+        <div className="form-minorista">
+          {minorista ? (
+            <VoluntaryForm
+              name={setName}
+              lastName={setLastName}
+              phone={setPhone}
+              mail={setMail}
+              dni={setDni}
+            />
+          ) : (
+            ''
+          )}
+          {minorista ? (
+            <DonateFoodForm
+              category={setCategoryDonation}
+              quantity={setQuantityDonation}
+              info={setInfoFood}
+            />
+          ) : (
+            ''
+          )}
+        </div>
         <div className="contSb">{minorista ? <SubmitButton /> : ''}</div>
       </Form>
       {mayorista ? <ContainerCheck /> : ''}

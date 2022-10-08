@@ -35,13 +35,12 @@ public class Donation {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     @JoinColumn(name = "id_user", nullable = true)
-    @Size(max = 10)
     private User user;
 
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
-    @JoinColumn(name = "id_Company", nullable = true)
-    @Size(max = 15)
+    @JoinColumn(name = "id_company", nullable = true)
+
     private Company company;
 
 
@@ -114,4 +113,5 @@ public class Donation {
     public void setCompany(Company company) {
         this.company = company;
     }
+
 }

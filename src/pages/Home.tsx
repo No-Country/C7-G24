@@ -15,7 +15,7 @@ const Home = () => {
           <p>
             Somos una organización sin fines de lucro, y trabajamos con el
             objetivo de contribuir a la reducción del hambre, mejorar la
-            nutrición y evitar el desperdicio de alimentos en Argentina. BdA
+            nutrición y evitar el desperdicio de alimentos en Argentina. BDA
             Balcarce es un puente entre quienes sufren hambre y quienes desean
             colaborar para mejorar la situación, a través de donaciones de
             alimentos aptos para el consumo, con el fin de almacenarlos,

@@ -16,7 +16,7 @@ const ThoseWhoParticipate = () => {
     <Fragment>
       <div className="header-participate">
         <h1 className="header-h1">¿Quienes participan?</h1>
-
+        <br />
         <p className="p-header">
           Todos somos voluntarios, cada uno desde su lugar. asi, se consolida un
           equipo de fortalezas en el que cada parte es fundamental
@@ -28,8 +28,8 @@ const ThoseWhoParticipate = () => {
           <div>
             <h3 className="header-h3">Voluntarios</h3>
             <p className="parrafo-v">
-              Javir Fornieles. Fernando Mendoza. Maximiliano Garcia. Macela
-              Boullon. Carlos Irazoqui. Toman Martorello. Julien Laurencon.
+              Javier Fornieles. Fernando Mendoza. Maximiliano Garcia. Marcela
+              Boullon. Carlos Irazoqui. Tomas Martorello. Julien Laurencon.
               Julieta Fuentes. Alejandra Yommi. Laura Oveja Smith. Maria Celia
               Duy. Mariela Barda. Nicolas Santamaria. Beatriz Garcia. Manuela
               Cucci. Pablo Buceta. Victoria Quillenhauquy.
@@ -62,7 +62,7 @@ const ThoseWhoParticipate = () => {
             <p className="parrafo-e">
               Cecilia Aicega (Escribania). Florencia Mancini (Nutricion).
               Santiago Scioli (Recursos). Guillermina Muñoz Barda (Asuntos
-              Legales). Manuel MArtinez Nava (Diseño Grafico). Jorge Gianetti
+              Legales). Manuel Martinez Nava (Diseño Grafico). Jorge Gianetti
               (Logistica). Matias Santini (Recursos). Francisco Garcia
               (Recursos). Josefina Muñoz (Redes)
             </p>

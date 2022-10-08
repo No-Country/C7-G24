@@ -36,7 +36,7 @@ const NavBar = () => {
               Novedades
             </NavLink>
             <NavLink
-              to="recibirAyuda"
+              to="contacto"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Contacto

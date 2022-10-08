@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoPicture from '../../assets/isologotipo.png';
+import LogoPicture2 from '../../assets/isologotipo2.png';
 import Location from '../../assets/Location.png';
 import Messsage from '../../assets/Message.png';
 import '../../styles/Footer.css';
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const FooterComponent = () => {
   return (
     <div className="footer">
-      <img src={LogoPicture} alt="" className="logo_Picture" />
+      <img src={LogoPicture2} alt="" className="logo_Picture" />
       <div>
         <p className="parrafo-f">
           Trabajamos para reducir el hambre, mejorar la nutrición y evitar el

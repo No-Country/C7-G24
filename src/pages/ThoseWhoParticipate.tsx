@@ -28,11 +28,11 @@ const ThoseWhoParticipate = () => {
           <div>
             <h3 className="header-h3">Voluntarios</h3>
             <p className="parrafo-v">
-              Javier Fornieles. Fernando Mendoza. Maximiliano Garcia. Marcela
-              Boullon. Carlos Irazoqui. Tomas Martorello. Julien Laurencon.
-              Julieta Fuentes. Alejandra Yommi. Laura Oveja Smith. Maria Celia
-              Duy. Mariela Barda. Nicolas Santamaria. Beatriz Garcia. Manuela
-              Cucci. Pablo Buceta. Victoria Quillenhauquy.
+              Javier Fornieles. Fernando Mendoza. Maximiliano García. Marcela
+              Boullon. Carlos Irazoqui. Tomás Martorello. Julien Laurençon.
+              Julieta Fuertes. Alejandra Yommi. Laura Oveja Smith. María Celia
+              Duy. Mariela Barda. Nicolás Santamaría. Beatriz García. Manuela
+              Cucci. Pablo Buceta. Victoria Quillehauquy.
             </p>
           </div>
         </div>
@@ -43,27 +43,27 @@ const ThoseWhoParticipate = () => {
               Voluntarios de la Comision Directiva
             </h3>
             <p className="parrafo-d">
-              Ma. Elkisabel Qeilenmann. Ma. Ines Leaden. Ma. Eugenia Bazzalo.
+              Ma. Elisabel Weilenmann. Ma. Inés Leaden. Ma. Eugenia Bazzalo.
               Laura Dimuro. Lourdes Filipini. Ma. Paz Irazoqui. Ana Moyano.
-              Lujan Nagore. Marta Paidon. Noemi Del Grosso de Capperi. Nicolas
-              Cerono. Silvia Zitarosa. Graciela Minichiello. Julian Chiocarello.
-              Daniel Cucci. Manuela Cucci. Maria Celia Duy. Nicolas Santamaria.
-              Andres Olivares. Jorge Ledezma. Agustin Odriozola. Victoria
-              Quillenhauquy. Mariela Signes. Lucia Menucci.
+              Luján Nagore. Marta Paidón. Noemí Del Grosso de Capperi. Nicolás
+              Cerono. Silvia Zitarosa. Graciela Minichiello. Julián Chiocarello.
+              Daniel Cucci. Manuela Cucci. Ma.Celia Duy. Nicolás Santamaría.
+              Andrés Olivares. Jorge Ledezma. Agustín Odriozola. Victoria
+              Quillehauquy. Mariela Signes. Lucía Melucci.
             </p>
           </div>
         </div>
-        <div className="voluntary">
+        <div className="voluntary-e">
           <img src={ImgB} className="ImgC" alt="" />
           <div>
             <h3 className="header-h3-e">
               Voluntarios en funciones especificas
             </h3>
             <p className="parrafo-e">
-              Cecilia Aicega (Escribania). Florencia Mancini (Nutricion).
+              Cecilia Aicega (Escribanía). Florencia Mancini (Nutrición).
               Santiago Scioli (Recursos). Guillermina Muñoz Barda (Asuntos
-              Legales). Manuel Martinez Nava (Diseño Grafico). Jorge Gianetti
-              (Logistica). Matias Santini (Recursos). Francisco Garcia
+              Legales). Manuel Martinez Nava (Diseño Gráfico). Jorge Gianetti
+              (Logística). Matías Santini (Recursos). Francisco García
               (Recursos). Josefina Muñoz (Redes)
             </p>
           </div>

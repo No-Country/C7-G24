@@ -24,13 +24,16 @@ function App() {
         <ContainerNavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="thosewhoparticipate" element={<ThoseWhoParticipate />} />
-          <Route path="news" element={<News />} />
-          <Route path="forms" element={<FormPages />} />
-          <Route path="donate" element={<Donate />} />
-          <Route path="recibirAyuda" element={<NeedHelp />} />
-          <Route path="contacto" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route
+            path="/thosewhoparticipate"
+            element={<ThoseWhoParticipate />}
+          />
+          <Route path="/news" element={<News />} />
+          <Route path="/forms" element={<FormPages />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/recibirAyuda" element={<NeedHelp />} />
+          <Route path="/contacto" element={<Contact />} />
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<Navigate to="not-found" />} />
           <Route path="/gratitude" element={<Gratitude />} />

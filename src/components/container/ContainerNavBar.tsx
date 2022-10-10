@@ -1,10 +1,8 @@
 import React from 'react';
-import  NavBar  from '../pure/Navbar';
+import NavBar from '../pure/Navbar';
 
 const ContainerNavBar = () => {
-  return (<div>
-    <NavBar/>
-  </div>
-)};
+  return <NavBar />;
+};
 
-export default ContainerNavBar
+export default ContainerNavBar;

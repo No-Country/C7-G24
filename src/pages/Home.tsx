@@ -45,14 +45,15 @@ const Home = () => {
             <img src={bal} alt="" className="bal-img" />
           </div>
           <div className="container-CTrabajamos">
-            <div>
+            <div className="color-contenedor">
               <div className="span1">1 </div>
               <p className="container-color paso1">Paso 1</p>
               <p className="container-color">
                 Recibimos donaciones de alimentos por parte de empresas,
                 productores, supermercados y mayoritas.
-              </p>
+              </p>{' '}
             </div>
+            {''}
           </div>
           <div className="container-CTrabajamos2">
             <div>

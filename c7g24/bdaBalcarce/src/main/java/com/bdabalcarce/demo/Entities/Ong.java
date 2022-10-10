@@ -10,39 +10,39 @@ public class Ong {
 
     @Id
     @NotNull
-    @Size (max = 15)
+    @Size (min= 11, max = 15)//min 11 caracteres porque es la cantidad de nros. en un cuit en caso de omitir puntos y guiones
     @Column (name = "ong_cuit")
     private String ongCuit;
 
     @NotNull
-    @Size (max = 50)
+    @Size (min= 1,max = 50)
     @Column (name = "ong_name")
     private String ongName;
 
     @NotNull
-    @Size (max = 50)
+    @Size (min= 1, max = 50)
     @Column (name = "ong_reason")
     private String ongReason;
 
     @NotNull
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column (name = "ong_headNm")
     private String ongHeadNm;
 
     @NotNull
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column (name = "ong_headLn")
     private String ongHeadLn;
 
-    @Size (max = 50)
+    @Size (min= 1, max = 50)
     @Column (name = "ong_address")
     private String ongAddress;
 
-    @Size (max = 20)
+    @Size (min= 1, max = 20)
     @Column (name = "ong_phone")
     private String ongPhone;
 
-    @Size (max = 30)
+    @Size (min= 1, max = 30)
     @Column (name = "ong_email")
     private String ongEmail;
 

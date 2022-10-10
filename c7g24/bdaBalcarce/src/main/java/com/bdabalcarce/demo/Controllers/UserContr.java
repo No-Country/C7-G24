@@ -43,8 +43,10 @@ public class UserContr {
         if (StringUtils.isBlank(dtousuario.getUserName()) ||
                 StringUtils.isBlank(dtousuario.getUserLastname()) ||
                 StringUtils.isBlank(dtousuario.getUserDni())){
+                /*Si no se ingresan los campos userName, userLastname y userDni, reportará un
+                BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
 
-            return new ResponseEntity(new Message("Campos obligatorios: Nombre, Apellidoy Dni"),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Message("Campos obligatorios: userName, userLastname y userDni"),HttpStatus.BAD_REQUEST);
         }
 
         User usuario = new User(

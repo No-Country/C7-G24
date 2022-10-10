@@ -33,6 +33,8 @@ public class CompanyContr {
                 StringUtils.isBlank(coDto.getCoAddress())  ||
                 StringUtils.isBlank(coDto.getCoContactNm()) ||
                 StringUtils.isBlank(coDto.getCoContactLn())  ){
+                /*Si no se ingresan los campos coName, coCategory, coCuit, coEmail, coPhone, coAddress, coContactNm y
+                coContactLn, se reportará un BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
 
             return new ResponseEntity(new Message("Campos obligatorios: coName, coCategory, coCuit, coEmail, coPhone, coAddress, coContactNm y coContactLn"),
                             HttpStatus.BAD_REQUEST);

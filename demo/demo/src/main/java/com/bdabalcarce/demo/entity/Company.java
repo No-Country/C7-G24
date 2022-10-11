@@ -17,40 +17,40 @@ public class Company {
     private int id_Company;
 
     @NotNull
-    @Size (max = 15)
+    @Size (min= 11, max = 15)  //min 11 caracteres porque es la cantidad de nros. en un cuit en caso de omitir puntos y guiones
     @Column(name = "co_cuit")
     private String coCuit;
 
     @NotNull
-    @Size(max = 80)
+    @Size(min= 1, max = 80)
     @Column(name = "co_name")
     private String coName;
 
     @NotNull
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column(name = "co_category")
     private String coCategory;
 
 
     @NotNull
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column(name = "co_email")
     private String coEmail;
 
     @NotNull
-    @Size (max = 15)
+    @Size (min= 1,max = 15)
     @Column(name = "co_phone")
     private String coPhone;
 
-    @Size (max = 50)
+    @Size (min= 1, max = 50)
     @Column(name = "co_address")
     private String coAdress;
 
-    @Size (max = 20)
+    @Size (min= 1, max = 20)
     @Column(name = "co_ContactNm")
     private String coContactNm;
 
-    @Size (max = 20)
+    @Size (min= 1, max = 20)
     @Column(name = "co_ContactLn")
     private String coContactLn;
 

@@ -31,7 +31,8 @@ public class OngContr {
                 StringUtils.isBlank(ongDto.getOngHeadNm()) ||
                 StringUtils.isBlank(ongDto.getOngHeadLn()) ||
                 StringUtils.isBlank(ongDto.getOngAddress()) ){
-
+    /*Si no se ingresan los campos ongName, ongCuit, ongReason, ongHeadNm, ongHeadLn y ongAddress,
+     se reportará un BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
             return new ResponseEntity(new Message("Campos obligatorios: ongName, ongCuit, ongReason, ongHeadNm, ongHeadLn y ongAddress"),
                     HttpStatus.BAD_REQUEST);
         }

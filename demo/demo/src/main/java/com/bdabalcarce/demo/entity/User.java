@@ -18,41 +18,41 @@ public class User implements Serializable {
     private int id_user;
 
     @NotNull
-    @Size (max = 10)
+    @Size (min= 8, max = 10)//min 8 caracteres porque es la cantidad de nros. en un dni en caso de omitir puntos
     @Column(name = "user_dni")
     private String userDni;
 
-    @Size (max = 12)
+    @Size (min= 5, max = 12)
     @Column(name = "user_rol")
     private String userRol;
 
     @NotNull
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column(name = "user_name")
     private String userName;
 
     @NotNull
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column(name = "user_lastname")
     private String userLastname;
 
-    @Size (max = 25)
+    @Size (min= 1, max = 25)
     @Column(name = "user_email")
     private String userEmail;
 
-    @Size (max = 15)
+    @Size (min= 1, max = 15)
     @Column(name = "user_phone")
     private String userPhone;
 
-    @Size (max = 50)
+    @Size (min= 1, max = 50)
     @Column(name = "user_address")
     private String userAdress;
 
-    @Size (max = 10)
+    @Size (min= 1, max = 10)
     @Column(name = "user_vehicle")
     private String userVehicle;
 
-    @Size (max = 10)
+    @Size (min= 1, max = 10)
     @Column(name = "user_abailability")
     private String userAbailability;
 
@@ -75,6 +75,13 @@ public class User implements Serializable {
         this.userVehicle = userVehicle;
         this.userAbailability = userAbailability;
     }
+
+    public User(String userDni, String userName, String userLastname) {
+        this.userDni = userDni;
+        this.userName = userName;
+        this.userLastname = userLastname;
+    }
+
 
     public int getId_user() {
         return id_user;

@@ -7,6 +7,7 @@ import DonateFoodForm from '../pure/DonateFoodForm';
 import DonateOthersForm from '../pure/DonateOtherForm';
 import SubmitButton from '../SubmitButton';
 import { useAppContext } from '../../context/Context';
+import Img from '../../assets/isologotipo.png';
 
 const ContainerCheck = () => {
   const [name, setName] = useState('');
@@ -30,6 +31,8 @@ const ContainerCheck = () => {
   const [otherDonate, setOtherDonate] = useState('');
   const [infoOtherDonate, setInfoOtherDonate] = useState('');
   const [quantityOtherDonate, setQuantityOtherDonate] = useState('');
+  const [stateSoyPersona, setStateSoyPersona] = useState(true);
+  const [stateSoyEmpresa, setStateSoyEmpresa] = useState(true);
   const context = useAppContext();
 
   const handleOnSubmitVoluntaryForm = (event: {
@@ -96,9 +99,11 @@ const ContainerCheck = () => {
     switch (name) {
       case 'persona':
         setSoyPersona(e.target.checked);
+        setStateSoyEmpresa(false);
         break;
       case 'empresa':
         setSoyEmpresa(e.target.checked);
+        setStateSoyPersona(false);
         break;
       case 'comida':
         setDonateFood(e.target.checked);
@@ -117,80 +122,161 @@ const ContainerCheck = () => {
         noValidate
         validated={validated}
         onSubmit={handleOnSubmitVoluntaryForm}
+        className="form-c"
       >
-        <Form.Group as={Col} md="2">
-          <Form.Check
-            type="checkbox"
-            onChange={handleOnCheckBox}
-            label="¿Eres una Persona ?"
-            id="persona"
-          />
-          <Form.Check
-            type="checkbox"
-            onChange={handleOnCheckBox}
-            label="¿Eres una Empresa ?"
-            id="empresa"
-          />
-        </Form.Group>
+        {stateSoyPersona && stateSoyEmpresa ? (
+          <div className="p-5">
+            <div className="formHeader">
+              <img src={Img} alt="" className="logoBalcarce" />
+              <div className="p-formu">
+                El hambre no espera para miles de chicos y chicas que siguen
+                necesitando de los comedores para tener un plato de comida.
+              </div>
+              <h4 className="H4-form">Quiero sumarme como Donante</h4>{' '}
+            </div>
+            <div>
+              <Form.Group className="check-bool" as={Col} md="12">
+                <Form.Check
+                  type="checkbox"
+                  onChange={handleOnCheckBox}
+                  label="¿Eres una Persona ?"
+                  className="check-1"
+                  id="persona"
+                />
+                <Form.Check
+                  type="checkbox"
+                  onChange={handleOnCheckBox}
+                  label="¿Eres una Empresa ?"
+                  className="check-1"
+                  id="empresa"
+                />
+              </Form.Group>
+            </div>
+          </div>
+        ) : (
+          ''
+        )}
+
         {soyPersona ? (
-          <VoluntaryForm
-            name={setName}
-            lastName={setLastName}
-            phone={setPhone}
-            mail={setMail}
-            dni={setDni}
-          />
+          <div className="p-5">
+            <div className="formHeader">
+              <img src={Img} alt="" className="logoBalcarce" />
+              <div className="p-formu">
+                El hambre no espera para miles de chicos y chicas que siguen
+                necesitando de los comedores para tener un plato de comida.
+              </div>
+              <h4 className="H4-form">Quiero sumarme como Donante</h4>{' '}
+            </div>
+            <div className="py-5">
+              <VoluntaryForm
+                name={setName}
+                lastName={setLastName}
+                phone={setPhone}
+                mail={setMail}
+                dni={setDni}
+              />
+            </div>
+
+            <Form.Group as={Col} md="2">
+              <div className="check-form1">
+                <Form.Check
+                  type="checkbox"
+                  label="Donar Alimentos"
+                  id="comida"
+                  className="conditionDonateFood"
+                  onChange={handleOnCheckBox}
+                />
+                <Form.Check
+                  type="checkbox"
+                  label="Otras Donaciónes"
+                  id="otros"
+                  className="conditionDonateOther"
+                  onChange={handleOnCheckBox}
+                />
+              </div>
+            </Form.Group>
+            {donateFood && soyPersona ? (
+              <div className="conditionDonateFood2">
+                <DonateFoodForm
+                  category={setCategoryDonation}
+                  quantity={setQuantityDonation}
+                  info={setInfoFood}
+                />
+              </div>
+            ) : (
+              ''
+            )}
+            {otherDonate && soyPersona ? (
+              <div className="conditionDonateOther2">
+                <DonateOthersForm
+                  otherDonate={setInfoOtherDonate}
+                  quantityOtherDonate={setQuantityOtherDonate}
+                />
+              </div>
+            ) : (
+              ''
+            )}
+            <div className="conditionSb">
+              <SubmitButton />
+            </div>
+          </div>
         ) : (
           ''
         )}
         {soyEmpresa ? (
-          <CompanyForm
-            nameCompany={setCompanyName}
-            addres={setCompanyAddres}
-            typeCompany={setTypeCompany}
-            cuit={setCuit}
-            mail={setMailCompany}
-            phone={setPhoneCompany}
-          />
-        ) : (
-          ''
-        )}
-        {soyEmpresa ? (
-          <Form.Group as={Col} md="2">
-            <Form.Check
-              type="checkbox"
-              label="Donar Alimentos"
-              id="comida"
-              onChange={handleOnCheckBox}
+          <div>
+            <CompanyForm
+              nameCompany={setCompanyName}
+              addres={setCompanyAddres}
+              typeCompany={setTypeCompany}
+              cuit={setCuit}
+              mail={setMailCompany}
+              phone={setPhoneCompany}
             />
-            <Form.Check
-              type="checkbox"
-              label="Otras Donaciónes"
-              id="otros"
-              onChange={handleOnCheckBox}
-            />
-          </Form.Group>
+            <Form.Group as={Col} md="2">
+              <div className="check-form2">
+                <Form.Check
+                  type="checkbox"
+                  label="Donar Alimentos"
+                  id="comida"
+                  onChange={handleOnCheckBox}
+                />
+                <Form.Check
+                  type="checkbox"
+                  label="Otras Donaciónes"
+                  id="otros"
+                  onChange={handleOnCheckBox}
+                />
+              </div>
+            </Form.Group>
+            {donateFood && soyEmpresa ? (
+              <div className="conditionDonateFood">
+                <DonateFoodForm
+                  category={setCategoryDonation}
+                  quantity={setQuantityDonation}
+                  info={setInfoFood}
+                />
+              </div>
+            ) : (
+              ''
+            )}
+            {otherDonate && soyEmpresa ? (
+              <div className="conditionDonateOther">
+                <DonateOthersForm
+                  otherDonate={setInfoOtherDonate}
+                  quantityOtherDonate={setQuantityOtherDonate}
+                />
+              </div>
+            ) : (
+              ''
+            )}
+            <div className="conditionSb">
+              <SubmitButton />
+            </div>
+          </div>
         ) : (
           ''
         )}
-        {donateFood ? (
-          <DonateFoodForm
-            category={setCategoryDonation}
-            quantity={setQuantityDonation}
-            info={setInfoFood}
-          />
-        ) : (
-          ''
-        )}
-        {otherDonate ? (
-          <DonateOthersForm
-            otherDonate={setInfoOtherDonate}
-            quantityOtherDonate={setQuantityOtherDonate}
-          />
-        ) : (
-          ''
-        )}
-        {donateFood || otherDonate ? <SubmitButton /> : ''}
       </Form>
     </div>
   );

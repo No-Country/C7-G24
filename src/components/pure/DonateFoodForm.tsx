@@ -2,6 +2,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import '../../styles/HeaderForm.css';
 
 const DonateFoodForm = ({ category, quantity, info }: any) => {
   const handleOnChange = (e: { target: { name: any; value: any } }) => {
@@ -32,12 +33,12 @@ const DonateFoodForm = ({ category, quantity, info }: any) => {
   };
 
   return (
-    <div className="p-4">
+    <div className="px-5">
       <Row>
         {''}
-        Seleccionar Categoria:
+        <div className="select-text">Seleccionar Categoria:</div>
         <select
-          className="btn btn-dropdown  btn-success p-1 w-10"
+          className="btn btn-dropdown  select-food btn-success p-1 w-10"
           name="categoria"
           onChange={handleOnChange}
         >
@@ -48,32 +49,37 @@ const DonateFoodForm = ({ category, quantity, info }: any) => {
           <option value="Proteinas">Proteinas</option>
         </select>
         <Form.Group as={Col} md="2" controlId="validationCustom01">
-          <Form.Label>Peso/Cantidad</Form.Label>
-          <Form.Control
-            required
-            type="text"
-            onChange={handleOnChange}
-            name="cantidad"
-            placeholder="ejem : papas 10kg"
-          />
+          <div className="divfoodDonate">
+            <Form.Label className="label-form">Peso/Cantidad</Form.Label>
+            <input
+              required
+              type="text"
+              className="foodDonateForm"
+              onChange={handleOnChange}
+              name="cantidad"
+              placeholder="ejem : papas 10kg"
+            />
+          </div>
           <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
             Debes completar el campo!
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="2">
-          <Form.Check
-            type="checkbox"
-            id="perecedero"
-            onClick={handleOnClick}
-            label="Perecedero"
-          />
-          <Form.Check
-            type="checkbox"
-            onClick={handleOnClick}
-            id="noperecedero"
-            label="No Perecedero"
-          />
+          <div className="check-form">
+            <Form.Check
+              type="checkbox"
+              id="perecedero"
+              onClick={handleOnClick}
+              label="Perecedero"
+            />
+            <Form.Check
+              type="checkbox"
+              onClick={handleOnClick}
+              id="noperecedero"
+              label="No Perecedero"
+            />
+          </div>
         </Form.Group>
       </Row>
     </div>

@@ -52,13 +52,6 @@ p {
   border-radius: 6px;
   color: #ffff;
 }
-/* select {
-  margin: 10px;
-}
-select.btn.btn-dropdown.btn-success.p-1.w-10 {
-  width: 100px;
-  height: 30px;
-} */
 
 .form-check {
   margin-top: 10px;
@@ -69,7 +62,7 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
   width: 540px;
   height: 540px;
   margin-right: 60px;
-  margin-top: 100px;
+  margin-top: 75px;
   margin-left: 600px;
   top: calc(50% - 640px / 2 + 36px);
   background: #8c30f5;
@@ -107,7 +100,7 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
   width: 550px;
   height: 500px;
 }
-.container-CTrabajamos {
+.color-contenedor {
   margin-left: 600px;
   margin-top: -500px;
   background-color: #8c30f5;
@@ -204,11 +197,63 @@ select.btn.btn-dropdown.btn-success.p-1.w-10 {
   font-size: 30px;
   margin-bottom: 35px;
 }
-.container-header {
-  width: 100%;
-  height: 250.16px;
-  margin-top: 150px;
-}
 .conteo {
   width: 100%;
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .cite-p {
+    margin-left: -360px;
+    font-size: 14px;
+  }
+  .cite-Int {
+    margin-left: -400px;
+  }
+  .bg-circle {
+    display: none;
+  }
+  .comotrabajamos {
+    font-size: 20px;
+  }
+  .bal-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+  }
+  .span2,
+  .span3 {
+    font-size: 20px;
+    margin-left: -380px;
+    background: none;
+  }
+  .span1 {
+    margin-left: -27px;
+    margin-top: -37px;
+    font-size: 20px;
+    background: none;
+  }
+  .paso1 {
+    margin-left: 51px;
+    margin-top: -70px;
+  }
+  .container-color {
+    font-size: 12px;
+    margin-left: 42px;
+    margin-top: -85px;
+    color: #ffff;
+    margin-bottom: 12px;
+  }
+  .container-color2,
+  .container-color3 {
+    font-size: 12px;
+    margin-left: -300px;
+    margin-bottom: -30px;
+  }
+  .color-contenedor {
+    background-color: #8c30f5;
+    width: 345px;
+    height: 100px;
+    z-index: 0;
+    color: white;
+    margin-left: 245px;
+  }
 }

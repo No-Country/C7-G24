@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoPicture from '../../assets/Rect.png';
+import LogoPicture2 from '../../assets/isologotipo2.png';
 import Location from '../../assets/Location.png';
 import Messsage from '../../assets/Message.png';
 import '../../styles/Footer.css';
@@ -9,26 +9,23 @@ import { Link } from 'react-router-dom';
 const FooterComponent = () => {
   return (
     <div className="footer">
-      <img src={LogoPicture} alt="" className="logo_Picture" />
-      <div>
-        <p className="parrafo-f">
-          Trabajamos para reducir el hambre, mejorar la nutrición y evitar el
-          desperdicio de alimentos
-        </p>
-        <SocialBar />
-      </div>
+      <img src={LogoPicture2} alt="" className="logo_Picture" />
+      <p className="parrafo-f">
+        Trabajamos para reducir el hambre, mejorar la nutrición y evitar el
+        desperdicio de alimentos
+      </p>
       <div className="menu-footer">
         <h6 className="h6-footer">Menu</h6>
-        <Link className="a-footer" to="#">
+        <Link className="a-footer" to="/home">
           Sobre Nosotros
         </Link>
-        <Link className="a-footer" to="#">
+        <Link className="a-footer" to="/thosewhoparticipate">
           Quienes participan
         </Link>
-        <Link className="a-footer" to="#">
+        <Link className="a-footer" to="/forms">
           Voluntarios
         </Link>
-        <Link className="a-footer" to="#">
+        <Link className="a-footer" to="/donate">
           Donantes de alimentos
         </Link>
       </div>
@@ -51,13 +48,14 @@ const FooterComponent = () => {
       <div className="cont-politic">
         <a
           href="https://www.bancodealimentos.org.ar/politica-de-privacidad/"
-          className="politic"
+          className="privaciti"
           target="_blank"
           rel="noreferrer"
         >
           |Politica de privacidad|
         </a>
       </div>
+      <SocialBar />
     </div>
   );
 };

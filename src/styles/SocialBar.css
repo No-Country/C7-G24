@@ -16,8 +16,7 @@
 }
 
 .social-container {
-  bottom: 50px;
-  margin-top: -200px;
+  margin-top: -50px;
   margin-left: 160px;
   display: grid;
   grid-auto-flow: column;
@@ -70,4 +69,12 @@
 
 .colorsocialL {
   background-color: var(--linkedin);
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .social-container {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: -40px;
+  }
 }

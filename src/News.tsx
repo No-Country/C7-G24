@@ -3,7 +3,7 @@ import '../styles/News.css';
 import ImgA from '../assets/6.jpeg';
 import ImgB from '../assets/3.jpeg';
 import ImgC from '../assets/5.jpg';
-import ImgD from '../assets/10.jpg';
+import ImgD from '../assets/bal.png';
 import ImgE from '../assets/7.jpg';
 import ImgF from '../assets/8.jpeg';
 import FooterComponent from '../components/container/FooterComponent';
@@ -73,15 +73,11 @@ const News = () => {
           rel="noreferrer"
         >
           <div className="header-new3">
-            <img className="img-news2" src={ImgD} alt="" />
+            <img className="img-news3" src={ImgD} alt="" />
             <h4 className="header-h4">
-              Ya se distribuyeron mas de 2,5 millones
-              <br />
-              de kilos de papas a todo el pais
+              Ya se distribuyeron mas de 2,5 millones de kilos de papas a todo
+              el pais
             </h4>
-            <p className="p-new1">
-              “Hoy sobra papa, hoy hay gente que la necesita”.
-            </p>
           </div>
         </a>
         <a

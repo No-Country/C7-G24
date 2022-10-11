@@ -6,13 +6,14 @@
   height: 520px;
   left: 0px;
   background: #0b0d17;
+  margin-top: -85px;
 }
 
 .logo_Picture {
   width: 146px;
   height: 50px;
   margin-left: 160px;
-  margin-top: 150px;
+  margin-top: 180px;
 }
 .parrafo-f {
   font-size: 14px;
@@ -32,7 +33,7 @@
   width: 255px;
   height: 186px;
   margin-left: 600px;
-  margin-top: -200px;
+  margin-top: -350px;
   color: #d9dbe1;
 }
 .a-footer {
@@ -82,6 +83,7 @@
 .cont-im {
   padding-right: 10px;
 }
+.privaciti,
 .politic {
   width: 145px;
   height: 24px;
@@ -93,5 +95,42 @@
   margin-left: 1050px;
 }
 .cont-politic {
-  margin-top: 100px;
+  margin-top: -20px;
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .logo_Picture {
+    width: 70px;
+    height: 25px;
+    margin-left: 30px;
+    margin-top: 75px;
+  }
+  .parrafo-f {
+    padding-left: 30px;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .menu-footer {
+    margin-left: 50px;
+    margin-top: -230px;
+  }
+  .a-footer {
+    font-size: 10px;
+  }
+  .sobrenosotros-f {
+    margin-left: 400px;
+    margin-top: -180px;
+  }
+  .location,
+  .politic {
+    font-size: 10px;
+  }
+  .privaciti {
+    margin-left: 300px;
+  }
+  .footer {
+    height: 450px;
+  }
+  .cont-politic {
+    margin-left: 100px;
+  }
 }

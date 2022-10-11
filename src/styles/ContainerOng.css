@@ -1,0 +1,14 @@
+.fondo4 {
+  height: 1200px;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+.formong {
+  height: 1100px;
+}
+
+.submitButtonFormOng {
+  position: absolute;
+  left: 250px;
+}

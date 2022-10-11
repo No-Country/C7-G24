@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import LogoPicture2 from '../../assets/isologotipo2.png';
+=======
+import LogoPicture from '../../assets/Rect.png';
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc
 import Location from '../../assets/Location.png';
 import Messsage from '../../assets/Message.png';
 import '../../styles/Footer.css';
@@ -9,6 +13,7 @@ import { Link } from 'react-router-dom';
 const FooterComponent = () => {
   return (
     <div className="footer">
+<<<<<<< HEAD
       <img src={LogoPicture2} alt="" className="logo_Picture" />
       <p className="parrafo-f">
         Trabajamos para reducir el hambre, mejorar la nutrición y evitar el
@@ -26,6 +31,28 @@ const FooterComponent = () => {
           Voluntarios
         </Link>
         <Link className="a-footer" to="/donate">
+=======
+      <img src={LogoPicture} alt="" className="logo_Picture" />
+      <div>
+        <p className="parrafo-f">
+          Trabajamos para reducir el hambre, mejorar la nutrición y evitar el
+          desperdicio de alimentos
+        </p>
+        <SocialBar />
+      </div>
+      <div className="menu-footer">
+        <h6 className="h6-footer">Menu</h6>
+        <Link className="a-footer" to="#">
+          Sobre Nosotros
+        </Link>
+        <Link className="a-footer" to="#">
+          Quienes participan
+        </Link>
+        <Link className="a-footer" to="#">
+          Voluntarios
+        </Link>
+        <Link className="a-footer" to="#">
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc
           Donantes de alimentos
         </Link>
       </div>
@@ -48,14 +75,21 @@ const FooterComponent = () => {
       <div className="cont-politic">
         <a
           href="https://www.bancodealimentos.org.ar/politica-de-privacidad/"
+<<<<<<< HEAD
           className="privaciti"
+=======
+          className="politic"
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc
           target="_blank"
           rel="noreferrer"
         >
           |Politica de privacidad|
         </a>
       </div>
+<<<<<<< HEAD
       <SocialBar />
+=======
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc
     </div>
   );
 };

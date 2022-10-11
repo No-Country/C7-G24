@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc
 import React, { useState } from 'react';
 import '../../styles/Carousel.css';
 import carousel1 from '../../assets/1.jpg';
@@ -48,3 +52,28 @@ const CarouselComponent = () => {
 };
 
 export default CarouselComponent;
+<<<<<<< HEAD
+=======
+=======
+import React from "react";
+import "../../styles/Carousel.css";
+import carousel1 from "../../assets/1.jpg";
+import carousel2 from "../../assets/2.jpg";
+import carousel3 from "../../assets/3.jpeg";
+import carousel4 from "../../assets/4.jpg";
+
+const CarouselComponent = () => {
+
+    return (
+<div className="pic-ctn">
+    <img src={carousel1} alt="balcarse" className="picture"/>
+    <img src={carousel2} alt="balcarse" className="picture"/>
+    <img src={carousel3} alt="balcarse" className="picture"/>
+    <img src={carousel4} alt="balcarse" className="picture"/>
+  </div>
+    );
+}
+
+export default CarouselComponent;
+>>>>>>> fbe3ffdb9510254c6471782b661e86fea7293c71
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc

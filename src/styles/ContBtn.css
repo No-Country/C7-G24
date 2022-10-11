@@ -1,12 +1,17 @@
 .cont-btn {
   position: absolute;
+<<<<<<< HEAD
   top: 850px;
+=======
+  top: 700px;
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc
   left: 250px;
 }
 .p-vehicle {
   font-size: 15px;
   height: 0px;
 }
+<<<<<<< HEAD
 .p-formu {
   position: absolute;
   font-size: 14px;
@@ -36,3 +41,5 @@
   width: 150px;
   height: 50px;
 }
+=======
+>>>>>>> c5998c77fe7204c3ab57d21ebfee16b3c0779acc

@@ -1,5 +1,4 @@
 package com.bdabalcarce.demo.controller;
-
 import com.bdabalcarce.demo.Dto.OngDto;
 import com.bdabalcarce.demo.entity.Message;
 import com.bdabalcarce.demo.entity.Ong;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -42,7 +40,6 @@ public class OngContr {
             return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: ongPhone o ongEmail"),
                     HttpStatus.BAD_REQUEST);
         }
-
         Ong ong = new Ong(
                 ongDto.getOngName(),
                 ongDto.getOngCuit(),
@@ -52,7 +49,6 @@ public class OngContr {
                 ongDto.getOngAddress(),
                 ongDto.getOngPhone(),
                 ongDto.getOngEmail());
-
         ongServ.save(ong);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);

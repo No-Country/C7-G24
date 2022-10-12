@@ -1,6 +1,4 @@
 package com.bdabalcarce.demo.controller;
-
-
 import com.bdabalcarce.demo.Dto.CompanyDto;
 import com.bdabalcarce.demo.entity.Message;
 import com.bdabalcarce.demo.entity.Company;
@@ -10,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-
 import java.util.List;
 
 
@@ -37,8 +33,8 @@ public class CompanyContr {
                 StringUtils.isBlank(coDto.getCoContactNm()) ||
                 StringUtils.isBlank(coDto.getCoContactLn())  ){
 
-            /*Si no se ingresan los campos coName, coCategory, coCuit, coEmail, coPhone, coAddress, coContactNm y
-                coContactLn, se reportará un BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
+        /*Si no se ingresan los campos coName, coCategory, coCuit, coEmail, coPhone, coAddress, coContactNm y
+        coContactLn, se reportará un BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
 
             return new ResponseEntity(new Message("Campos obligatorios: coName, coCategory, coCuit, coEmail, coPhone, coAddress, coContactNm y coContactLn"),
                     HttpStatus.BAD_REQUEST);

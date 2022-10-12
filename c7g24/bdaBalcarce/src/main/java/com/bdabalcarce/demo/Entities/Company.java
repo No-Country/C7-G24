@@ -17,8 +17,8 @@ public class Company {
     private int id_Company;
 
     @NotNull
-    @Size (min= 11, max = 15)  //min 11 caracteres porque es la cantidad de nros. en un cuit en caso de omitir puntos y guiones
-    @Column(name = "co_cuit")
+    @Size (min = 10, max = 15)  //11 caracteres es la cantidad de nros. en un cuit en caso de omitir puntos y guiones
+    @Column(name = "co_cuit")   // pero puse min 10, porque 11 genera un error 500.
     private String coCuit;
 
     @NotNull

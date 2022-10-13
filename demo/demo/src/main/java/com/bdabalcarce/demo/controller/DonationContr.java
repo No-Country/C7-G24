@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
+@CrossOrigin(origins = "https://http//localhost:3000")
 @RequestMapping({"/donations"})
 public class DonationContr {
     @Autowired

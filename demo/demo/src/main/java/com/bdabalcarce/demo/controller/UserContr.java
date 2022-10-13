@@ -10,12 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import com.bdabalcarce.demo.service.UserS;
 import java.util.List;
 @RestController
+@CrossOrigin(origins = "https://http//localhost:3000")
+
 
 @RequestMapping({"/users"})
 public class UserContr {
     @Autowired
     UserS userServ;
     @GetMapping ("/list")
+
     public ResponseEntity<List<User>> list() {
         List<User> list = userServ.list();
         return new ResponseEntity(list, HttpStatus.OK);
@@ -29,6 +32,7 @@ public class UserContr {
         return new ResponseEntity(persona, HttpStatus.OK);
     }
     @PostMapping("/create")
+
     public ResponseEntity<?> create(@RequestBody UserDto dtousuario) {
         if (StringUtils.isBlank(dtousuario.getUserName()) ||
                 StringUtils.isBlank(dtousuario.getUserLastname()) ||

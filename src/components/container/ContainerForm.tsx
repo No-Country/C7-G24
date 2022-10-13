@@ -33,6 +33,7 @@ const FormContainer = () => {
       event.stopPropagation();
     }
     setValidated(true);
+
     /* crea un objeto persona con la informacion obtenida desde el formulario voluntario */
     const person = {
       id: dni,
@@ -43,6 +44,7 @@ const FormContainer = () => {
       schedule,
       vehicle,
     };
+
     context.createVoluntary(person);
   };
 

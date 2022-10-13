@@ -22,11 +22,11 @@ const FooterComponent = () => {
         <Link className="a-footer" to="/thosewhoparticipate">
           Quienes participan
         </Link>
-        <Link className="a-footer" to="/forms">
-          Voluntarios
+        <Link className="a-footer" to="/news">
+          Novedades
         </Link>
-        <Link className="a-footer" to="/donate">
-          Donantes de alimentos
+        <Link className="a-footer" to="/contacto">
+          Contacto
         </Link>
       </div>
       <div className="sobrenosotros-f">
@@ -38,7 +38,7 @@ const FooterComponent = () => {
           rel="noreferrer"
         >
           <img src={Location} alt="" className="cont-im" />
-          calle 43 e/18 y Av. Centenario
+          Calle 43 c/18 y Av. Centenario. Balcarce, Buenos Aires.
         </a>
         <div className="location">
           <img src={Messsage} alt="" className="cont-im" />

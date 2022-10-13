@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="home">
+        <Navbar.Brand href="/home">
           <img src={logoPicture} alt="BDA" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,31 +24,31 @@ const NavBar = () => {
             onSelect={(selectedKey: any) => setActive(selectedKey)}
           >
             <NavLink
-              to="home"
+              to="/sobrenosotros"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Sobre Nosotros
             </NavLink>
             <NavLink
-              to="thosewhoparticipate"
+              to="/thosewhoparticipate"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Quienes Participan
             </NavLink>
             <NavLink
-              to="news"
+              to="/news"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Novedades
             </NavLink>
             <NavLink
-              to="contacto"
+              to="/contacto"
               className={({ isActive }) => (isActive ? 'link active' : 'link')}
             >
               Contacto
             </NavLink>
             <div className="py-3">
-              <Link to="recibirAyuda" className="botonR letras">
+              <Link to="/recibirAyuda" className="botonR letras">
                 Recibir Ayuda
               </Link>{' '}
             </div>{' '}

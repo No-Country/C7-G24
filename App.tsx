@@ -16,7 +16,6 @@ import News from './pages/News';
 import ThoseWhoParticipate from './pages/ThoseWhoParticipate';
 import NotFound from './pages/NotFound';
 import Gratitude from './pages/Gratitude';
-import About from './pages/About';
 
 function App() {
   return (
@@ -38,7 +37,6 @@ function App() {
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<Navigate to="not-found" />} />
           <Route path="/gratitude" element={<Gratitude />} />
-          <Route path="/sobrenosotros" element={<About />} />
         </Routes>
       </Router>
     </Context>

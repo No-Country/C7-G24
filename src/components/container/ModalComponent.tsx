@@ -37,16 +37,6 @@ function ModalComponent() {
               Sumate Como Voluntario
             </Button>
           </Link>
-          <Button className="button-modal" onClick={handleClose}>
-            <a
-              className="donate-e"
-              href="https://donaronline.org/banco-de-alimentos-balcarce-asociacion-civil/menos-hambre-mas-futuro"
-              target="_blank"
-              rel="no reference noreferrer"
-            >
-              Colaborar con un monto
-            </a>
-          </Button>
         </Modal.Body>
       </Modal>
     </>

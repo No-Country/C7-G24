@@ -16,15 +16,15 @@ const AppContext = createContext({
 });
 
 const Context = ({ children }: any) => {
-  const [voluntarys, setvoluntarys]: any[] = useState([]);
+  const [voluntarys, setVoluntarys]: any[] = useState([]);
   const [companysDonations, setCompanysDonations]: any[] = useState([]);
   const [peoplesDonations, setPeoplesDonations]: any[] = useState([]);
 
-  const createVoluntary = (voluntary: any) => {
+  const createVoluntary = (voluntary: object) => {
     const temp: any[] = [...voluntarys];
     temp.push(voluntary);
 
-    setvoluntarys([...temp]);
+    setVoluntarys([...temp]);
   };
 
   const getVoluntary = (id: any) => {

@@ -6,7 +6,7 @@ import FooterComponent from '../components/container/FooterComponent';
 const Contact = () => {
   return (
     <div>
-      <h1 className="contacTitle">Contactanos!</h1>
+      <h1 className="contacTitle">¡Contáctanos!</h1>
       <img src={Fondo2} alt="" className="fondo3" />
       <div className="containerContact p-5">
         <a
@@ -18,20 +18,20 @@ const Contact = () => {
           Donar Online
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=542266446438&text=¡Hola!%20Quiero%20colaborar%20con%20el%20BDA%20"
-          target="_blank"
-          rel="no reference noreferrer"
-          className="redirect"
-        >
-          Quiero donar o ser voluntario
-        </a>
-        <a
           href="https://api.whatsapp.com/send?phone=542266448249&text=¡Hola!%20Me%20gustaría%20recibir%20la%20ayuda%20del%20BDA"
           target="_blank"
           rel="no reference noreferrer"
           className="redirect"
         >
           Área Social - Asistencia BDA
+        </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=542266446438&text=¡Hola!%20Quiero%20colaborar%20con%20el%20BDA%20"
+          target="_blank"
+          rel="no reference noreferrer"
+          className="redirect"
+        >
+          Whatsapp BDA
         </a>
         <a
           href="https://www.instagram.com/bancodealimentosbalcarce/"

@@ -52,7 +52,7 @@ const FooterComponent = () => {
           target="_blank"
           rel="noreferrer"
         >
-          |Politica de privacidad|
+          Politica de privacidad
         </a>
       </div>
       <SocialBar />

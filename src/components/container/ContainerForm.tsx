@@ -6,6 +6,7 @@ import VoluntaryForm from '../pure/VoluntaryForm';
 import VehicleForm from '../pure/VehicleForm';
 import ScheduleForm from '../pure/ScheduleForm';
 import SubmitButton from '../SubmitButton';
+import axios from 'axios';
 import { useAppContext } from '../../context/Context';
 import '../../styles/ContBtn.css';
 
@@ -22,12 +23,13 @@ const FormContainer = () => {
 
   const context = useAppContext();
 
-  const handleOnSubmitVoluntaryForm = (event: {
+  const handleOnSubmitVoluntaryForm = async (event: {
     currentTarget: any;
     preventDefault: () => void;
     stopPropagation: () => void;
   }) => {
     const form = event.currentTarget;
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
@@ -35,6 +37,15 @@ const FormContainer = () => {
     setValidated(true);
 
     /* crea un objeto persona con la informacion obtenida desde el formulario voluntario */
+    type CreatePerson = {
+      id: string;
+      name: string;
+      lastName: string;
+      phone: string;
+      mail: string;
+      schedule: string;
+      vehicle: string;
+    };
     const person = {
       id: dni,
       name,
@@ -44,7 +55,11 @@ const FormContainer = () => {
       schedule,
       vehicle,
     };
-
+    try {
+      await axios.post<CreatePerson>('http://localhost:8080/', { person });
+    } catch (error) {
+      console.log('error message: ', error);
+    }
     context.createVoluntary(person);
   };
 

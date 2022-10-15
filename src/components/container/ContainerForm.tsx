@@ -47,16 +47,16 @@ const FormContainer = () => {
       vehicle: string;
     };
     const person = {
-      dni,
-      name,
-      lastName,
-      phone,
-      mail,
-      schedule,
-      vehicle,
+      userdni: dni,
+      username: name,
+      userlasname: lastName,
+      userphone: phone,
+      useremail: mail,
+      userabailability: schedule,
+      uservehicle: vehicle,
     };
     try {
-      axios
+      await axios
         .post<CreatePerson>('/create', person)
         .then((data: any) => console.log(data));
     } catch (error) {

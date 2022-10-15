@@ -1,6 +1,7 @@
 {
   "name": "c7-g24",
   "version": "0.1.0",
+  "proxi": "https://bda-back-prueba.herokuapp.com/users",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

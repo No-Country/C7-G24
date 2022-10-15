@@ -6,7 +6,7 @@ import VoluntaryForm from '../pure/VoluntaryForm';
 import VehicleForm from '../pure/VehicleForm';
 import ScheduleForm from '../pure/ScheduleForm';
 import SubmitButton from '../SubmitButton';
-import axiosinstance from '../../http-common';
+import axios from '../../http-common';
 import { useAppContext } from '../../context/Context';
 import '../../styles/ContBtn.css';
 
@@ -29,6 +29,7 @@ const FormContainer = () => {
     stopPropagation: () => void;
   }) => {
     const form = event.currentTarget;
+    event.preventDefault();
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
@@ -55,8 +56,8 @@ const FormContainer = () => {
       vehicle,
     };
     try {
-      axiosinstance
-        .post<CreatePerson>('/users/create', { person })
+      axios
+        .post<CreatePerson>('/create', person)
         .then((data: any) => console.log(data));
     } catch (error) {
       console.log('error message: ', error);

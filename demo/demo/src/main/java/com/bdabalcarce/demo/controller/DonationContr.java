@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
-@CrossOrigin(origins = "https://http//localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping({"/donations"})
 public class DonationContr {
     @Autowired
@@ -53,9 +53,9 @@ public class DonationContr {
         // Si se detectan datos en user, se generará un objeto, y se asociará con su donation.
             if (userdto != null) {
                 user = new User(
-                        userdto.getUserDni(),
-                        userdto.getUserName(),
-                        userdto.getUserLastname());
+                        userdto.getUserdni(),
+                        userdto.getUsername(),
+                        userdto.getUserlastname());
 
         // Si se detectan datos en company, se generará un objeto de su clase, y se asociará con su donation.
             } else {

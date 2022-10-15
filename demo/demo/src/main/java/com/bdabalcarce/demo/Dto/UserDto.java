@@ -4,103 +4,105 @@ import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 public class UserDto {
-    private  String userRol;
+    private  String userrol;
     @NotBlank
-    private String userName;
+    private String username;
     @NotBlank
-    private String userLastname;
+    private String userlastname;
     @NotBlank
-    private String userDni;
-    private String userEmail;
-    private String userPhone;
-    private String userAdress;
-    private String userVehicle;
-    private String userAbailability;
+    private String userdni;
+    private String useremail;
+    private String userphone;
+    private String useradress;
+    private String uservehicle;
+    private String userabailability;
     private List<Donation> donaciones = new ArrayList<Donation>();
     public UserDto() {
     }
-    public UserDto(String userDni, String userRol, String userName, String userLastname,  String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
-        this.userDni = userDni;
-        this.userRol = userRol;
-        this.userName = userName;
-        this.userLastname = userLastname;
-        this.userEmail = userEmail;
-        this.userPhone = userPhone;
-        this.userAdress = userAdress;
-        this.userVehicle = userVehicle;
-        this.userAbailability = userAbailability;
+    public UserDto(String userdni, String userrol, String username, String userlastname,  String useremail, String userphone, String useradress, String uservehicle, String userabailability) {
+        this.userdni = userdni;
+        this.userrol = userrol;
+        this.username = username;
+        this.userlastname = userlastname;
+        this.useremail = useremail;
+        this.userphone = userphone;
+        this.useradress = useradress;
+        this.uservehicle = uservehicle;
+        this.userabailability = userabailability;
     }
-    public String getUserRol() {
 
-        return userRol;
+    public String getUserrol() {
+        return userrol;
     }
-    public void setUserRol(String userRol) {
 
-        this.userRol = userRol;
+    public void setUserrol(String userrol) {
+        this.userrol = userrol;
     }
-    public String getUserName() {
 
-        return userName;
+    public String getUsername() {
+        return username;
     }
-    public void setUserName(String userName) {
 
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
-    public String getUserLastname() {
 
-        return userLastname;
+    public String getUserlastname() {
+        return userlastname;
     }
-    public void setUserLastname(String userLastname) {
 
-        this.userLastname = userLastname;
+    public void setUserlastname(String userlastname) {
+        this.userlastname = userlastname;
     }
-    public String getUserDni() {
 
-        return userDni;
+    public String getUserdni() {
+        return userdni;
     }
-    public void setUserDni(String userDni) {
 
-        this.userDni = userDni;
+    public void setUserdni(String userdni) {
+        this.userdni = userdni;
     }
-    public String getUserEmail() {
 
-        return userEmail;
+    public String getUseremail() {
+        return useremail;
     }
-    public void setUserEmail(String userEmail) {
 
-        this.userEmail = userEmail;
+    public void setUseremail(String useremail) {
+        this.useremail = useremail;
     }
-    public String getUserPhone() {
 
-        return userPhone;
+    public String getUserphone() {
+        return userphone;
     }
-    public void setUserPhone(String userPhone) {
 
-        this.userPhone = userPhone;
+    public void setUserphone(String userphone) {
+        this.userphone = userphone;
     }
-    public String getUserAdress() {
 
-        return userAdress;
+    public String getUseradress() {
+        return useradress;
     }
-    public void setUserAdress(String userAdress) {
-        this.userAdress = userAdress;
-    }
-    public String getUserVehicle() {
 
-        return userVehicle;
+    public void setUseradress(String useradress) {
+        this.useradress = useradress;
     }
-    public void setUserVehicle(String userVehicle) {
 
-        this.userVehicle = userVehicle;
+    public String getUservehicle() {
+        return uservehicle;
     }
-    public String getUserAbailability() {
 
-        return userAbailability;
+    public void setUservehicle(String uservehicle) {
+        this.uservehicle = uservehicle;
     }
-    public void setUserAbailability(String userAbailability) {
 
-        this.userAbailability = userAbailability;
+    public String getUserabailability() {
+        return userabailability;
     }
+
+    public void setUserabailability(String userabailability) {
+        this.userabailability = userabailability;
+    }
+
     public List<Donation> getDonaciones() {
 
         return donaciones;

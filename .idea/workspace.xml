@@ -7,12 +7,11 @@
     <list default="true" id="56b95f38-5bbf-4030-84e9-07b973a1266a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/Dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/Dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/CompanyContr.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/CompanyContr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/DonationContr.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/DonationContr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/OngContr.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/OngContr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/UserContr.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/controller/UserContr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/service/UserS.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/service/UserS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/Ong.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/Ong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/bdabalcarce/demo/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

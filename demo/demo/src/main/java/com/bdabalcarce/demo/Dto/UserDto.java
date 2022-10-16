@@ -15,11 +15,11 @@ public class UserDto {
     private String userphone;
     private String useradress;
     private String uservehicle;
-    private String userabailability;
+    private String useravailability;
     private List<Donation> donaciones = new ArrayList<Donation>();
     public UserDto() {
     }
-    public UserDto(String userdni, String userrol, String username, String userlastname,  String useremail, String userphone, String useradress, String uservehicle, String userabailability) {
+    public UserDto(String userdni, String userrol, String username, String userlastname,  String useremail, String userphone, String useradress, String uservehicle, String useravailability) {
         this.userdni = userdni;
         this.userrol = userrol;
         this.username = username;
@@ -28,7 +28,7 @@ public class UserDto {
         this.userphone = userphone;
         this.useradress = useradress;
         this.uservehicle = uservehicle;
-        this.userabailability = userabailability;
+        this.useravailability = useravailability;
     }
 
     public String getUserrol() {
@@ -95,12 +95,12 @@ public class UserDto {
         this.uservehicle = uservehicle;
     }
 
-    public String getUserabailability() {
-        return userabailability;
+    public String getUseravailability() {
+        return useravailability;
     }
 
-    public void setUserabailability(String userabailability) {
-        this.userabailability = userabailability;
+    public void setUseravailability(String useravailability) {
+        this.useravailability = useravailability;
     }
 
     public List<Donation> getDonaciones() {

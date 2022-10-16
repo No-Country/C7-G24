@@ -10,7 +10,7 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_donation;
     @NotNull
-    @Size(max = 25)
+
     @Column(name = "don_category")
     private String donCategory;
     @NotNull
@@ -18,7 +18,7 @@ public class Donation {
     private Boolean donPerishable;
     @Column(name = "don_expiration")
     private Date donExpiration;
-    @Size(max = 200)
+
     @Column (name = "don_details")
     private String donDetails;
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})

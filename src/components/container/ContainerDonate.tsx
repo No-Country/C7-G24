@@ -5,9 +5,11 @@ import DonateFoodForm from '../pure/DonateFoodForm';
 import VoluntaryForm from '../pure/VoluntaryForm';
 import SubmitButton from '../SubmitButton';
 import ContainerCheck from './ContainerCheck';
+import axios from '../../http-common-donate';
 import { useAppContext } from '../../context/Context';
 import Img from '../../assets/isologotipo.png';
 import '../../styles/HeaderForm.css';
+import { useNavigate } from 'react-router-dom';
 
 const ContainerDonate = () => {
   const [name, setName] = useState('');
@@ -17,7 +19,7 @@ const ContainerDonate = () => {
   const [dni, setDni] = useState('');
   const [categoryDonation, setCategoryDonation] = useState('');
   const [quantityDonation, setQuantityDonation] = useState('');
-  const [infoFood, setInfoFood] = useState('');
+  const [infoFood, setInfoFood] = useState(false);
   const [minorista, setMinorista] = useState(false);
   const [mayorista, setMayorista] = useState(false);
   const [validated, setValidated] = useState(false);
@@ -25,9 +27,11 @@ const ContainerDonate = () => {
   const [stateMayorista, setStateMayorista] = useState(true);
 
   const context = useAppContext();
+  const navigate = useNavigate();
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = async (event: any) => {
     const form = event.currentTarget;
+    event.preventDefault();
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
@@ -35,17 +39,38 @@ const ContainerDonate = () => {
 
     setValidated(true);
 
-    const peopleDonation = {
-      id: dni,
-      name,
-      lastName,
-      phone,
-      mail,
-      categoryDonation,
-      quantityDonation,
-      infoFood,
+    type CreatePeopleDonation = {
+      dni: string;
+      name: string;
+      lastName: string;
+      phone: string;
+      mail: string;
+      categoryDonation: string;
+      quantityDonation: string;
+      infoFood: boolean;
     };
+
+    const peopleDonation = {
+      userdni: dni,
+      username: name,
+      userlastname: lastName,
+      userphone: phone,
+      useremail: mail,
+      doncategory: categoryDonation,
+      dondetails: quantityDonation,
+      donperishable: infoFood,
+    };
+
+    try {
+      await axios
+        .post<CreatePeopleDonation>('/create', peopleDonation)
+        .then((data) => console.log(data));
+    } catch (error) {
+      console.log('error message:', error);
+    }
+
     context.createPeopleDonation(peopleDonation);
+    navigate('/gratitude');
   };
 
   const handleOnClick = (event: any) => {
@@ -113,9 +138,10 @@ const ContainerDonate = () => {
           )}
           {minorista ? (
             <DonateFoodForm
-              category={setCategoryDonation}
               quantity={setQuantityDonation}
               info={setInfoFood}
+              value={categoryDonation}
+              setValue={setCategoryDonation}
             />
           ) : (
             ''

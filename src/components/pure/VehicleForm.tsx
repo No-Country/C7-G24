@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-const VehicleForm = ({ vehicle }: any) => {
+const VehicleForm = ({ vehicle, setVehicle }: any) => {
   const onChangeVehicle = (event: { target: { value: any } }) => {
     const value = event.target.value;
-    vehicle(value);
+    setVehicle(value);
   };
 
   return (
@@ -12,6 +12,7 @@ const VehicleForm = ({ vehicle }: any) => {
         className="btn btn-dropdown btn-success p-1"
         name="Vehiculo"
         onChange={() => onChangeVehicle}
+        value={vehicle}
       >
         <option value="Camion">Camion</option>
         <option value="Camioneta">Camioneta</option>

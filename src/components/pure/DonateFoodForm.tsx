@@ -4,12 +4,12 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import '../../styles/HeaderForm.css';
 
-const DonateFoodForm = ({ category, quantity, info }: any) => {
+const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
   const handleOnChange = (e: { target: { name: any; value: any } }) => {
     const names = e.target.name;
     switch (names) {
       case 'categoria':
-        category(e.target.value);
+        setValue(e.target.value);
         break;
       case 'cantidad':
         quantity(e.target.value);
@@ -21,10 +21,10 @@ const DonateFoodForm = ({ category, quantity, info }: any) => {
     const name = e.target.id;
     switch (name) {
       case 'perecedero':
-        info('Perecedero');
+        info(true);
         break;
       case 'noperecedero':
-        info('No Perecedero');
+        info(false);
         break;
 
       default:
@@ -41,6 +41,7 @@ const DonateFoodForm = ({ category, quantity, info }: any) => {
           className="btn btn-dropdown  select-food btn-success p-1 w-10"
           name="categoria"
           onChange={handleOnChange}
+          value={value}
         >
           <option value="Granos">Granos</option>
           <option value="Verduras">Verduras</option>

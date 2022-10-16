@@ -8,6 +8,7 @@ import ScheduleForm from '../pure/ScheduleForm';
 import SubmitButton from '../SubmitButton';
 import axios from '../../http-common';
 import { useAppContext } from '../../context/Context';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/ContBtn.css';
 
 const FormContainer = () => {
@@ -22,6 +23,7 @@ const FormContainer = () => {
   const [vehicle, setVehicle] = useState('');
 
   const context = useAppContext();
+  const navigate = useNavigate();
 
   const handleOnSubmitVoluntaryForm = async (event: {
     currentTarget: any;
@@ -64,6 +66,7 @@ const FormContainer = () => {
     }
 
     context.createVoluntary(person);
+    navigate('/gratitude');
   };
 
   const check = (e: { target: { checked: any } }) => {
@@ -109,7 +112,8 @@ const FormContainer = () => {
           />{' '}
           {completed ? (
             <p className="p-vehicle">
-              Tipo de Vehiculo: <VehicleForm vehicle={setVehicle} />{' '}
+              Tipo de Vehiculo:{' '}
+              <VehicleForm vehicle={vehicle} setVehicle={setVehicle} />{' '}
             </p>
           ) : (
             ''

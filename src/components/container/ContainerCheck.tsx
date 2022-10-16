@@ -6,8 +6,10 @@ import VoluntaryForm from '../pure/VoluntaryForm';
 import DonateFoodForm from '../pure/DonateFoodForm';
 import DonateOthersForm from '../pure/DonateOtherForm';
 import SubmitButton from '../SubmitButton';
+import axios from '../../http-common-donate';
 import { useAppContext } from '../../context/Context';
 import Img from '../../assets/isologotipo.png';
+import { useNavigate } from 'react-router-dom';
 
 const ContainerCheck = () => {
   const [name, setName] = useState('');
@@ -34,13 +36,15 @@ const ContainerCheck = () => {
   const [stateSoyPersona, setStateSoyPersona] = useState(true);
   const [stateSoyEmpresa, setStateSoyEmpresa] = useState(true);
   const context = useAppContext();
+  const navigate = useNavigate();
 
-  const handleOnSubmitVoluntaryForm = (event: {
+  const handleOnSubmitVoluntaryForm = async (event: {
     currentTarget: any;
     preventDefault: () => void;
     stopPropagation: () => void;
   }) => {
     const form = event.currentTarget;
+    event.preventDefault();
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
@@ -48,44 +52,102 @@ const ContainerCheck = () => {
 
     setValidated(true);
     if (soyPersona) {
-      const peopleDonate = {
-        id: dni,
-        name,
-        lastName,
-        phone,
-        mail,
-        categoryDonation,
-        quantityDonation,
-        infoFood,
+      type CreatePeopleDonate = {
+        dni: string;
+        name: string;
+        lastName: string;
+        phone: string;
+        mail: string;
+        categoryDonation: string;
+        quantityDonation: string;
+        infoFood: boolean;
       };
+
+      const peopleDonate = {
+        userdni: dni,
+        username: name,
+        userlastname: lastName,
+        userphone: phone,
+        useremail: mail,
+        doncategory: categoryDonation,
+        dondetails: quantityDonation,
+        donperishable: infoFood,
+      };
+      try {
+        await axios
+          .post<CreatePeopleDonate>('/create', peopleDonate)
+          .then((data) => console.log(data));
+      } catch (error) {
+        console.log('error message:', error);
+      }
+
       context.createPeopleDonation(peopleDonate);
+      navigate('/gratitude');
     }
     if (soyEmpresa && donateFood) {
-      const companyDonate = {
-        id: cuit,
-        companyName,
-        companyAddres,
-        typeCompany,
-        mailCompany,
-        phoneCompany,
-        categoryDonation,
-        quantityDonation,
-        infoFood,
+      type CreateCompanyDonate = {
+        cuit: string;
+        companyName: string;
+        companyAddres: string;
+        typeCompany: string;
+        mailCompany: string;
+        phoneCompany: string;
+        categoryDonation: string;
+        quantityDonation: string;
+        infoFood: string;
       };
+
+      const companyDonate = {
+        cocuit: cuit,
+        coname: companyName,
+        coaddress: companyAddres,
+        cocategory: typeCompany,
+        coemail: mailCompany,
+        cophone: phoneCompany,
+        doncategory: categoryDonation,
+        dondetails: quantityDonation,
+        donperishable: infoFood,
+      };
+      try {
+        await axios
+          .post<CreateCompanyDonate>('/create', companyDonate)
+          .then((data) => console.log(data));
+      } catch (error) {
+        console.log('error message:', error);
+      }
       context.createCompanyDonation(companyDonate);
+      navigate('/gratitude');
     }
     if (soyEmpresa && otherDonate) {
-      const companyDonate = {
-        id: cuit,
-        companyName,
-        companyAddres,
-        typeCompany,
-        mailCompany,
-        phoneCompany,
-        infoOtherDonate,
-        quantityOtherDonate,
+      type CreateCompanyDonate = {
+        cuit: string;
+        companyName: string;
+        companyAddres: string;
+        typeCompany: string;
+        mailCompany: string;
+        phoneCompany: string;
+        infoOtherDonate: string;
+        quantityOtherDonate: string;
       };
+      const companyDonate = {
+        cocuit: cuit,
+        coname: companyName,
+        coaddress: companyAddres,
+        cocategory: typeCompany,
+        coemail: mailCompany,
+        cophone: phoneCompany,
+        doncategory: infoOtherDonate,
+        dondetails: quantityOtherDonate,
+      };
+      try {
+        await axios
+          .post<CreateCompanyDonate>('/create', companyDonate)
+          .then((data) => console.log(data));
+      } catch (error) {
+        console.log('error message:', error);
+      }
       context.createCompanyDonation(companyDonate);
+      navigate('/gratitude');
     }
   };
 
@@ -198,7 +260,8 @@ const ContainerCheck = () => {
             {donateFood && soyPersona ? (
               <div className="conditionDonateFood2">
                 <DonateFoodForm
-                  category={setCategoryDonation}
+                  value={categoryDonation}
+                  setValue={setCategoryDonation}
                   quantity={setQuantityDonation}
                   info={setInfoFood}
                 />
@@ -252,7 +315,8 @@ const ContainerCheck = () => {
             {donateFood && soyEmpresa ? (
               <div className="conditionDonateFood">
                 <DonateFoodForm
-                  category={setCategoryDonation}
+                  value={categoryDonation}
+                  setValue={setCategoryDonation}
                   quantity={setQuantityDonation}
                   info={setInfoFood}
                 />

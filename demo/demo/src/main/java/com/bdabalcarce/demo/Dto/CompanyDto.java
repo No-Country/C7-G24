@@ -2,79 +2,95 @@ package com.bdabalcarce.demo.Dto;
 import javax.validation.constraints.NotBlank;
 public class CompanyDto {
     @NotBlank
-    private String coName;
+    private String coname;
     @NotBlank
-    private String coCategory;
+    private String cocategory;
     @NotBlank
-    private String coCuit;
+    private String cocuit;
     @NotBlank
-    private String coEmail;
+    private String coemail;
     @NotBlank
-    private String coPhone;
+    private String cophone;
     @NotBlank
-    private String coAddress;
+    private String coaddress;
     @NotBlank
-    private String coContactNm;
+    private String cocontactNm;
     @NotBlank
-    private String coContactLn;
+    private String cocontactLn;
     public CompanyDto() {
     }
-    public CompanyDto(String coName, String coCategory, String coCuit, String coEmail, String coPhone, String coAddress, String coContactNm, String coContactLn) {
-        this.coName = coName;
-        this.coCategory = coCategory;
-        this.coCuit = coCuit;
-        this.coEmail = coEmail;
-        this.coPhone = coPhone;
-        this.coAddress = coAddress;
-        this.coContactNm = coContactNm;
-        this.coContactLn = coContactLn;
+    public CompanyDto(String coname, String cocategory, String cocuit, String coemail, String cophone, String coaddress, String cocontactNm, String cocontactLn) {
+        this.coname = coname;
+        this.cocategory = cocategory;
+        this.cocuit = cocuit;
+        this.coemail = coemail;
+        this.cophone = cophone;
+        this.coaddress = coaddress;
+        this.cocontactNm = cocontactNm;
+        this.cocontactLn = cocontactLn;
     }
-    public String getCoName() {
-        return coName;
+
+    public String getConame() {
+        return coname;
     }
-    public void setCoName(String coName) {
-        this.coName = coName;
+
+    public void setConame(String coname) {
+        this.coname = coname;
     }
-    public String getCoCategory() {
-        return coCategory;
+
+    public String getCocategory() {
+        return cocategory;
     }
-    public void setCoCategory(String coCategory) {
-        this.coCategory = coCategory;
+
+    public void setCocategory(String cocategory) {
+        this.cocategory = cocategory;
     }
-    public String getCoCuit() {
-        return coCuit;
+
+    public String getCocuit() {
+        return cocuit;
     }
-    public void setCoCuit(String coCuit) {
-        this.coCuit = coCuit;
+
+    public void setCocuit(String cocuit) {
+        this.cocuit = cocuit;
     }
-    public String getCoEmail() {
-        return coEmail;
+
+    public String getCoemail() {
+        return coemail;
     }
-    public void setCoEmail(String coEmail) {
-        this.coEmail = coEmail;
+
+    public void setCoemail(String coemail) {
+        this.coemail = coemail;
     }
-    public String getCoPhone() {
-        return coPhone;
+
+    public String getCophone() {
+        return cophone;
     }
-    public void setCoPhone(String coPhone) {
-        this.coPhone = coPhone;
+
+    public void setCophone(String cophone) {
+        this.cophone = cophone;
     }
-    public String getCoAddress() {
-        return coAddress;
+
+    public String getCoaddress() {
+        return coaddress;
     }
-    public void setCoAddress(String coAddress) {
-        this.coAddress = coAddress;
+
+    public void setCoaddress(String coaddress) {
+        this.coaddress = coaddress;
     }
-    public String getCoContactNm() {
-        return coContactNm;
+
+    public String getCocontactNm() {
+        return cocontactNm;
     }
-    public void setCoContactNm(String coContactNm) {
-        this.coContactNm = coContactNm;
+
+    public void setCocontactNm(String cocontactNm) {
+        this.cocontactNm = cocontactNm;
     }
-    public String getCoContactLn() {
-        return coContactLn;
+
+    public String getCocontactLn() {
+        return cocontactLn;
     }
-    public void setCoContactLn(String coContactLn) {
-        this.coContactLn = coContactLn;
+
+    public void setCocontactLn(String cocontactLn) {
+        this.cocontactLn = cocontactLn;
     }
 }

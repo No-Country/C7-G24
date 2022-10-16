@@ -24,11 +24,11 @@ public class DonationContr {
     @GetMapping("/list")
     public ResponseEntity<List<Donation>>list() {
         List<Donation> list = donationS.list();
-            return new ResponseEntity(list, HttpStatus.OK);
+        return new ResponseEntity(list, HttpStatus.OK);
     };
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DonationDto dtoDonation) {
-        if (StringUtils.isBlank(dtoDonation.getDonCategory())) {
+        if (StringUtils.isBlank(dtoDonation.getDoncategory())) {
         /*Si no se ingresa el campo donCategory, se reportará un BAD_REQUEST en consola
          con el siguiente msj y la info no se registrará*/
             return new ResponseEntity(new Message("Campos obligatorios: donCategory"), HttpStatus.BAD_REQUEST);
@@ -46,42 +46,37 @@ public class DonationContr {
             return new ResponseEntity(new Message("Debe elegir un tipo de donante. no ambos"),
                     HttpStatus.BAD_REQUEST);}
 
-            UserDto userdto = dtoDonation.getUser();
-            CompanyDto companyDto = dtoDonation.getCompany();
-            User user = null;
-            Company company = null;
+        UserDto userdto = dtoDonation.getUser();
+        CompanyDto companyDto = dtoDonation.getCompany();
+        User user = null;
+        Company company = null;
         // Si se detectan datos en user, se generará un objeto, y se asociará con su donation.
-            if (userdto != null) {
-                user = new User(
-                        userdto.getUserdni(),
-                        userdto.getUsername(),
-                        userdto.getUserlastname());
+        if (userdto != null) {
+            user = new User(
+                    userdto.getUserdni(),
+                    userdto.getUsername(),
+                    userdto.getUserlastname());
 
-        // Si se detectan datos en company, se generará un objeto de su clase, y se asociará con su donation.
-            } else {
-                company = new Company(
-                        companyDto.getCoCuit(),
-                        companyDto.getCoName(),
-                        companyDto.getCoCategory(),
-                        companyDto.getCoEmail(),
-                        companyDto.getCoPhone(),
-                        companyDto.getCoAddress(),
-                        companyDto.getCoContactNm(),
-                        companyDto.getCoContactLn());
-            }
-            Donation donacion = new Donation(
-                    dtoDonation.getDonCategory(),
-                    dtoDonation.getDonPerishable(),
-                    dtoDonation.getDonExpiration(),
-                    dtoDonation.getDonDetails(),
-                    user,
-                    company
-            );
-            donationS.save(donacion);
-            return new ResponseEntity(new Message("Información guardada"), HttpStatus.OK);
-        }}
-
-
-
-
-
+            // Si se detectan datos en company, se generará un objeto de su clase, y se asociará con su donation.
+        } else {
+            company = new Company(
+                    companyDto.getCocuit(),
+                    companyDto.getConame(),
+                    companyDto.getCocategory(),
+                    companyDto.getCoemail(),
+                    companyDto.getCophone(),
+                    companyDto.getCoaddress(),
+                    companyDto.getCocontactNm(),
+                    companyDto.getCocontactLn());
+        }
+        Donation donacion = new Donation(
+                dtoDonation.getDoncategory(),
+                dtoDonation.getDonperishable(),
+                dtoDonation.getDonexpiration(),
+                dtoDonation.getDondetails(),
+                user,
+                company
+        );
+        donationS.save(donacion);
+        return new ResponseEntity(new Message("Información guardada"), HttpStatus.OK);
+    }}

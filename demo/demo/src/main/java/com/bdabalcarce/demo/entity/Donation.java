@@ -1,7 +1,6 @@
 package com.bdabalcarce.demo.entity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.Date;
 @Entity
 @Table(name="donations")
@@ -28,7 +27,11 @@ public class Donation {
     @JoinColumn(name = "id_company", nullable = true)
 
     private Company company;
+
     public Donation() {
+    }
+
+    public Donation(String doncategory, Boolean donperishable, Date donexpiration, String dondetails, User user) {
     }
     public Donation(String donCategory, Boolean donPerishable, Date donExpiration, String donDetails, User user, Company company) {
         this.donCategory = donCategory;
@@ -36,8 +39,9 @@ public class Donation {
         this.donExpiration = donExpiration;
         this.donDetails = donDetails;
         this.user = user;
-        this.company = company;
+        //this.company = company;
     }
+
     public int getId_donation() {
 
         return id_donation;

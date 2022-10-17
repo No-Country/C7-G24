@@ -26,6 +26,7 @@ const ContainerOng = () => {
     stopPropagation: () => void;
   }) => {
     const form = event.currentTarget;
+    event.preventDefault();
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();

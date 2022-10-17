@@ -51,10 +51,10 @@ const FormContainer = () => {
     const person = {
       userdni: dni,
       username: name,
-      userlasname: lastName,
+      userlastname: lastName,
       userphone: phone,
       useremail: mail,
-      userabailability: schedule,
+      useravailability: schedule,
       uservehicle: vehicle,
     };
     try {

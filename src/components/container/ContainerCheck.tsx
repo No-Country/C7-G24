@@ -51,7 +51,7 @@ const ContainerCheck = () => {
     }
 
     setValidated(true);
-    if (soyPersona) {
+    if (soyPersona && donateFood) {
       type CreatePeopleDonate = {
         dni: string;
         name: string;
@@ -62,26 +62,51 @@ const ContainerCheck = () => {
         quantityDonation: string;
         infoFood: boolean;
       };
-
       const peopleDonate = {
-        userdni: dni,
-        username: name,
-        userlastname: lastName,
-        userphone: phone,
-        useremail: mail,
+        user: {
+          userdni: dni,
+          username: name,
+          userlastname: lastName,
+          userphone: phone,
+          useremail: mail,
+        },
         doncategory: categoryDonation,
         dondetails: quantityDonation,
         donperishable: infoFood,
       };
       try {
-        await axios
-          .post<CreatePeopleDonate>('/create', peopleDonate)
-          .then((data) => console.log(data));
-      } catch (error) {
-        console.log('error message:', error);
-      }
+        await axios.post<CreatePeopleDonate>('/create', peopleDonate);
+      } catch (error) {}
 
       context.createPeopleDonation(peopleDonate);
+      navigate('/gratitude');
+    }
+    if (soyPersona && otherDonate) {
+      type CreatePeopleDonate = {
+        dni: string;
+        name: string;
+        lastName: string;
+        phone: string;
+        mail: string;
+        categoryDonation: string;
+        quantityDonation: string;
+        infoFood: boolean;
+      };
+      const peopleDonate = {
+        user: {
+          userdni: dni,
+          username: name,
+          userlastname: lastName,
+          userphone: phone,
+          useremail: mail,
+        },
+        doncategory: infoOtherDonate,
+        dondetails: quantityOtherDonate,
+      };
+      try {
+        await axios.post<CreatePeopleDonate>('/create', peopleDonate);
+      } catch (error) {}
+      context.createCompanyDonation(peopleDonate);
       navigate('/gratitude');
     }
     if (soyEmpresa && donateFood) {
@@ -98,23 +123,21 @@ const ContainerCheck = () => {
       };
 
       const companyDonate = {
-        cocuit: cuit,
-        coname: companyName,
-        coaddress: companyAddres,
-        cocategory: typeCompany,
-        coemail: mailCompany,
-        cophone: phoneCompany,
+        company: {
+          cocuit: cuit,
+          coname: companyName,
+          coaddress: companyAddres,
+          cocategory: typeCompany,
+          coemail: mailCompany,
+          cophone: phoneCompany,
+        },
         doncategory: categoryDonation,
         dondetails: quantityDonation,
         donperishable: infoFood,
       };
       try {
-        await axios
-          .post<CreateCompanyDonate>('/create', companyDonate)
-          .then((data) => console.log(data));
-      } catch (error) {
-        console.log('error message:', error);
-      }
+        await axios.post<CreateCompanyDonate>('/create', companyDonate);
+      } catch (error) {}
       context.createCompanyDonation(companyDonate);
       navigate('/gratitude');
     }
@@ -130,22 +153,20 @@ const ContainerCheck = () => {
         quantityOtherDonate: string;
       };
       const companyDonate = {
-        cocuit: cuit,
-        coname: companyName,
-        coaddress: companyAddres,
-        cocategory: typeCompany,
-        coemail: mailCompany,
-        cophone: phoneCompany,
+        company: {
+          cocuit: cuit,
+          coname: companyName,
+          coaddress: companyAddres,
+          cocategory: typeCompany,
+          coemail: mailCompany,
+          cophone: phoneCompany,
+        },
         doncategory: infoOtherDonate,
         dondetails: quantityOtherDonate,
       };
       try {
-        await axios
-          .post<CreateCompanyDonate>('/create', companyDonate)
-          .then((data) => console.log(data));
-      } catch (error) {
-        console.log('error message:', error);
-      }
+        await axios.post<CreateCompanyDonate>('/create', companyDonate);
+      } catch (error) {}
       context.createCompanyDonation(companyDonate);
       navigate('/gratitude');
     }

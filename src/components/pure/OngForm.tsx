@@ -4,7 +4,47 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ImgA from '../../assets/isologotipo.png';
 
-const OngForm = () => {
+const OngForm = ({
+  pName,
+  pLastName,
+  cuitOng,
+  emailOng,
+  phoneOng,
+  nameOng,
+  addressOng,
+  typeOng,
+}: any) => {
+  const handleOnChange = (e: { target: { name: any; value: any } }) => {
+    const name = e.target.name;
+    switch (name) {
+      case 'persona nombre':
+        pName(e.target.value);
+        break;
+      case 'persona apellido':
+        pLastName(e.target.value);
+        break;
+      case 'cuit ong':
+        cuitOng(e.target.value);
+        break;
+      case 'email ong':
+        emailOng(e.target.value);
+        break;
+      case 'telefono ong':
+        phoneOng(e.target.value);
+        break;
+      case 'nombre ong':
+        nameOng(e.target.value);
+        break;
+      case 'direccion ong':
+        addressOng(e.target.value);
+        break;
+      case 'tipo ong':
+        typeOng(e.target.value);
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <div>
       <div className="formHeader">
@@ -18,7 +58,12 @@ const OngForm = () => {
         <Row className="mb-3 ">
           <Form.Group as={Col} md="12" controlId="validationCustom01">
             <Form.Label>Nombre </Form.Label>
-            <Form.Control required type="text" />
+            <Form.Control
+              required
+              type="text"
+              name="persona nombre"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!
@@ -26,7 +71,12 @@ const OngForm = () => {
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom01">
             <Form.Label>Apellido </Form.Label>
-            <Form.Control required type="text" />
+            <Form.Control
+              required
+              type="text"
+              name="persona apellido"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!
@@ -34,7 +84,12 @@ const OngForm = () => {
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom02">
             <Form.Label>Cuit de la Organización</Form.Label>
-            <Form.Control required type="text" />
+            <Form.Control
+              required
+              type="text"
+              name="cuit ong"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!
@@ -45,7 +100,9 @@ const OngForm = () => {
             <Form.Control
               type="text"
               placeholder="ejem : usuario@email.com"
+              name="email ong"
               required
+              onChange={handleOnChange}
             />
             <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
@@ -54,7 +111,13 @@ const OngForm = () => {
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom03">
             <Form.Label>Telefono</Form.Label>
-            <Form.Control type="text" placeholder="0000-0000-0000" required />
+            <Form.Control
+              type="text"
+              placeholder="0000-0000-0000"
+              required
+              name="telefono ong"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!
@@ -64,7 +127,12 @@ const OngForm = () => {
         <Row className="mb-3">
           <Form.Group as={Col} md="12" controlId="validationCustom03">
             <Form.Label>Nombre de la Organización</Form.Label>
-            <Form.Control type="text" required />
+            <Form.Control
+              type="text"
+              required
+              name="nombre ong"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!
@@ -72,7 +140,12 @@ const OngForm = () => {
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom04">
             <Form.Label>Direccion</Form.Label>
-            <Form.Control type="text" required />
+            <Form.Control
+              type="text"
+              required
+              name="direccion ong"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto!</Form.Control.Feedback>
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!
@@ -80,7 +153,12 @@ const OngForm = () => {
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom05">
             <Form.Label>Tipo de Organización</Form.Label>
-            <Form.Control type="text" required />
+            <Form.Control
+              type="text"
+              required
+              name="tipo ong"
+              onChange={handleOnChange}
+            />
             <Form.Control.Feedback>Correcto!</Form.Control.Feedback>{' '}
             <Form.Control.Feedback type="invalid">
               Debes completar el campo!

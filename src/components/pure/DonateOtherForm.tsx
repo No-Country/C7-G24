@@ -4,6 +4,19 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
 const DonateOtherForm = ({ otherDonate, quantityOtherDonate }: any) => {
+  const handleOnChange = (e: { target: { name: any; value: any } }) => {
+    const name = e.target.name;
+    switch (name) {
+      case 'otra donacion':
+        otherDonate(e.target.value);
+        break;
+      case 'cantidad donacion':
+        quantityOtherDonate(e.target.value);
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <div>
       <h5>Otras donaciones</h5>
@@ -15,6 +28,7 @@ const DonateOtherForm = ({ otherDonate, quantityOtherDonate }: any) => {
             placeholder="Lo que deseas donar"
             name="otra donacion"
             required
+            onChange={handleOnChange}
           />
           <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
@@ -27,6 +41,8 @@ const DonateOtherForm = ({ otherDonate, quantityOtherDonate }: any) => {
             type="text"
             placeholder="Litros/Kilogramos/Unidades"
             required
+            name="cantidad donacion"
+            onChange={handleOnChange}
           />
           <Form.Control.Feedback>Correcto.</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">

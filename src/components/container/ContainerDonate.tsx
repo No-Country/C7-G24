@@ -51,23 +51,21 @@ const ContainerDonate = () => {
     };
 
     const peopleDonation = {
-      userdni: dni,
-      username: name,
-      userlastname: lastName,
-      userphone: phone,
-      useremail: mail,
+      user: {
+        userdni: dni,
+        username: name,
+        userlastname: lastName,
+        userphone: phone,
+        useremail: mail,
+      },
       doncategory: categoryDonation,
       dondetails: quantityDonation,
       donperishable: infoFood,
     };
 
     try {
-      await axios
-        .post<CreatePeopleDonation>('/create', peopleDonation)
-        .then((data) => console.log(data));
-    } catch (error) {
-      console.log('error message:', error);
-    }
+      await axios.post<CreatePeopleDonation>('/create', peopleDonation);
+    } catch (error) {}
 
     context.createPeopleDonation(peopleDonation);
     navigate('/gratitude');

@@ -12,7 +12,8 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins = "https://http//localhost:3000")
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping({"/companies"})
 public class CompanyContr {
     @Autowired
@@ -25,14 +26,14 @@ public class CompanyContr {
     }
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody CompanyDto coDto) {
-        if (StringUtils.isBlank(coDto.getCoName()) ||
-                StringUtils.isBlank(coDto.getCoCategory()) ||
-                StringUtils.isBlank(coDto.getCoCuit())  ||
-                StringUtils.isBlank(coDto.getCoEmail())  ||
-                StringUtils.isBlank(coDto.getCoPhone())  ||
-                StringUtils.isBlank(coDto.getCoAddress())  ||
-                StringUtils.isBlank(coDto.getCoContactNm()) ||
-                StringUtils.isBlank(coDto.getCoContactLn())  ){
+        if (StringUtils.isBlank(coDto.getConame()) ||
+                StringUtils.isBlank(coDto.getCocategory()) ||
+                StringUtils.isBlank(coDto.getCocuit())  ||
+                StringUtils.isBlank(coDto.getCoemail())  ||
+                StringUtils.isBlank(coDto.getCophone())  ||
+                StringUtils.isBlank(coDto.getCoaddress())  ||
+                StringUtils.isBlank(coDto.getCocontactNm()) ||
+                StringUtils.isBlank(coDto.getCocontactLn())  ){
 
         /*Si no se ingresan los campos coName, coCategory, coCuit, coEmail, coPhone, coAddress, coContactNm y
         coContactLn, se reportará un BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
@@ -42,14 +43,14 @@ public class CompanyContr {
         }
 
         Company empresa = new Company(
-                coDto.getCoName(),
-                coDto.getCoCategory(),
-                coDto.getCoCuit(),
-                coDto.getCoEmail(),
-                coDto.getCoPhone(),
-                coDto.getCoAddress(),
-                coDto.getCoContactNm(),
-                coDto.getCoContactLn());
+                coDto.getConame(),
+                coDto.getCocategory(),
+                coDto.getCocuit(),
+                coDto.getCoemail(),
+                coDto.getCophone(),
+                coDto.getCoaddress(),
+                coDto.getCocontactNm(),
+                coDto.getCocontactLn());
 
         coServ.save(empresa);
 

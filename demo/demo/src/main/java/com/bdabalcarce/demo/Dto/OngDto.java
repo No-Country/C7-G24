@@ -3,102 +3,95 @@ import javax.validation.constraints.NotBlank;
 
 public class OngDto {
     @NotBlank
-    private String ongName;
+    private String ongname;
     @NotBlank
-    private String ongCuit;
+    private String ongcuit;
     @NotBlank
-    private String ongReason;
+    private String ongreason;
     @NotBlank
-    private String ongHeadNm;
+    private String ongheadnm;
     @NotBlank
-    private String ongHeadLn;
+    private String ongheadln;
     @NotBlank
-    private String ongAddress;
-    private String ongPhone;
-    private String ongEmail;
+    private String ongaddress;
+    private String ongphone;
+    private String ongemail;
     public OngDto() {
     }
-    public OngDto(String ongName, String ongCuit, String ongReason, String ongHeadNm, String ongHeadLn, String ongAddress, String ongPhone, String ongEmail) {
-        this.ongName = ongName;
-        this.ongCuit = ongCuit;
-        this.ongReason = ongReason;
-        this.ongHeadNm = ongHeadNm;
-        this.ongHeadLn = ongHeadLn;
-        this.ongAddress = ongAddress;
-        this.ongPhone = ongPhone;
-        this.ongEmail = ongEmail;
-    }
-    public String getOngName() {
 
-        return ongName;
-    }
-    public void setOngName(String ongName) {
-
-        this.ongName = ongName;
-    }
-    public String getOngCuit() {
-        return ongCuit;
-    }
-    public void setOngCuit(String ongCuit) {
-
-        this.ongCuit = ongCuit;
-    }
-    public String getOngReason() {
-
-        return ongReason;
-    }
-    public void setOngReason(String ongReason) {
-
-        this.ongReason = ongReason;
-    }
-    public String getOngHeadNm() {
-
-        return ongHeadNm;
+    public OngDto(String ongname, String ongcuit, String ongreason, String ongheadnm, String ongheadln, String ongaddress, String ongphone, String ongemail) {
+        this.ongname = ongname;
+        this.ongcuit = ongcuit;
+        this.ongreason = ongreason;
+        this.ongheadnm = ongheadnm;
+        this.ongheadln = ongheadln;
+        this.ongaddress = ongaddress;
+        this.ongphone = ongphone;
+        this.ongemail = ongemail;
     }
 
-    public void setOngHeadNm(String ongHeadNm) {
-
-        this.ongHeadNm = ongHeadNm;
+    public String getOngname() {
+        return ongname;
     }
 
-    public String getOngHeadLn() {
-
-        return ongHeadLn;
+    public void setOngname(String ongname) {
+        this.ongname = ongname;
     }
 
-    public void setOngHeadLn(String ongHeadLn) {
-
-        this.ongHeadLn = ongHeadLn;
+    public String getOngcuit() {
+        return ongcuit;
     }
 
-    public String getOngAddress() {
-
-        return ongAddress;
+    public void setOngcuit(String ongcuit) {
+        this.ongcuit = ongcuit;
     }
 
-    public void setOngAddress(String ongAddress) {
-
-        this.ongAddress = ongAddress;
+    public String getOngreason() {
+        return ongreason;
     }
 
-    public String getOngPhone() {
-
-        return ongPhone;
+    public void setOngreason(String ongreason) {
+        this.ongreason = ongreason;
     }
 
-    public void setOngPhone(String ongPhone) {
-
-        this.ongPhone = ongPhone;
+    public String getOngheadnm() {
+        return ongheadnm;
     }
 
-    public String getOngEmail() {
-
-        return ongEmail;
+    public void setOngheadnm(String ongheadnm) {
+        this.ongheadnm = ongheadnm;
     }
 
-    public void setOngEmail(String ongEmail) {
+    public String getOngheadln() {
+        return ongheadln;
+    }
 
-        this.ongEmail = ongEmail;
+    public void setOngheadln(String ongheadln) {
+        this.ongheadln = ongheadln;
+    }
+
+    public String getOngaddress() {
+        return ongaddress;
+    }
+
+    public void setOngaddress(String ongaddress) {
+        this.ongaddress = ongaddress;
+    }
+
+    public String getOngphone() {
+        return ongphone;
+    }
+
+    public void setOngphone(String ongphone) {
+        this.ongphone = ongphone;
+    }
+
+    public String getOngemail() {
+        return ongemail;
+    }
+
+    public void setOngemail(String ongemail) {
+        this.ongemail = ongemail;
     }
 }
 

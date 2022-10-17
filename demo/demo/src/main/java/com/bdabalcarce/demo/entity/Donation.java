@@ -1,7 +1,6 @@
 package com.bdabalcarce.demo.entity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.Date;
 @Entity
 @Table(name="donations")
@@ -10,15 +9,14 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_donation;
     @NotNull
-    @Size(max = 25)
     @Column(name = "don_category")
     private String donCategory;
-    @NotNull
+
     @Column (name = "don_perishable")
     private Boolean donPerishable;
     @Column(name = "don_expiration")
     private Date donExpiration;
-    @Size(max = 200)
+
     @Column (name = "don_details")
     private String donDetails;
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
@@ -28,7 +26,11 @@ public class Donation {
     @JoinColumn(name = "id_company", nullable = true)
 
     private Company company;
+
     public Donation() {
+    }
+
+    public Donation(String doncategory, Boolean donperishable, Date donexpiration, String dondetails, User user) {
     }
     public Donation(String donCategory, Boolean donPerishable, Date donExpiration, String donDetails, User user, Company company) {
         this.donCategory = donCategory;
@@ -38,6 +40,7 @@ public class Donation {
         this.user = user;
         this.company = company;
     }
+
     public int getId_donation() {
 
         return id_donation;

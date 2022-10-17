@@ -3,57 +3,59 @@ import javax.validation.constraints.NotBlank;
 import java.util.Date;
 public class DonationDto {
     @NotBlank
-    private String donCategory;
-    @NotBlank
-    private Boolean donPerishable;
-    private Date donExpiration;
-    private String donDetails;
+    private String doncategory;
+
+    private Boolean donperishable;
+    private Date donexpiration;
+    private String dondetails;
     private UserDto user;
+
     private CompanyDto company;
     public DonationDto() {
     }
-    public DonationDto(String donCategory, Boolean donPerishable, Date donExpiration, String donDetails, UserDto user, CompanyDto company) {
-        this.donCategory = donCategory;
-        this.donPerishable = donPerishable;
-        this.donExpiration = donExpiration;
-        this.donDetails = donDetails;
+    public DonationDto(String doncategory, Boolean donperishable, Date donexpiration, String dondetails, UserDto user, CompanyDto company) {
+        this.doncategory = doncategory;
+        this.donperishable = donperishable;
+        this.donexpiration = donexpiration;
+        this.dondetails = dondetails;
         this.user= user;
         this.company = company;
     }
     public DonationDto(String donCategory, Boolean donPerishable, Date donExpiration, String donDetails) {
     }
-    public String getDonCategory() {
 
-        return donCategory;
+    public String getDoncategory() {
+        return doncategory;
     }
-    public void setDonCategory(String donCategory) {
 
-        this.donCategory = donCategory;
+    public void setDoncategory(String doncategory) {
+        this.doncategory = doncategory;
     }
-    public Boolean getDonPerishable() {
 
-        return donPerishable;
+    public Boolean getDonperishable() {
+        return donperishable;
     }
-    public void setDonPerishable(Boolean donPerishable) {
 
-        this.donPerishable = donPerishable;
+    public void setDonperishable(Boolean donperishable) {
+        this.donperishable = donperishable;
     }
-    public Date getDonExpiration() {
 
-        return donExpiration;
+    public Date getDonexpiration() {
+        return donexpiration;
     }
-    public void setDonExpiration(Date donExpiration) {
 
-        this.donExpiration = donExpiration;
+    public void setDonexpiration(Date donexpiration) {
+        this.donexpiration = donexpiration;
     }
-    public String getDonDetails() {
 
-        return donDetails;
+    public String getDondetails() {
+        return dondetails;
     }
-    public void setDonDetails(String donDetails) {
 
-        this.donDetails = donDetails;
+    public void setDondetails(String dondetails) {
+        this.dondetails = dondetails;
     }
+
     public UserDto getUser() {
 
         return user;
@@ -62,6 +64,7 @@ public class DonationDto {
 
         this.user = user;
     }
+
     public CompanyDto getCompany() {
 
         return company;

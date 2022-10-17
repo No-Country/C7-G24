@@ -13,41 +13,41 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_user;
     @NotNull
-    @Size (min= 8, max = 10)//min 8 caracteres porque es la cantidad de nros. en un dni en caso de omitir puntos
+
     @Column(name = "user_dni")
     private String userDni;
-    @Size (min= 5, max = 12)
+
     @Column(name = "user_rol")
     private String userRol;
     @NotNull
-    @Size (min= 1, max = 25)
+
     @Column(name = "user_name")
     private String userName;
     @NotNull
-    @Size (min= 1, max = 25)
+
     @Column(name = "user_lastname")
     private String userLastname;
-    @Size (min= 1, max = 25)
+
     @Column(name = "user_email")
     private String userEmail;
-    @Size (min= 1, max = 15)
+
     @Column(name = "user_phone")
     private String userPhone;
-    @Size (min= 1, max = 50)
+
     @Column(name = "user_address")
     private String userAdress;
-    @Size (min= 1, max = 10)
+
     @Column(name = "user_vehicle")
     private String userVehicle;
-    @Size (min= 1, max = 10)
-    @Column(name = "user_abailability")
-    private String userAbailability;
+
+    @Column(name = "user_availability")
+    private String userAvailability;
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER,cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<Donation> donaciones = new ArrayList<Donation>();
     public User() {
     }
-    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAbailability) {
+    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAvailability) {
         this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
@@ -56,14 +56,19 @@ public class User implements Serializable {
         this.userPhone = userPhone;
         this.userAdress = userAdress;
         this.userVehicle = userVehicle;
-        this.userAbailability = userAbailability;
+        this.userAvailability = userAvailability;
     }
 
-    public User(String userDni, String userName, String userLastname) {
+    public User(String userDni, String userName, String userLastname, String userEmail, String userPhone, String userVehicle, String userAvailability) {
         this.userDni = userDni;
         this.userName = userName;
         this.userLastname = userLastname;
+        this.userEmail = userEmail;
+        this.userPhone = userPhone;
+        this.userVehicle = userVehicle;
+        this.userAvailability = userAvailability;
     }
+
     public int getId_user() {
         return id_user;
     }
@@ -118,12 +123,15 @@ public class User implements Serializable {
     public void setUserVehicle(String userVehicle) {
         this.userVehicle = userVehicle;
     }
-    public String getUserAbailability() {
-        return userAbailability;
+
+    public String getUserAvailability() {
+        return userAvailability;
     }
-    public void setUserAbailability(String userAbailability) {
-        this.userAbailability = userAbailability;
+
+    public void setUserAvailability(String userAvailability) {
+        this.userAvailability = userAvailability;
     }
+
     public List<Donation> getDonaciones() {
         return donaciones;
     }

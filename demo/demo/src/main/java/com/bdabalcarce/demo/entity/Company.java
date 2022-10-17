@@ -12,32 +12,32 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_Company;
     @NotNull
-    @Size (max = 15)
+
     @Column(name = "co_cuit")
     private String coCuit;
     @NotNull
-    @Size(min= 1, max = 80)
+
     @Column(name = "co_name")
     private String coName;
     @NotNull
-    @Size (min= 1, max = 25)
+
     @Column(name = "co_category")
     private String coCategory;
     @NotNull
-    @Size (min= 1, max = 25)
+
     @Column(name = "co_email")
     private String coEmail;
     @NotNull
-    @Size (min= 1,max = 15)
+
     @Column(name = "co_phone")
     private String coPhone;
-    @Size (min= 1, max = 50)
+
     @Column(name = "co_address")
     private String coAdress;
-    @Size (min= 1, max = 20)
+
     @Column(name = "co_ContactNm")
     private String coContactNm;
-    @Size (min= 1, max = 20)
+
     @Column(name = "co_ContactLn")
     private String coContactLn;
     @JsonIgnore

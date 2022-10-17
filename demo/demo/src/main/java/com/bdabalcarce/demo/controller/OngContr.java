@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://http//localhost:3000")
-@RequestMapping({"ongs"})
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping({"/ongs"})
 public class OngContr {
     @Autowired
     OngS ongServ;
@@ -24,32 +24,32 @@ public class OngContr {
     }
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody OngDto ongDto) {
-        if (StringUtils.isBlank(ongDto.getOngName()) ||
-                StringUtils.isBlank(ongDto.getOngCuit()) ||
-                StringUtils.isBlank(ongDto.getOngReason())  ||
-                StringUtils.isBlank(ongDto.getOngHeadNm()) ||
-                StringUtils.isBlank(ongDto.getOngHeadLn()) ||
-                StringUtils.isBlank(ongDto.getOngAddress()) ){
+        if (StringUtils.isBlank(ongDto.getOngname()) ||
+                StringUtils.isBlank(ongDto.getOngcuit()) ||
+                StringUtils.isBlank(ongDto.getOngreason())  ||
+                StringUtils.isBlank(ongDto.getOngheadnm()) ||
+                StringUtils.isBlank(ongDto.getOngheadln()) ||
+                StringUtils.isBlank(ongDto.getOngaddress()) ){
     /*Si no se ingresan los campos ongName, ongCuit, ongReason, ongHeadNm, ongHeadLn y ongAddress,
      se reportará un BAD_REQUEST en consola con el siguiente msj y la info no se registrará*/
             return new ResponseEntity(new Message("Campos obligatorios: ongName, ongCuit, ongReason, ongHeadNm, ongHeadLn y ongAddress"),
                     HttpStatus.BAD_REQUEST);
         }
 
-        if (StringUtils.isBlank(ongDto.getOngPhone()) &&
-                StringUtils.isBlank(ongDto.getOngEmail()) ){
+        if (StringUtils.isBlank(ongDto.getOngphone()) &&
+                StringUtils.isBlank(ongDto.getOngemail()) ){
             return new ResponseEntity(new Message("Ingrese al menos uno de los dos campos: ongPhone o ongEmail"),
                     HttpStatus.BAD_REQUEST);
         }
         Ong ong = new Ong(
-                ongDto.getOngName(),
-                ongDto.getOngCuit(),
-                ongDto.getOngReason(),
-                ongDto.getOngHeadNm(),
-                ongDto.getOngHeadLn(),
-                ongDto.getOngAddress(),
-                ongDto.getOngPhone(),
-                ongDto.getOngEmail());
+                ongDto.getOngname(),
+                ongDto.getOngcuit(),
+                ongDto.getOngreason(),
+                ongDto.getOngheadnm(),
+                ongDto.getOngheadln(),
+                ongDto.getOngaddress(),
+                ongDto.getOngphone(),
+                ongDto.getOngemail());
         ongServ.save(ong);
 
         return new ResponseEntity(new Message("Información guardada"),HttpStatus.OK);

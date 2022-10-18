@@ -22,6 +22,7 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
     switch (name) {
       case 'perecedero':
         info(true);
+
         break;
       case 'noperecedero':
         info(false);
@@ -66,22 +67,26 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
             Debes completar el campo!
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="2">
-          <div className="check-form">
-            <Form.Check
-              type="checkbox"
-              id="perecedero"
+        <div className="check-form">
+          <div>
+            <input
+              name="alimento"
+              type="radio"
+              value="perecedero"
               onClick={handleOnClick}
-              label="Perecedero"
             />
-            <Form.Check
-              type="checkbox"
-              onClick={handleOnClick}
-              id="noperecedero"
-              label="No Perecedero"
-            />
+            <label>Perecedero</label>
           </div>
-        </Form.Group>
+          <div>
+            <input
+              type="radio"
+              onClick={handleOnClick}
+              value="noperecedero"
+              name="alimento"
+            />
+            <label>No Perecedero</label>
+          </div>
+        </div>
       </Row>
     </div>
   );

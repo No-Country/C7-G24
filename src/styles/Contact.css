@@ -46,3 +46,11 @@
     position: relative;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .containerContact {
+    margin-top: 100px;
+  }
+  .contacTitle {
+    margin-top: 70px;
+  }
+}

@@ -102,6 +102,7 @@ const OngForm = ({
               placeholder="ejem : usuario@email.com"
               name="email ong"
               required
+              pattern="[^@\s]+@[^@\s]+"
               onChange={handleOnChange}
             />
             <Form.Control.Feedback>Correcto.</Form.Control.Feedback>

@@ -84,7 +84,10 @@ const ThoseWhoParticipate = () => {
           <img className="img-logos" src={Carrefour} alt="" />
         </div>
       </div>
-      <FooterComponent />
+      <div className="footer-participate">
+        {' '}
+        <FooterComponent />
+      </div>
     </Fragment>
   );
 };

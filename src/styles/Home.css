@@ -205,7 +205,7 @@ p {
 .conteo {
   width: 100%;
 }
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 768px) {
   .cite-p {
     width: 500px;
     margin-left: -600px;
@@ -264,5 +264,22 @@ p {
   }
   .cFooter {
     margin-top: -100px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .bg-circle {
+    margin-top: 150px;
+  }
+  .logo {
+    margin-left: -250px;
+  }
+  .cite-Int {
+    margin-left: -500px;
+  }
+  .cite-p {
+    margin-left: -400px;
+  }
+  .footer {
+    margin-top: -200px;
   }
 }

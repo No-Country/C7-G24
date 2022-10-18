@@ -148,7 +148,9 @@ const News = () => {
         </div>
       </div>
 
-      <FooterComponent />
+      <div className="footer-participate">
+        <FooterComponent />
+      </div>
     </Fragment>
   );
 };

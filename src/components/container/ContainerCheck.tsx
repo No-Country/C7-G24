@@ -52,124 +52,126 @@ const ContainerCheck = () => {
 
     setValidated(true);
     /* validaciones del tipo de donante y tipo de donacion */
-    if (soyPersona && donateFood) {
-      type CreatePeopleDonate = {
-        dni: string;
-        name: string;
-        lastName: string;
-        phone: string;
-        mail: string;
-        categoryDonation: string;
-        quantityDonation: string;
-        infoFood: boolean;
-      };
-      const peopleDonate = {
-        user: {
-          userdni: dni,
-          username: name,
-          userlastname: lastName,
-          userphone: phone,
-          useremail: mail,
-        },
-        doncategory: categoryDonation,
-        dondetails: quantityDonation,
-        donperishable: infoFood,
-      };
-      try {
-        await axios.post<CreatePeopleDonate>('/create', peopleDonate);
-      } catch (error) {}
+    if (form.checkValidity() === true) {
+      if (soyPersona && donateFood) {
+        type CreatePeopleDonate = {
+          dni: string;
+          name: string;
+          lastName: string;
+          phone: string;
+          mail: string;
+          categoryDonation: string;
+          quantityDonation: string;
+          infoFood: boolean;
+        };
+        const peopleDonate = {
+          user: {
+            userdni: dni,
+            username: name,
+            userlastname: lastName,
+            userphone: phone,
+            useremail: mail,
+          },
+          doncategory: categoryDonation,
+          dondetails: quantityDonation,
+          donperishable: infoFood,
+        };
+        try {
+          await axios.post<CreatePeopleDonate>('/create', peopleDonate);
+        } catch (error) {}
 
-      context.createPeopleDonation(peopleDonate);
-      navigate('/gratitude');
-    }
-    if (soyPersona && otherDonate) {
-      type CreatePeopleDonate = {
-        dni: string;
-        name: string;
-        lastName: string;
-        phone: string;
-        mail: string;
-        categoryDonation: string;
-        quantityDonation: string;
-        infoFood: boolean;
-      };
-      const peopleDonate = {
-        user: {
-          userdni: dni,
-          username: name,
-          userlastname: lastName,
-          userphone: phone,
-          useremail: mail,
-        },
-        doncategory: infoOtherDonate,
-        dondetails: quantityOtherDonate,
-      };
-      try {
-        await axios.post<CreatePeopleDonate>('/create', peopleDonate);
-      } catch (error) {}
-      context.createCompanyDonation(peopleDonate);
-      navigate('/gratitude');
-    }
-    if (soyEmpresa && donateFood) {
-      type CreateCompanyDonate = {
-        cuit: string;
-        companyName: string;
-        companyAddres: string;
-        typeCompany: string;
-        mailCompany: string;
-        phoneCompany: string;
-        categoryDonation: string;
-        quantityDonation: string;
-        infoFood: string;
-      };
+        context.createPeopleDonation(peopleDonate);
+        navigate('/gratitude');
+      }
+      if (soyPersona && otherDonate) {
+        type CreatePeopleDonate = {
+          dni: string;
+          name: string;
+          lastName: string;
+          phone: string;
+          mail: string;
+          categoryDonation: string;
+          quantityDonation: string;
+          infoFood: boolean;
+        };
+        const peopleDonate = {
+          user: {
+            userdni: dni,
+            username: name,
+            userlastname: lastName,
+            userphone: phone,
+            useremail: mail,
+          },
+          doncategory: infoOtherDonate,
+          dondetails: quantityOtherDonate,
+        };
+        try {
+          await axios.post<CreatePeopleDonate>('/create', peopleDonate);
+        } catch (error) {}
+        context.createCompanyDonation(peopleDonate);
+        navigate('/gratitude');
+      }
+      if (soyEmpresa && donateFood) {
+        type CreateCompanyDonate = {
+          cuit: string;
+          companyName: string;
+          companyAddres: string;
+          typeCompany: string;
+          mailCompany: string;
+          phoneCompany: string;
+          categoryDonation: string;
+          quantityDonation: string;
+          infoFood: string;
+        };
 
-      const companyDonate = {
-        company: {
-          cocuit: cuit,
-          coname: companyName,
-          coaddress: companyAddres,
-          cocategory: typeCompany,
-          coemail: mailCompany,
-          cophone: phoneCompany,
-        },
-        doncategory: categoryDonation,
-        dondetails: quantityDonation,
-        donperishable: infoFood,
-      };
-      try {
-        await axios.post<CreateCompanyDonate>('/create', companyDonate);
-      } catch (error) {}
-      context.createCompanyDonation(companyDonate);
-      navigate('/gratitude');
-    }
-    if (soyEmpresa && otherDonate) {
-      type CreateCompanyDonate = {
-        cuit: string;
-        companyName: string;
-        companyAddres: string;
-        typeCompany: string;
-        mailCompany: string;
-        phoneCompany: string;
-        infoOtherDonate: string;
-        quantityOtherDonate: string;
-      };
-      const companyDonate = {
-        company: {
-          cocuit: cuit,
-          coname: companyName,
-          coaddress: companyAddres,
-          cocategory: typeCompany,
-          coemail: mailCompany,
-          cophone: phoneCompany,
-        },
-        doncategory: infoOtherDonate,
-        dondetails: quantityOtherDonate,
-      };
-      try {
-        await axios.post<CreateCompanyDonate>('/create', companyDonate);
-      } catch (error) {}
-      context.createCompanyDonation(companyDonate);
-      navigate('/gratitude');
+        const companyDonate = {
+          company: {
+            cocuit: cuit,
+            coname: companyName,
+            coaddress: companyAddres,
+            cocategory: typeCompany,
+            coemail: mailCompany,
+            cophone: phoneCompany,
+          },
+          doncategory: categoryDonation,
+          dondetails: quantityDonation,
+          donperishable: infoFood,
+        };
+        try {
+          await axios.post<CreateCompanyDonate>('/create', companyDonate);
+        } catch (error) {}
+        context.createCompanyDonation(companyDonate);
+        navigate('/gratitude');
+      }
+      if (soyEmpresa && otherDonate) {
+        type CreateCompanyDonate = {
+          cuit: string;
+          companyName: string;
+          companyAddres: string;
+          typeCompany: string;
+          mailCompany: string;
+          phoneCompany: string;
+          infoOtherDonate: string;
+          quantityOtherDonate: string;
+        };
+        const companyDonate = {
+          company: {
+            cocuit: cuit,
+            coname: companyName,
+            coaddress: companyAddres,
+            cocategory: typeCompany,
+            coemail: mailCompany,
+            cophone: phoneCompany,
+          },
+          doncategory: infoOtherDonate,
+          dondetails: quantityOtherDonate,
+        };
+        try {
+          await axios.post<CreateCompanyDonate>('/create', companyDonate);
+        } catch (error) {}
+        context.createCompanyDonation(companyDonate);
+        navigate('/gratitude');
+      }
     }
   };
 

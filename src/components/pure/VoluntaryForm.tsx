@@ -79,6 +79,8 @@ const VoluntaryForm = ({ name, lastName, phone, mail, dni }: any) => {
             placeholder="ejem : usuario@email.com"
             onChange={handleOnChange}
             name="mail"
+            pattern="[^@\s]+@[^@\s]+"
+            title="Invalid email address"
           />
         </Form.Group>
         <Form.Group as={Col} md="12" controlId="validationCustom05">

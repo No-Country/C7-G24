@@ -17,7 +17,7 @@ const ContainerDonate = () => {
   const [phone, setPhone] = useState('');
   const [mail, setMail] = useState('');
   const [dni, setDni] = useState('');
-  const [categoryDonation, setCategoryDonation] = useState('');
+  const [categoryDonation, setCategoryDonation] = useState('Granos');
   const [quantityDonation, setQuantityDonation] = useState('');
   const [infoFood, setInfoFood] = useState(false);
   const [minorista, setMinorista] = useState(false);
@@ -38,37 +38,38 @@ const ContainerDonate = () => {
     }
 
     setValidated(true);
+    if (form.checkValidity() === true) {
+      type CreatePeopleDonation = {
+        dni: string;
+        name: string;
+        lastName: string;
+        phone: string;
+        mail: string;
+        categoryDonation: string;
+        quantityDonation: string;
+        infoFood: boolean;
+      };
 
-    type CreatePeopleDonation = {
-      dni: string;
-      name: string;
-      lastName: string;
-      phone: string;
-      mail: string;
-      categoryDonation: string;
-      quantityDonation: string;
-      infoFood: boolean;
-    };
+      const peopleDonation = {
+        user: {
+          userdni: dni,
+          username: name,
+          userlastname: lastName,
+          userphone: phone,
+          useremail: mail,
+        },
+        doncategory: categoryDonation,
+        dondetails: quantityDonation,
+        donperishable: infoFood,
+      };
 
-    const peopleDonation = {
-      user: {
-        userdni: dni,
-        username: name,
-        userlastname: lastName,
-        userphone: phone,
-        useremail: mail,
-      },
-      doncategory: categoryDonation,
-      dondetails: quantityDonation,
-      donperishable: infoFood,
-    };
+      try {
+        await axios.post<CreatePeopleDonation>('/create', peopleDonation);
+      } catch (error) {}
 
-    try {
-      await axios.post<CreatePeopleDonation>('/create', peopleDonation);
-    } catch (error) {}
-
-    context.createPeopleDonation(peopleDonation);
-    navigate('/gratitude');
+      context.createPeopleDonation(peopleDonation);
+      navigate('/gratitude');
+    }
   };
 
   const handleOnClick = (event: any) => {

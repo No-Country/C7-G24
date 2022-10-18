@@ -53,3 +53,22 @@
     margin-top: 300px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .containerBodyNeedHelp {
+    margin-top: -1107px;
+    margin-left: 80px;
+  }
+  .containerNeedHelpForm {
+    margin-left: -350px;
+    margin-top: 10px;
+  }
+  .footer-help {
+    margin-top: 350px;
+  }
+  .conteFoo {
+    padding-left: -50px;
+  }
+  .cont-politic {
+    margin-left: 200px;
+  }
+}

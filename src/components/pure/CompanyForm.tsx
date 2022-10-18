@@ -115,6 +115,7 @@ const CompanyForm = ({
               placeholder="ejem : usuario@email.com"
               name="email"
               onChange={handleOnChange}
+              pattern="[^@\s]+@[^@\s]+"
               required
             />
             <Form.Control.Feedback>Correcto.</Form.Control.Feedback>

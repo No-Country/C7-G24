@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import '../styles/Contact.css';
 import Fondo2 from '../assets/Rectanglepurple.png';
 import FooterComponent from '../components/container/FooterComponent';
@@ -61,9 +61,9 @@ const Contact = () => {
         </div>
       </div>
 
-      <Fragment>
+      <div className="footer-participate">
         <FooterComponent />
-      </Fragment>
+      </div>
     </div>
   );
 };

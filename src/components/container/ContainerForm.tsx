@@ -20,7 +20,7 @@ const FormContainer = () => {
   const [mail, setMail] = useState('');
   const [dni, setDni] = useState('');
   const [schedule, setSchedule] = useState('');
-  const [vehicle, setVehicle] = useState('');
+  const [vehicle, setVehicle] = useState('Camion');
 
   const context = useAppContext();
   const navigate = useNavigate();
@@ -36,38 +36,41 @@ const FormContainer = () => {
       event.preventDefault();
       event.stopPropagation();
     }
+
     setValidated(true);
 
-    /* crea un objeto persona con la informacion obtenida desde el formulario voluntario */
-    type CreatePerson = {
-      dni: string;
-      name: string;
-      lastName: string;
-      phone: string;
-      mail: string;
-      schedule: string;
-      vehicle: string;
-    };
-    const person = {
-      userdni: dni,
-      username: name,
-      userlastname: lastName,
-      userphone: phone,
-      useremail: mail,
-      useravailability: schedule,
-      uservehicle: vehicle,
-    };
-    try {
-      await axios
-        .post<CreatePerson>('/create', person)
-        .then((data: any) => console.log(data));
-    } catch (error) {
-      console.log('error message: ', error);
+    if (form.checkValidity() === true) {
+      type CreatePerson = {
+        dni: string;
+        name: string;
+        lastName: string;
+        phone: string;
+        mail: string;
+        schedule: string;
+        vehicle: string;
+      };
+      const person = {
+        userdni: dni,
+        username: name,
+        userlastname: lastName,
+        userphone: phone,
+        useremail: mail,
+        useravailability: schedule,
+        uservehicle: vehicle,
+      };
+      try {
+        await axios
+          .post<CreatePerson>('/create', person)
+          .then((data: any) => console.log(data));
+      } catch (error) {
+        console.log('error message: ', error);
+      }
+      context.createVoluntary(person);
+      navigate('/gratitude');
     }
-
-    context.createVoluntary(person);
-    navigate('/gratitude');
   };
+
+  /* crea un objeto persona con la informacion obtenida desde el formulario voluntario */
 
   const check = (e: { target: { checked: any } }) => {
     const value = e.target.checked;
@@ -113,7 +116,7 @@ const FormContainer = () => {
           {completed ? (
             <p className="p-vehicle">
               Tipo de Vehiculo:{' '}
-              <VehicleForm vehicle={vehicle} setVehicle={setVehicle} />{' '}
+              <VehicleForm vehicle={vehicle} setVehicle={setVehicle} />
             </p>
           ) : (
             ''

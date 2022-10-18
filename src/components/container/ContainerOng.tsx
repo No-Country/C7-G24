@@ -6,7 +6,6 @@ import SubmitButton from '../SubmitButton';
 import Fondo4 from '../../assets/Rectanglepurple.png';
 import axios from '../../http-common-ongs';
 import '../../styles/ContainerOng.css';
-import FooterComponent from './FooterComponent';
 
 const ContainerOng = () => {
   const [validated, setValidated] = useState(false);
@@ -115,9 +114,6 @@ const ContainerOng = () => {
             <SubmitButton />
           </div>
         </Form>
-      </div>
-      <div className="responsiveFooterOng">
-        <FooterComponent />
       </div>
     </div>
   );

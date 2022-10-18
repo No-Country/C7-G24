@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import OngForm from '../pure/OngForm';
 import SubmitButton from '../SubmitButton';
-import Fondo4 from '../../assets/11.jpeg';
+import Fondo4 from '../../assets/Rectanglepurple.png';
 import axios from '../../http-common-ongs';
 import '../../styles/ContainerOng.css';
 import FooterComponent from './FooterComponent';
@@ -61,29 +61,64 @@ const ContainerOng = () => {
   return (
     <div>
       <img src={Fondo4} alt="" className="fondo4" />
-      <Form
-        className="formong p-5"
-        noValidate
-        validated={validated}
-        onSubmit={handleOnSubmitOngForm}
-      >
-        <OngForm
-          pName={setPName}
-          pLastName={setPLastName}
-          cuitOng={setCuitOng}
-          emailOng={setEmailOng}
-          phoneOng={setPhoneOng}
-          nameOng={setNameOng}
-          addressOng={setAddressOng}
-          typeOng={setTypeOng}
-        />
-        <div className="submitButtonFormOng">
-          <SubmitButton />
+      <div className="containerBodyNeedHelp">
+        <div className="titleBodyNeedHelp">
+          Inscribi a tu organizacion social
         </div>
-      </Form>
-      <Fragment>
+        <p className="paragraphgBodyNeedHelp">
+          Términos y Condiciones:
+          <br />
+          <br /> Brindar servicio alimenticio en el lugar, al menos tres veces a
+          la semana.
+          <br />
+          <br /> Contar con alguna de las siguientes condiciones: Personería
+          Jurídica propia*; Inscripción en el Ministerio de Relaciones
+          Exteriores y Culto, Aval parroquial; Cooperadora escolar.
+          <br />
+          <br /> *La personería jurídica será solicitada por mail una vez que se
+          complete el formulario.
+          <br />
+          <br /> Es importante tener en cuenta que:
+          <br />
+          <br /> Los alimentos deberán ser retirados del depósito del Banco de
+          <br />
+          Alimentos por la organización.
+          <br />
+          <br /> Se solicitará una contribución simbólica por cada kg. retirado.
+          <br />
+          <br />
+          Se solicitará número de CUIT a cada organización, para poder hacer
+          recibo electrónico.
+          <br />
+          <br /> Los alimentos solo podrán ser utilizados para los servicios
+          declarados.
+        </p>
+      </div>
+      <div className="containerNeedHelpForm">
+        <Form
+          className="formong p-5"
+          noValidate
+          validated={validated}
+          onSubmit={handleOnSubmitOngForm}
+        >
+          <OngForm
+            pName={setPName}
+            pLastName={setPLastName}
+            cuitOng={setCuitOng}
+            emailOng={setEmailOng}
+            phoneOng={setPhoneOng}
+            nameOng={setNameOng}
+            addressOng={setAddressOng}
+            typeOng={setTypeOng}
+          />
+          <div className="submitButtonFormOng">
+            <SubmitButton />
+          </div>
+        </Form>
+      </div>
+      <div className="responsiveFooterOng">
         <FooterComponent />
-      </Fragment>
+      </div>
     </div>
   );
 };

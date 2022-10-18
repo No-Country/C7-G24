@@ -5,7 +5,6 @@ h1 {
   width: 540px;
   height: 196px;
   margin-top: 50px;
-
   font-weight: 800;
   font-size: 72px;
   line-height: 98px;
@@ -62,7 +61,7 @@ p {
   width: 540px;
   height: 540px;
   margin-right: 60px;
-  margin-top: 75px;
+  margin-top: -45px;
   margin-left: 600px;
   top: calc(50% - 640px / 2 + 36px);
   background: #8c30f5;
@@ -73,13 +72,17 @@ p {
   height: 250.16px;
   background: #d4f9fb;
   margin: auto;
-  padding-left: 450px;
+  padding-left: 700px;
   margin-top: 150px;
 }
 .cite-Int {
   margin-top: 50px;
   margin-left: -50px;
 }
+.cite-p {
+  width: 750px;
+}
+
 .container-img {
   padding: 0px;
   gap: 24px;
@@ -88,7 +91,6 @@ p {
 }
 .comotrabajamos {
   padding-top: 70px;
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -186,6 +188,9 @@ p {
   color: black;
   line-height: 25px;
 }
+.cFooter {
+  margin-top: 170px;
+}
 
 .paso1 {
   font-size: 30px;
@@ -202,11 +207,12 @@ p {
 }
 @media screen and (min-width: 400px) and (max-width: 768px) {
   .cite-p {
-    margin-left: -360px;
+    width: 500px;
+    margin-left: -600px;
     font-size: 14px;
   }
   .cite-Int {
-    margin-left: -400px;
+    margin-left: -630px;
   }
   .bg-circle {
     display: none;
@@ -255,5 +261,8 @@ p {
     z-index: 0;
     color: white;
     margin-left: 245px;
+  }
+  .cFooter {
+    margin-top: -100px;
   }
 }

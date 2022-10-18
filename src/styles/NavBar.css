@@ -1,33 +1,34 @@
 :root {
-  /* colors */
-  --primary-500: #049456;
-  /* grey */
-  --grey-500: black;
+  --primary-500: #8c30f5;
+  --white-color: #ffff;
+  --black-color: black;
+  --font--weight: 500;
+  --fifteen-pixels: 15px;
 }
 .logo {
   position: absolute;
   width: 100px;
   height: 35px;
-  left: 110px;
-  top: 15px;
+  left: 300px;
+  top: var(--fifteen-pixels);
 }
 .container-navbar {
   padding-left: 150px;
 }
 .link {
-  font-weight: 500;
+  font-weight: var(--font--weight);
   text-decoration: none;
   padding-right: 30px;
-  padding-top: 15px;
-  color: var(--grey-500);
+  padding-top: var(--fifteen-pixels);
+  color: var(--black-color);
 }
 
-.active {
-  color: #8c30f5;
-  padding-top: 15px;
+.activebar {
+  color: var(--primary-500);
+  padding-top: var(--fifteen-pixels);
 }
 .link:hover {
-  color: #8c30f5;
+  color: var(--primary-500);
 }
 .botonI {
   display: flex;
@@ -37,34 +38,34 @@
   gap: 10px;
   width: 175px;
   height: 48px;
-  background: #8c30f5;
+  background: var(--primary-500);
   border-radius: 6px;
-  color: #ffff;
+  color: var(--white-color);
   margin-top: -12px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: var(--font--weight);
 }
 .botonI:hover {
-  color: #ffff;
+  color: var(--white-color);
 }
 .letras {
-  font-weight: 500;
+  font-weight: var(--font--weight);
 }
 .botonR {
   background-color: #f1e4ff;
-  color: #8c30f5;
+  color: var(--primary-500);
   border-radius: 6px;
   padding: 12px 32px;
   margin-top: -12px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: var(--font--weight);
 }
 .botonR:hover {
-  color: #8c30f5;
+  color: var(--primary-500);
 }
 .containtModal {
-  padding-top: 15px;
-  padding-left: 15px;
+  padding-top: var(--fifteen-pixels);
+  padding-left: var(--fifteen-pixels);
 }
 @media screen and (max-width: 768px) {
   .containtModal {

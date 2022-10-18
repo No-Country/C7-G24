@@ -26,7 +26,7 @@
 
 .fondo3 {
   left: 0;
-  width: 100%;
+  width: var(--one-hundred-percent);
   height: 900px;
   z-index: -1;
 }
@@ -36,10 +36,13 @@
   left: 33%;
 }
 @media screen and (max-width: 700px) and (min-width: 400px) {
-  .fondo3 {
-    left: 0;
-    width: 100%;
-    height: 900px;
-    z-index: -1;
+  .contacTitle {
+    left: 10%;
+  }
+  .containerContact {
+    left: 1%;
+  }
+  .responsiveContactContainer {
+    position: relative;
   }
 }

@@ -17,28 +17,28 @@ const CarouselComponent = () => {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="d-block w-100  rounded-circle"
+          className=" w-100  rounded-circle"
           src={carousel1}
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 rounded-circle"
+          className=" w-100 rounded-circle"
           src={carousel3}
           alt="Second slide"
         />{' '}
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block  w-100 rounded-circle"
+          className="  w-100 rounded-circle"
           src={carousel2}
           alt="Third slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block m-auto w-100 rounded-circle"
+          className="  w-100 rounded-circle"
           src={carousel4}
           alt="First slide"
         />

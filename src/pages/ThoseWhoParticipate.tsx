@@ -18,8 +18,10 @@ const ThoseWhoParticipate = () => {
         <h1 className="header-h1">¿Quienes participan?</h1>
         <br />
         <p className="p-header">
-          Todos somos voluntarios, cada uno desde su lugar. asi, se consolida un
-          equipo de fortalezas en el que cada parte es fundamental
+          Todos somos voluntarios, cada uno desde su lugar.
+          <br />
+          Asi, se consolida un equipo de fortalezas en el que cada parte es
+          fundamental
         </p>
       </div>
       <div className="container">
@@ -69,7 +71,9 @@ const ThoseWhoParticipate = () => {
           </div>
         </div>
         <div className="cont-title">
-          <h3 className="header-h3-Emp"> Empresas Donantes</h3>
+          <h3 className="header-h3-Emp">
+            Donantes de alimentos, productos y servicios logísticos.
+          </h3>
         </div>
         <div className="container-logos">
           <img className="img-granix" src={Granix} alt="" />

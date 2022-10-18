@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import '../styles/About.css';
 import Img from '../assets/3.jpeg';
 import FooterComponent from '../components/container/FooterComponent';
 const About = () => {
   return (
     <div className="headerAbout">
-      <div>
+      <div className="containerHeaderAbout">
         <h1 className="titleAbout">Sobre Nosotros</h1>
         <p className="paragraphAbout">
           Somos un Banco de Alimentos de Balcarse, Provincia de Buenos Aires.
@@ -42,9 +42,9 @@ const About = () => {
           </p>
         </div>
       </div>
-      <Fragment>
+      <div className="contentAboutFooter">
         <FooterComponent />
-      </Fragment>
+      </div>
     </div>
   );
 };

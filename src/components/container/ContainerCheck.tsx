@@ -51,6 +51,7 @@ const ContainerCheck = () => {
     }
 
     setValidated(true);
+    /* validaciones del tipo de donante y tipo de donacion */
     if (soyPersona && donateFood) {
       type CreatePeopleDonate = {
         dni: string;

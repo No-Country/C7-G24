@@ -33,4 +33,7 @@ form {
     top: -100px;
     height: 1450px;
   }
+  .footerFormContainer {
+    margin-top: 130px;
+  }
 }

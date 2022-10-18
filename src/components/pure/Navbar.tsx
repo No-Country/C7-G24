@@ -25,25 +25,33 @@ const NavBar = () => {
           >
             <NavLink
               to="/sobrenosotros"
-              className={({ isActive }) => (isActive ? 'link active' : 'link')}
+              className={({ isActive }) =>
+                isActive ? 'link activebar' : 'link'
+              }
             >
               Sobre Nosotros
             </NavLink>
             <NavLink
               to="/thosewhoparticipate"
-              className={({ isActive }) => (isActive ? 'link active' : 'link')}
+              className={({ isActive }) =>
+                isActive ? 'link activebar' : 'link'
+              }
             >
               Quienes Participan
             </NavLink>
             <NavLink
               to="/news"
-              className={({ isActive }) => (isActive ? 'link active' : 'link')}
+              className={({ isActive }) =>
+                isActive ? 'link activebar' : 'link'
+              }
             >
               Novedades
             </NavLink>
             <NavLink
               to="/contacto"
-              className={({ isActive }) => (isActive ? 'link active' : 'link')}
+              className={({ isActive }) =>
+                isActive ? 'link activebar' : 'link'
+              }
             >
               Contacto
             </NavLink>

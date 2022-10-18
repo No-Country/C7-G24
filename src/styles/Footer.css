@@ -83,6 +83,9 @@
 .cont-im {
   padding-right: 10px;
 }
+.cont-mail {
+  padding-right: 90px;
+}
 .privaciti,
 .politic {
   width: 145px;
@@ -95,7 +98,12 @@
   margin-left: 1050px;
 }
 .cont-politic {
-  margin-top: -20px;
+  margin-top: 50px;
+  margin-left: 300px;
+}
+.conteFoo {
+  margin-top: 200px;
+  margin-left: 200px;
 }
 @media screen and (min-width: 400px) and (max-width: 768px) {
   .logo_Picture {
@@ -132,5 +140,9 @@
   }
   .cont-politic {
     margin-left: 100px;
+  }
+  .conteFoo {
+    margin-top: -10px;
+    margin-left: -10px;
   }
 }

@@ -51,7 +51,7 @@ const OngForm = ({
         <img src={ImgA} alt="" className="logoBalcarce" />
         <div className="p-formu">
           Trabajamos para reducir el hambre, mejorar la nutricion y evitar el
-          desperdicio de alimentos en Balcarse, Argentina.
+          desperdicio de alimentos en Balcarce, Argentina.
         </div>
       </div>{' '}
       <div className="py-5">

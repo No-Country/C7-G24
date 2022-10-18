@@ -74,7 +74,9 @@ const Home = () => {
         </div>
         <Content />
       </div>
-      <FooterComponent />
+      <div className="cFooter">
+        <FooterComponent />
+      </div>
     </Fragment>
   );
 };

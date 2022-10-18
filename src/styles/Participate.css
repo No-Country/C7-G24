@@ -1,15 +1,14 @@
 .header-participate {
   width: 100%;
   height: 272px;
-  left: 0px;
-  top: 0px;
   background: #d9d9d9;
+  margin-top: -50px;
 }
 .header-h1 {
   width: 838px;
   height: 97.82px;
-  margin-left: 280px;
-  top: 49.51px;
+  margin-left: 520px;
+  padding-top: 50px;
   font-weight: 800;
   font-size: 72px;
   line-height: 98px;
@@ -18,18 +17,16 @@
   text-align: center;
 }
 .p-header {
-  width: 1110px;
+  width: 100%;
   height: 72.18px;
-  margin-left: 165px;
+  padding-left: 500px;
   top: 128.25px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 25px;
   display: flex;
   align-items: flex-end;
   text-align: center;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 .ImgA,
 .ImgC {
@@ -126,20 +123,21 @@
   margin-right: 50px;
 }
 .img-granix {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin-right: 50px;
+  margin-top: -30px;
 }
 .header-h3-Emp {
-  width: 508px;
-  height: 76px;
+  width: 1000px;
+  height: 80px;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 54px;
 }
 .cont-title {
   margin-top: 450px;
-  margin-left: 350px;
+  margin-left: 100px;
 }
 @media screen and (min-width: 400px) and (max-width: 768px) {
   .header-participate {
@@ -153,9 +151,9 @@
   }
   .p-header {
     font-size: 10px;
-    margin-top: -70px;
-    margin-left: 100px;
-    width: 500px;
+    margin-top: -60px;
+    margin-left: -400px;
+    width: 1000px;
   }
   .ImgA,
   .ImgB,
@@ -207,11 +205,11 @@
     margin-left: -60px;
   }
   .header-h3-Emp {
-    font-size: 30px;
+    font-size: 18px;
   }
   .cont-title {
     margin-top: 250px;
-    margin-left: 100px;
+    margin-left: 3px;
   }
   .img-logos {
     height: 50px;

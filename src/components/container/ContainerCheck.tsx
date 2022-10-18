@@ -26,7 +26,7 @@ const ContainerCheck = () => {
   const [soyPersona, setSoyPersona] = useState(false);
   const [soyEmpresa, setSoyEmpresa] = useState(false);
   const [validated, setValidated] = useState(false);
-  const [categoryDonation, setCategoryDonation] = useState('');
+  const [categoryDonation, setCategoryDonation] = useState('Granos');
   const [quantityDonation, setQuantityDonation] = useState('');
   const [infoFood, setInfoFood] = useState('');
   const [donateFood, setDonateFood] = useState('');

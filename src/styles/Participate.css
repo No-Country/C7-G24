@@ -139,7 +139,7 @@
   margin-top: 450px;
   margin-left: 100px;
 }
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 768px) {
   .header-participate {
     height: 150px;
   }
@@ -235,8 +235,4 @@
   .p-header {
     margin-left: -200px;
   }
-
-  /* .footer-participate {
-    margin-left: -200px;
-  } */
 }

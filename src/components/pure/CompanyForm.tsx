@@ -128,6 +128,7 @@ const CompanyForm = ({
             <Form.Control
               type="text"
               name="telefono"
+              onChange={handleOnChange}
               placeholder="0000-0000-0000"
               required
             />

@@ -13,20 +13,18 @@ public class UserDto {
     private String userdni;
     private String useremail;
     private String userphone;
-    private String useradress;
     private String uservehicle;
     private String useravailability;
     private List<Donation> donaciones = new ArrayList<Donation>();
     public UserDto() {
     }
-    public UserDto(String userdni, String userrol, String username, String userlastname,  String useremail, String userphone, String useradress, String uservehicle, String useravailability) {
+    public UserDto(String userdni, String userrol, String username, String userlastname,  String useremail, String userphone, String uservehicle, String useravailability) {
         this.userdni = userdni;
         this.userrol = userrol;
         this.username = username;
         this.userlastname = userlastname;
         this.useremail = useremail;
         this.userphone = userphone;
-        this.useradress = useradress;
         this.uservehicle = uservehicle;
         this.useravailability = useravailability;
     }
@@ -77,14 +75,6 @@ public class UserDto {
 
     public void setUserphone(String userphone) {
         this.userphone = userphone;
-    }
-
-    public String getUseradress() {
-        return useradress;
-    }
-
-    public void setUseradress(String useradress) {
-        this.useradress = useradress;
     }
 
     public String getUservehicle() {

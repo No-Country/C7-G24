@@ -12,7 +12,7 @@ import com.bdabalcarce.demo.service.UserS;
 import javax.validation.Valid;
 import java.util.List;
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://bda-balcarce.netlify.app")
 
 @RequestMapping({"/users"})
 public class UserContr {
@@ -48,7 +48,6 @@ public class UserContr {
                 dtousuario.getUserlastname(),
                 dtousuario.getUseremail(),
                 dtousuario.getUserphone(),
-                dtousuario.getUseradress(),
                 dtousuario.getUservehicle(),
                 dtousuario.getUseravailability()
         );

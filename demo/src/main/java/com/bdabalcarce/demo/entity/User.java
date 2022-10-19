@@ -34,9 +34,6 @@ public class User implements Serializable {
     @Column(name = "user_phone")
     private String userPhone;
 
-    @Column(name = "user_address")
-    private String userAdress;
-
     @Column(name = "user_vehicle")
     private String userVehicle;
 
@@ -47,14 +44,13 @@ public class User implements Serializable {
     private List<Donation> donaciones = new ArrayList<Donation>();
     public User() {
     }
-    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userAdress, String userVehicle, String userAvailability) {
+    public User(String userDni, String userRol, String userName, String userLastname, String userEmail, String userPhone, String userVehicle, String userAvailability) {
         this.userDni = userDni;
         this.userRol = userRol;
         this.userName = userName;
         this.userLastname = userLastname;
         this.userEmail = userEmail;
         this.userPhone = userPhone;
-        this.userAdress = userAdress;
         this.userVehicle = userVehicle;
         this.userAvailability = userAvailability;
     }
@@ -110,12 +106,6 @@ public class User implements Serializable {
     }
     public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
-    }
-    public String getUserAdress() {
-        return userAdress;
-    }
-    public void setUserAdress(String userAdress) {
-        this.userAdress = userAdress;
     }
     public String getUserVehicle() {
         return userVehicle;

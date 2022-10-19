@@ -37,7 +37,7 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
     <div className="px-5">
       <Row>
         {''}
-        <div className="select-text">Seleccionar Categoria:</div>
+        <div className="select-text">Seleccionar Categoría:</div>
         <select
           className="btn btn-dropdown  select-food btn-success p-1 w-10"
           name="categoria"
@@ -47,8 +47,8 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
           <option value="Granos">Granos</option>
           <option value="Verduras">Verduras</option>
           <option value="Frutas">Frutas</option>
-          <option value="Productos Lacteos">Productos Lacteos</option>
-          <option value="Proteinas">Proteinas</option>
+          <option value="Productos Lacteos">Productos Lácteos</option>
+          <option value="Proteinas">Proteínas</option>
         </select>
         <Form.Group as={Col} md="2" controlId="validationCustom01">
           <div className="divfoodDonate">

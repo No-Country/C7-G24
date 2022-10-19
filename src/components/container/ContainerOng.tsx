@@ -62,7 +62,7 @@ const ContainerOng = () => {
       <img src={Fondo4} alt="" className="fondo4" />
       <div className="containerBodyNeedHelp">
         <div className="titleBodyNeedHelp">
-          Inscribi a tu organizacion social
+          Inscribí a tu organización social
         </div>
         <p className="paragraphgBodyNeedHelp">
           Términos y Condiciones:
@@ -70,15 +70,14 @@ const ContainerOng = () => {
           <br /> Brindar servicio alimenticio en el lugar, al menos tres veces a
           la semana.
           <br />
-          <br /> Contar con alguna de las siguientes condiciones: Personería
-          Jurídica propia*; Inscripción en el Ministerio de Relaciones
-          Exteriores y Culto, Aval parroquial; Cooperadora escolar.
+          <br /> Contar con alguna de las siguientes condiciones:
+          <br /> Personería Jurídica propia*; Inscripción en el Ministerio de
+          Relaciones Exteriores y Culto, Aval parroquial; Cooperadora escolar.
           <br />
           <br /> *La personería jurídica será solicitada por mail una vez que se
           complete el formulario.
           <br />
           <br /> Es importante tener en cuenta que:
-          <br />
           <br /> Los alimentos deberán ser retirados del depósito del Banco de
           <br />
           Alimentos por la organización.

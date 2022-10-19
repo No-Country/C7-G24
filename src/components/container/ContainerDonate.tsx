@@ -101,7 +101,7 @@ const ContainerDonate = () => {
             El hambre no espera para miles de chicos y chicas que siguen
             necesitando de los comedores para tener un plato de comida.
           </div>
-          <h4 className="H4-form">Quiero sumarme como Donante</h4>{' '}
+          <h4 className="H4-form">Quiero sumarme como donante </h4>{' '}
         </div>
         {stateMinorista && stateMayorista ? (
           <div className="contBtnType">

@@ -29,12 +29,12 @@ function ModalComponent() {
           <Link to="/donate">
             <Button className="button-modal" onClick={handleClose}>
               {' '}
-              Sumate Como Donante
+              Sumate como donante
             </Button>
           </Link>{' '}
           <Link to="forms">
             <Button className="button-modal" onClick={handleClose}>
-              Sumate Como Voluntario
+              Sumate como voluntario
             </Button>
           </Link>
         </Modal.Body>

@@ -42,7 +42,7 @@ const FooterComponent = () => {
             Calle 43 c/18 y Av. Centenario. Balcarce, Buenos Aires.
           </a>
           <div className="location">
-            <img src={Messsage} alt="" className="cont-mail" />
+            <img src={Messsage} alt="" className="cont-im" />
             bancodealimentobalcarce@gmail.com
           </div>
         </div>

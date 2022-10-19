@@ -68,7 +68,7 @@ const CompanyForm = ({
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom02">
-            <Form.Label>Direccion</Form.Label>
+            <Form.Label>Dirección</Form.Label>
             <Form.Control
               type="text"
               name="direccion"
@@ -124,7 +124,7 @@ const CompanyForm = ({
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom06">
-            <Form.Label>Telefono</Form.Label>
+            <Form.Label>Teléfono</Form.Label>
             <Form.Control
               type="text"
               name="telefono"

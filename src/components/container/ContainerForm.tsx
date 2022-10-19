@@ -115,7 +115,7 @@ const FormContainer = () => {
           />{' '}
           {completed ? (
             <p className="p-vehicle">
-              Tipo de Vehiculo:{' '}
+              Tipo de Vehículo:{' '}
               <VehicleForm vehicle={vehicle} setVehicle={setVehicle} />
             </p>
           ) : (

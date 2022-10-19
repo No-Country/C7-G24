@@ -20,7 +20,7 @@ const ThoseWhoParticipate = () => {
         <p className="p-header">
           Todos somos voluntarios, cada uno desde su lugar.
           <br />
-          Asi, se consolida un equipo de fortalezas en el que cada parte es
+          Así, se consolida un equipo de fortalezas en el que cada parte es
           fundamental
         </p>
       </div>

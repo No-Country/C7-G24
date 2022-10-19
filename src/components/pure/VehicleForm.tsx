@@ -13,11 +13,11 @@ const VehicleForm = ({ vehicle, setVehicle }: any) => {
     <Fragment>
       <select
         className="btn btn-dropdown btn-success p-1"
-        name="Vehiculo"
+        name="Vehículo"
         onChange={onClickVehicle}
         value={vehicle}
       >
-        <option>Camion</option>
+        <option>Camión</option>
         <option>Camioneta</option>
         <option>Auto</option>
         <option>Motocicleta</option>

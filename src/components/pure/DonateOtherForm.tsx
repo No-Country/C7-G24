@@ -22,7 +22,7 @@ const DonateOtherForm = ({ otherDonate, quantityOtherDonate }: any) => {
       <h5>Otras donaciones</h5>
       <Row>
         <Form.Group as={Col} md="4" controlId="validationCustom05">
-          <Form.Label>Donacion</Form.Label>
+          <Form.Label>Donación</Form.Label>
           <Form.Control
             type="text"
             placeholder="Lo que deseas donar"

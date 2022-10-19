@@ -52,10 +52,11 @@
   margin-bottom: 40px;
   font-size: 18px;
   font-weight: 400;
+  width: 300px;
 }
 .modal-body {
-  margin-left: 70px;
-  margin-top: 70px;
+  margin-left: 35px;
+  margin-top: 80px;
 }
 .donate-e {
   text-decoration: none;

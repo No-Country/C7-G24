@@ -218,7 +218,7 @@ const ContainerCheck = () => {
                 El hambre no espera para miles de chicos y chicas que siguen
                 necesitando de los comedores para tener un plato de comida.
               </div>
-              <h4 className="H4-form">Quiero sumarme como Donante</h4>{' '}
+              <h4 className="H4-form">Quiero sumarme como donante</h4>{' '}
             </div>
             <div>
               <Form.Group className="check-bool" as={Col} md="12">
@@ -274,7 +274,7 @@ const ContainerCheck = () => {
                 />
                 <Form.Check
                   type="checkbox"
-                  label="Otras Donaciónes"
+                  label="Otras Donaciones"
                   id="otros"
                   className="conditionDonateOther"
                   onChange={handleOnCheckBox}
@@ -330,7 +330,7 @@ const ContainerCheck = () => {
                 />
                 <Form.Check
                   type="checkbox"
-                  label="Otras Donaciónes"
+                  label="Otras Donaciones"
                   id="otros"
                   onChange={handleOnCheckBox}
                 />

@@ -32,7 +32,7 @@ const VoluntaryForm = ({ name, lastName, phone, mail, dni }: any) => {
     <div className="p-5">
       <Row>
         <Form.Group as={Col} md="12" controlId="validationCustom01">
-          <Form.Label>Nombres</Form.Label>
+          <Form.Label>Nombre</Form.Label>
           <Form.Control
             required
             type="text"
@@ -45,7 +45,7 @@ const VoluntaryForm = ({ name, lastName, phone, mail, dni }: any) => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="12" controlId="validationCustom02">
-          <Form.Label>Apellidos</Form.Label>
+          <Form.Label>Apellido</Form.Label>
           <Form.Control
             required
             type="text"
@@ -84,7 +84,7 @@ const VoluntaryForm = ({ name, lastName, phone, mail, dni }: any) => {
           />
         </Form.Group>
         <Form.Group as={Col} md="12" controlId="validationCustom05">
-          <Form.Label>Telefono</Form.Label>
+          <Form.Label>Teléfono</Form.Label>
           <Form.Control type="text" onChange={handleOnChange} name="telefono" />
         </Form.Group>
       </Row>

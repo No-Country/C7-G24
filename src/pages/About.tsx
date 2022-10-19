@@ -8,7 +8,7 @@ const About = () => {
       <div className="containerHeaderAbout">
         <h1 className="titleAbout">Sobre Nosotros</h1>
         <p className="paragraphAbout">
-          Somos un Banco de Alimentos de Balcarse, Provincia de Buenos Aires.
+          Somos un Banco de Alimentos de Balcarce, Provincia de Buenos Aires.
           Controlamos el hambre y contribuimos a una buena nutrición, rescatando
           mermas de más de 50 de donantes de alimentos. Con la creación de un
           Centro Hortícola Solidario. Transformando la realidad de más de 600
@@ -26,8 +26,7 @@ const About = () => {
             Ser una organización que está enfocada en la temática del hambre, la
             nutrición y la inseguridad alimentaria, para llegar con más
             alimentos a más personas que sufren hambre, incorporando más
-            organizaciones comunitarias de AMBA, en alianza con otros actores
-            sociales.
+            organizaciones comunitarias, en alianza con otros actores sociales.
           </p>
           <h4 className="titlethreeAbout titlesparagraphs">
             Este modelo se sostiene gracias..

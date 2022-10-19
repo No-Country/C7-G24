@@ -50,7 +50,7 @@ const OngForm = ({
       <div className="formHeader">
         <img src={ImgA} alt="" className="logoBalcarce" />
         <div className="p-formu">
-          Trabajamos para reducir el hambre, mejorar la nutricion y evitar el
+          Trabajamos para reducir el hambre, mejorar la nutrición y evitar el
           desperdicio de alimentos en Balcarce, Argentina.
         </div>
       </div>{' '}
@@ -111,7 +111,7 @@ const OngForm = ({
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom03">
-            <Form.Label>Telefono</Form.Label>
+            <Form.Label>Teléfono</Form.Label>
             <Form.Control
               type="text"
               placeholder="0000-0000-0000"
@@ -140,7 +140,7 @@ const OngForm = ({
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} md="12" controlId="validationCustom04">
-            <Form.Label>Direccion</Form.Label>
+            <Form.Label>Dirección</Form.Label>
             <Form.Control
               type="text"
               required

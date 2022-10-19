@@ -24,8 +24,8 @@ const News = () => {
             </h4>
             <p className="p-new">
               Banco de Alimentos de Balcarce, Tandil y Mar del Plata armaron un
-              centro de recuperacion en esa ultima ciudad, suman al INTA para un
-              trabajo en conjunto.
+              centro de recuperación y suman al INTA para un trabajo en
+              conjunto.
               <br />{' '}
               <a
                 href="https://www.lanacion.com.ar/economia/campo/rescatan-y-reparten-mas-de-50000-kilos-por-mes-de-verduras-y-frutas-para-ayudar-nid11032021/"
@@ -33,20 +33,20 @@ const News = () => {
                 rel="noreferrer"
                 className="ANCHOR-NEW"
               >
-                Saber Más
+                Saber más
               </a>{' '}
             </p>
           </div>
           <div className="col-lg-6 col-sm-12 col-xs-12">
             <img className="img-news" src={ImgB} alt="" />
             <h4 className="header-h4">
-              Se logro desde Balcarce el mayor rescate <br />
+              Se logró desde Balcarce el mayor rescate <br />
               de alimentos de la historia de Argentina
             </h4>
             <p className="p-new">
-              El banco de alimentos anuncio que luego de cinco meses de trabajo
-              junto a McCain y muchos voluntarios lograron el mayor rescate de
-              la historia.
+              El Banco de Alimentos anunció que luego de cinco meses de trabajo
+              junto a McCain y muchos voluntarios, lograron el mayor rescate de
+              la historia
               <br />
               <a
                 href=" https://www.minutobalcarce.com.ar/balcarce-solidario-desde-el-banco-de-alimentos-ya-distribuyeron-25-millones-de-kilos-de-papas-a-todo-el-pais/"
@@ -68,7 +68,7 @@ const News = () => {
               de Balcarce
             </h4>
             <p className="p-new">
-              El INTA firmo un acuerdo con el Banco de Alimentos de Balcarce
+              El INTA firmó un acuerdo con el Banco de Alimentos de Balcarce
               para rescatar frutas y verduras que se desechan por diferentes
               defectos.
               <br />
@@ -85,9 +85,8 @@ const News = () => {
           <div className="col">
             <img className="img-news" src={ImgD} alt="" />
             <h4 className="header-h4">
-              Ya se distribuyeron mas de 2,5 millones
-              <br />
-              de kilos de papas a todo el pais
+              Ya se distribuyeron más de 2,5 millones <br />
+              de kilos de papas a todo el país.
             </h4>
             <p className="p-new">
               “Hoy sobra papa, hoy hay gente que la necesita”.
@@ -111,9 +110,9 @@ const News = () => {
               Balcarce se unen
             </h4>
             <p className="p-new">
-              La alianza permitio distribuir alimentos con gran valor
-              nutricional a mas de 25.000 personas en situacion de
-              vulnerabilidad social en gran parte del pais.
+              La alianza permitió distribuir alimentos con gran valor
+              nutricional a mas de 25.000 personas en situación de
+              vulnerabilidad social en gran parte del país.
               <br />{' '}
               <a
                 href="https://noticias.autocosmos.com.ar/2021/05/06/volkswagen-argentina-basf-y-banco-de-alimentos-balcarce-se-unen-para-la-recuperacion-de-alimentos"
@@ -128,7 +127,7 @@ const News = () => {
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <img className="img-news" src={ImgF} alt="" />
             <h4 className="header-h4">
-              Como buscan recuperar los 16 millones <br />
+              Cómo buscan recuperar los 16 millones <br />
               de toneladas que se desperdician por año
             </h4>
             <p className="p-new">

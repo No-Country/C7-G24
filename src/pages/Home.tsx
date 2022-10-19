@@ -2,10 +2,12 @@ import React, { Fragment } from 'react';
 import '../styles/Home.css';
 import CarouselComponent from '../components/container/CarouselComponent';
 import Int from '../assets/int.png';
+import IntClose from '../assets/intClose.png';
 import bal from '../assets/bal.png';
 import FooterComponent from '../components/container/FooterComponent';
 import ModalComponent from '../components/container/ModalComponent';
 import Content from '../components/Content';
+import fundadora from '../assets/fundadora.png';
 const Home = () => {
   return (
     <Fragment>
@@ -29,7 +31,12 @@ const Home = () => {
         </div>
         <div className="cite">
           <div>
-            <img src={Int} className="cite-Int " alt="int"></img>
+            <img src={fundadora} className="fundadora" alt="fundadora" />
+            <p className="coordinadora">
+              Marcela Boullon
+              <br /> Coordinadora general
+            </p>
+            <img src={Int} className="cite-Int " alt="int" />
             <p className="cite-p">
               Trabajamos para reducir el hambre, mejorar la nutrición y evitar
               el desperdicio de alimentos. Recibimos grandes donaciones de
@@ -37,6 +44,7 @@ const Home = () => {
               organizaciones sociales que dan de comer a personas que lo
               necesitan.
             </p>
+            <img src={IntClose} className="intClose" alt="" />
           </div>
         </div>
         <div className="container">
@@ -63,7 +71,7 @@ const Home = () => {
                 Los clasificamos con ayuda de voluntarios
               </p>
             </div>
-            <div>
+            <div className="containerSpan3">
               <div className="span3">3</div>
               <p className="container-color3 paso3">Paso 3</p>
               <p className="container-color3">

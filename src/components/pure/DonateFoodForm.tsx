@@ -72,7 +72,7 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
             <input
               name="alimento"
               type="radio"
-              value="perecedero"
+              id="perecedero"
               onClick={handleOnClick}
             />
             <label>Perecedero</label>
@@ -81,7 +81,7 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
             <input
               type="radio"
               onClick={handleOnClick}
-              value="noperecedero"
+              id="noperecedero"
               name="alimento"
             />
             <label>No Perecedero</label>

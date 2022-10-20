@@ -25,7 +25,6 @@ const DonateOtherForm = ({ otherDonate, quantityOtherDonate }: any) => {
           <Form.Label>Donación</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Lo que deseas donar"
             name="otra donacion"
             required
             onChange={handleOnChange}
@@ -39,7 +38,6 @@ const DonateOtherForm = ({ otherDonate, quantityOtherDonate }: any) => {
           <Form.Label>Cantidad</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Litros/Kilogramos/Unidades"
             required
             name="cantidad donacion"
             onChange={handleOnChange}

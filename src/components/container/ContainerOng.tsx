@@ -31,30 +31,33 @@ const ContainerOng = () => {
       event.stopPropagation();
     }
     setValidated(true);
-    type CreateNeedHelp = {
-      pName: string;
-      pLastName: string;
-      emailOng: string;
-      phoneOng: string;
-      nameOng: string;
-      addressOng: string;
-      typeOng: string;
-    };
 
-    const needHelpOng = {
-      ongname: nameOng,
-      ongcuit: cuitOng,
-      ongreason: typeOng,
-      ongheadnm: pName,
-      ongheadln: pLastName,
-      ongaddress: addressOng,
-      ongphone: phoneOng,
-      ongemail: emailOng,
-    };
-    try {
-      await axios.post<CreateNeedHelp>('/create', needHelpOng);
-    } catch (error) {}
-    navigate('/gratitude');
+    if (form.checkValidity() === true) {
+      type CreateNeedHelp = {
+        pName: string;
+        pLastName: string;
+        emailOng: string;
+        phoneOng: string;
+        nameOng: string;
+        addressOng: string;
+        typeOng: string;
+      };
+
+      const needHelpOng = {
+        ongname: nameOng,
+        ongcuit: cuitOng,
+        ongreason: typeOng,
+        ongheadnm: pName,
+        ongheadln: pLastName,
+        ongaddress: addressOng,
+        ongphone: phoneOng,
+        ongemail: emailOng,
+      };
+      try {
+        await axios.post<CreateNeedHelp>('/create', needHelpOng);
+      } catch (error) {}
+      navigate('/gratitude');
+    }
   };
 
   return (

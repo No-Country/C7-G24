@@ -59,7 +59,7 @@ const DonateFoodForm = ({ setValue, value, quantity, info }: any) => {
               className="foodDonateForm"
               onChange={handleOnChange}
               name="cantidad"
-              placeholder="ejem : papas 10kg"
+              placeholder="ejem : Producto - Cantidad"
             />
           </div>
           <Form.Control.Feedback>Correcto!</Form.Control.Feedback>

@@ -24,6 +24,7 @@ Si quieres correr este proyecto de forma local debes seguir los siguientes pasos
 * ***Bootstrap*** (https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 * ***React*** (https://es.reactjs.org/)
 * ***React-router-dom***(https://reactrouter.com/en/main)
+* ***Axios*** (https://axios-http.com/es/)
 
 ## Las tecnologias Back-End utilizadas fueron:
 * ***JAVA*** (https://www.java.com/es/)

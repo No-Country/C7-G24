@@ -6,28 +6,23 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import com.bdabalcarce.demo.service.UserS;
 
 import javax.validation.Valid;
 import java.util.List;
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://bda-balcarce.netlify.app")
 
 @RequestMapping({"/users"})
 public class UserContr {
     @Autowired
     UserS userServ;
-
-    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping ("/list")
     public ResponseEntity  list() {
         List<User> list = userServ.list();
         return new ResponseEntity (list, HttpStatus.OK);
     }
-
-    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/detail/{id}")
     public ResponseEntity<User> getById(@PathVariable("id") int id) {
         if (!userServ.existById(id)) {

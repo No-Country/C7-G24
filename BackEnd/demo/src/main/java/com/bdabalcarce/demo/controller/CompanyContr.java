@@ -7,20 +7,18 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
 @RestController
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://bda-balcarce.netlify.app")
 @RequestMapping({"/companies"})
 public class CompanyContr {
     @Autowired
     CompanyS coServ;
 
-    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/list")
     public ResponseEntity<List<Company>> list() {
         List<Company> list = coServ.list();
